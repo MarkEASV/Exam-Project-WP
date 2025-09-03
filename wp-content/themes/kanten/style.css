@@ -3,3 +3,60 @@ Theme Name: Kanten
 Author: Kanten
 Description: Custom theme
 */ 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --max-width: 100%;
+    --grid-width: 1200px;
+
+    --grid-gap: 10px;
+
+    --main-color: #13171A;
+}
+
+
+.navBar{
+    background: var(--main-color);
+    padding: 1rem;
+    width: var(--max-width);
+}
+
+.navBarGrid {
+    width: var(--grid-width);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.ulNav {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.ulNav li {
+    height: 40px;
+}
+
+.ulNav li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+    text-align: center;
+}
+
+.ulNav li a:hover {
+    background: #fff;
+    color: var(--main-color);
+}
+
