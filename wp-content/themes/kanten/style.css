@@ -1,12 +1,8 @@
-/*
-Theme Name: Kanten
-Author: Kanten
-Description: Custom theme
-*/ 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 :root {
@@ -16,13 +12,33 @@ Description: Custom theme
     --grid-gap: 10px;
 
     --main-color: #13171A;
+    --secondary-color: #F5F5F5;
 }
 
+#wpadminbar {
+  display: none !important;
+}
 
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-color);
+  }
+
+  .container {
+    width: var( --max-width);
+  }
+
+  
 .navBar{
-    background: var(--main-color);
-    padding: 1rem;
-    width: var(--max-width);
+  background: #13171A80;
+  padding: 1rem 0;
+  width: var(--max-width);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 666;
 }
 
 .navBarGrid {
@@ -59,4 +75,5 @@ Description: Custom theme
     background: #fff;
     color: var(--main-color);
 }
+
 

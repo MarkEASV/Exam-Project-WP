@@ -5,6 +5,22 @@
 
     <div class="container">
 
+    <!--
+        * lav en field group til frontpage der indeholder:
+         - et image field med sluggen hero_image
+    -->
+        <section class="heroSection">
+            <?php 
+                $heroImage = get_field('hero_image');
+            ?>
+            <div class="heroImageContainer">
+                <img src="<?php echo esc_url($heroImage['url']); ?>" alt="<?php echo esc_attr($heroImage['alt']); ?>" />
+            </div>
+
+        </section>
+
+
+
     <!-- 
     * lav en post type med sluggen testimony 
     * lav en field group til testimonials der indeholder:
@@ -43,8 +59,8 @@
           wp_reset_postdata();
         ?>
       </section>
+    
     </div>
-
   <?php endwhile; ?>
 <?php endif; ?>
 
