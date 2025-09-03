@@ -1,17 +1,51 @@
 <?php get_header(); ?>
-<nav class="navBar">
-    <!-- <img src="" alt=""> -->
-<div class="navBarGrid">
-    <ul class="ulNav">
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Blogs</a></li>
-        <li><a href="#">Om</a></li>
-        <li><a href="#">Støtte</a></li>
-    </ul>
-</div>
-    
-</nav>
-<h1>Neck hurt</h1>
 
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post(); ?>
+
+    <div class="container">
+
+    <!-- 
+    * lav en post type med sluggen testimony 
+    * lav en field group til testimonials der indeholder:
+     - et image field med sluggen testimony_image
+     - et text area field med sluggen testimony_text
+    -->
+
+      <section class="testimonySection">
+        <?php
+          $args = array(
+            'post_type'      => 'testimony',
+            'posts_per_page' => 3,
+          );
+
+          $loop = new WP_Query($args);
+
+          if ($loop->have_posts()) :
+            while ($loop->have_posts()) : $loop->the_post();
+
+              $testimonyImage = get_field('testimony_image');
+              $testimonyGiver = get_the_title();
+              $testimonyText  = get_field('testimony_text');
+        ?>
+              <div class="testimonyCard">
+                <div class="testimonyImageContainer">
+                  <img src="<?php echo esc_url($testimonyImage['url']); ?>" alt="<?php echo esc_attr($testimonyImage['alt']); ?>" />
+                </div>
+                <div class="testimonyText">
+                  <h3><?php echo esc_html($testimonyGiver); ?></h3>
+                  <p><?php echo esc_html($testimonyText); ?></p>
+                </div>
+              </div>
+        <?php
+            endwhile;
+          endif;
+          wp_reset_postdata();
+        ?>
+      </section>
+    </div>
+
+  <?php endwhile; ?>
+<?php endif; ?>
 
 <?php get_footer(); ?>
