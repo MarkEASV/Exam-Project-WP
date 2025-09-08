@@ -84,11 +84,11 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "post_tag",
+            "taxonomy": "blog-tag",
             "add_term": 1,
             "save_terms": 1,
             "load_terms": 0,
-            "return_format": "id",
+            "return_format": "object",
             "field_type": "multi_select",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -110,11 +110,11 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
+            "taxonomy": "blog-category",
             "add_term": 0,
             "save_terms": 1,
             "load_terms": 0,
-            "return_format": "id",
+            "return_format": "object",
             "field_type": "select",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -141,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757346665
+    "modified": 1757353452
 }

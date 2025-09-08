@@ -127,6 +127,13 @@
                 $blogText = get_field('blog_card_text');
                 $blogAuthor = get_the_author_meta('display_name');
                 $blogDate  = get_the_date('d-m-Y');
+                $blogCategory = get_field('blog_category');
+
+                        if ($blogCategory) {
+                            if (is_object($blogCategory)) {
+                            $categoryLabel = $blogCategory->name;
+                                                    }
+                        }
           ?>
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
@@ -134,6 +141,7 @@
             <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
+          <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
