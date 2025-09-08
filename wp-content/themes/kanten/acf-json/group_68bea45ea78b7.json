@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_68bea45ec794b",
-            "label": "Hero image",
-            "name": "hero_image",
+            "label": "blog image",
+            "name": "blog_image",
             "aria-label": "",
             "type": "image",
             "instructions": "",
@@ -29,11 +29,32 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_68bea4ebc794d",
-            "label": "Author name",
-            "name": "author_name",
+            "key": "field_68bea6d7c7950",
+            "label": "blog full text",
+            "name": "blog_full_text",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_68befb433c83a",
+            "label": "blog card text",
+            "name": "blog_card_text",
+            "aria-label": "",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -45,35 +66,9 @@
             "default_value": "",
             "maxlength": "",
             "allow_in_bindings": 0,
+            "rows": "",
             "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_68bea4e9c794c",
-            "label": "Author image",
-            "name": "author_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "new_lines": ""
         },
         {
             "key": "field_68bea509c794e",
@@ -100,47 +95,6 @@
             "bidirectional": 0,
             "multiple": 0,
             "bidirectional_target": []
-        },
-        {
-            "key": "field_68bea6b8c794f",
-            "label": "Event Date",
-            "name": "event_date",
-            "aria-label": "",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
-            "first_day": 1,
-            "default_to_current_date": 0,
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_68bea6d7c7950",
-            "label": "Content",
-            "name": "content",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         },
         {
             "key": "field_68beb0c2fb00d",
@@ -187,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757327671
+    "modified": 1757346665
 }

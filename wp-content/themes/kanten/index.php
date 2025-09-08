@@ -81,11 +81,11 @@
           ?>
       <a href="<?php the_permalink(); ?>">
         <div class="eventCard">
-          <div class="eventImageContainer">
+          <div class="CardImageContainer">
             <img src="<?php echo esc_url($eventImage['url']); ?>" alt="<?php echo esc_attr($eventImage['alt']); ?>" />
           </div>
           <h3><?php echo esc_html($eventTitle); ?></h3>
-          <div class="eventCardText"><?php echo wp_kses_post($eventText); ?></div>
+          <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
             <div class="eventCardDate"><small class="eventDate">Dato: <?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
@@ -108,6 +108,49 @@
             wp_reset_postdata();
           ?>
       </section>
+
+      <section class="blogFrontpageSection">
+        <h2>Seneste Blogindlæg</h2>
+          <?php
+            $args = array(
+              'post_type'      => 'blog',
+              'posts_per_page' => 3,
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()) :
+              while ($loop->have_posts()) : $loop->the_post();
+
+                $blogImage = get_field('blog_image');
+                $blogTitle = get_the_title();
+                $blogText = get_field('blog_card_text');
+                $blogAuthor = get_the_author_meta('display_name');
+                $blogDate  = get_the_date('d-m-Y');
+          ?>
+      <a href="<?php the_permalink(); ?>">
+        <div class="blogCard">
+          <div class="CardImageContainer">
+            <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
+          </div>
+          <h3><?php echo esc_html($blogTitle); ?></h3>
+          <div class="blogCardDetails">
+            <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+          </div>
+          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+        </div>
+      </a>
+          <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
+              
+
+
+      </section>
+
 
 
     </div>
