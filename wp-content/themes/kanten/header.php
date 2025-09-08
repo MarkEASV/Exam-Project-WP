@@ -10,6 +10,9 @@
     <nav class="navBar">
     <!-- <img src="" alt=""> -->
         <div class="navBarGrid">
+            <div class="logoImg">
+                <p>coom</p>
+            </div>
             <ul class="ulNav">
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Blogs</a></li>

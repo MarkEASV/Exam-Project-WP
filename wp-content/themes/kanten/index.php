@@ -60,8 +60,53 @@
         ?>
       </section>
     
-      <section class="">
+      <section class="eventFrontpageSection">
+        <h2>Kommende Events</h2>
+          <?php
+            $args = array(
+              'post_type'      => 'event',
+              'posts_per_page' => 4,
+            );
 
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()) :
+              while ($loop->have_posts()) : $loop->the_post();
+
+                $eventImage = get_field('event_image');
+                $eventTitle = get_the_title();
+                $eventText = get_field('event_card_desc');
+                $eventDate  = get_field('event_date');
+                $eventPrice = get_field('event_price');
+          ?>
+      <a href="<?php the_permalink(); ?>">
+        <div class="eventCard">
+          <div class="eventImageContainer">
+            <img src="<?php echo esc_url($eventImage['url']); ?>" alt="<?php echo esc_attr($eventImage['alt']); ?>" />
+          </div>
+          <h3><?php echo esc_html($eventTitle); ?></h3>
+          <div class="eventCardText"><?php echo wp_kses_post($eventText); ?></div>
+          <div class="eventCardBottom">
+            <div class="eventCardDate"><small class="eventDate">Dato: <?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardPrice">
+                <?php if ($eventPrice < 1) : ?>
+                  <div class="eventPrice">
+                    <h5><?php echo $eventPrice; ?>Gratis</h5>
+                  </div>
+                  <?php else : ?>
+                    <div class="eventPriceOff">
+                      <h5><?php echo $eventPrice; ?>.-</h5>
+                    </div>
+                <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </a>
+          <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
       </section>
 
 
