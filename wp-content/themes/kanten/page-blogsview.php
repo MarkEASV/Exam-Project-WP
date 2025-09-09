@@ -3,7 +3,7 @@
         <?php while(have_posts()): the_post(); ?>
         
       <section class="blogviewSection">
-        <h2>Alle blogindlæg</h2>
+        <h2><?php pll_e("alle blogindlæg") ?></h2>
           <?php
             $args = array(
               'post_type'      => 'blog',
@@ -37,7 +37,7 @@
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogAuthor"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
           <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>

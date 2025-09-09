@@ -61,7 +61,7 @@
       </section>
     
       <section class="eventFrontpageSection">
-        <h2>Kommende Events</h2>
+        <h2><?php pll_e("Kommende Events")?></h2>
           <?php
             $args = array(
               'post_type'      => 'event',
@@ -87,11 +87,11 @@
           <h3><?php echo esc_html($eventTitle); ?></h3>
           <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate"><small class="eventDate">Dato: <?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5><?php echo $eventPrice; ?>Gratis</h5>
+                    <h5><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
@@ -110,7 +110,7 @@
       </section>
 
       <section class="blogFrontpageSection">
-        <h2>Seneste Blogindlæg</h2>
+        <h2><?php pll_e("seneste blogindlæg") ?></h2>
           <?php
             $args = array(
               'post_type'      => 'blog',

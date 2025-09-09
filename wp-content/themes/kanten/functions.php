@@ -8,3 +8,18 @@ function custom_theme_styles() {
 }
 
 add_action('wp_enqueue_scripts', 'custom_theme_styles');
+
+function plp_register_strings() {
+    pll_register_string("blogsview", "alle blogindlæg");
+    pll_register_string("header", "events");
+    pll_register_string("header", "blogs");
+    pll_register_string("header", "bæredygtighed");
+    pll_register_string("header", "om");
+    pll_register_string("header", "støtte");
+    pll_register_string("frontpage", "Kommende Events");
+    pll_register_string("frontpage", "dato");
+    pll_register_string("frontpage", "gratis");
+    pll_register_string("frontpage", "seneste blogindlæg");
+    pll_register_string("blogsview", "af");
+}
+add_action('init', 'plp_register_strings');
