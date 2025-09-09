@@ -63,7 +63,7 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         <div class="!mt-37.5 !mb-27.5">
       <section class="blogRelatedSection">
-        <h2>Seneste Blogindlæg</h2>
+        <h2>Relaterede Blogindlæg</h2>
           <?php
             $args = array(
               'post_type'      => 'blog',

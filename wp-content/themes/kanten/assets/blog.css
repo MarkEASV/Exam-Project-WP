@@ -53,19 +53,17 @@
     margin: 20px auto 0 auto;
     color: var(--secondary-color);
 }
+  .articleSiteSetup p:first-of-type{
+    margin-top: 40px ;
+}
 
 .articleAuthorText{
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
     border-bottom: 2px solid var(--secondary-color);
-    align-items: center;
+    align-items: end;
     display: flex;
     justify-content: space-between;
     color: var(--secondary-color);
-}
-
-.articleDel{
-    display: flex;
-    align-items: center;
 }
 
 .articleBorder {
@@ -90,7 +88,7 @@
 .blogRelatedSection h2 {
   grid-column: 1 / -1;
   grid-row: 1;
-  margin: 0 auto;
+  margin: 0 auto 50px auto;
   font-size: 60px;
   color: var(--secondary-color);
   text-decoration: none;
