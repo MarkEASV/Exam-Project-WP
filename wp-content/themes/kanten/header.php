@@ -15,7 +15,7 @@
             </div>
             <ul class="ulNav">
                 <li><a href="#">Events</a></li>
-                <li><a href="<?php echo site_url('/blog/'); ?>">Blogs</a></li>
+                <li><a href="<?php echo site_url('/blogsview/'); ?>">Blogs</a></li>
                 <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>">Bæredygtighed</a></li>
                 <li><a href="#">Om</a></li>
                 <li><a href="#">Støtte</a></li>
