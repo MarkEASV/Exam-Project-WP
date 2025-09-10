@@ -66,6 +66,7 @@
             $args = array(
               'post_type'      => 'event',
               'posts_per_page' => 4,
+              'lang' => pll_current_language(),
             );
 
             $loop = new WP_Query($args);
@@ -115,7 +116,7 @@
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => 3,
-              'lang'           => '',
+              'lang' => pll_current_language(),
             );
 
             $loop = new WP_Query($args);

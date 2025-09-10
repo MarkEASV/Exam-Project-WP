@@ -63,12 +63,19 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         <div>
       <section class="blogRelatedSection">
-        <h2>Relaterede Blogindlæg</h2>
+        <h2>Andre Blogindlæg</h2>
           <?php
+          $blogCategory = get_field('blog_category');
+
+if ($blogCategory && is_object($blogCategory)) {
+    $mainCategorySlug = $blogCategory->slug;     
+}
+
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => 3,
-              'lang'           => '',
+              'lang' => pll_current_language(),
+               'post__not_in' => array(get_the_ID()),
             );
 
             $loop = new WP_Query($args);
