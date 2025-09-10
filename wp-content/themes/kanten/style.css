@@ -53,13 +53,15 @@
 }
 
 .logoImg {
-    grid-column: 1 / 2;
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
+    grid-column: 1 / 1;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.logoImg img {
+    height: 50px;
+    width: auto;
 }
 
 .ulNav {

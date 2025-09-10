@@ -2,7 +2,7 @@
   width: var(--grid-width);
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(auto, auto); /* bedre end 1fr for content */
+  grid-template-rows: repeat(auto, auto); 
   gap: var(--grid-gap);
   margin: 150px auto 0 auto;
 }
