@@ -8,6 +8,7 @@
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => -1,
+              'lang'           => '',
             );
 
             $loop = new WP_Query($args);

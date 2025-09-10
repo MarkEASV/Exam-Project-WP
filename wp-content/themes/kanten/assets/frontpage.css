@@ -79,7 +79,7 @@
 .eventFrontpageSection a {
   grid-column: span 6;
   grid-row: 2;
-  height: 500px;
+  height: 600px;
   background-color: var(--secondary-color);
   border-radius: 20px;
   position: relative;
@@ -109,6 +109,10 @@
   display: block; 
 }
 
+.eventCard {
+  height: 600px;
+}
+
 .eventCard h3 {
     padding: 15px;
     font-size: 24px;
@@ -122,6 +126,7 @@
 .eventCardBottom {
     display: flex;
     padding: 0 15px 15px 15px;
+    margin-top: 23px;
 }
 
 .eventCardDate {

@@ -115,6 +115,7 @@
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => 3,
+              'lang'           => '',
             );
 
             $loop = new WP_Query($args);

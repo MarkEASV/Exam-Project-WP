@@ -68,6 +68,7 @@ if (!empty($tags) && is_array($tags)) : ?>
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => 4,
+              'lang'           => '',
             );
 
             $loop = new WP_Query($args);
