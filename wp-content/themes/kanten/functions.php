@@ -32,3 +32,7 @@ function plp_register_strings() {
     pll_register_string("blogsview", "af");
 }
 add_action('init', 'plp_register_strings');
+
+add_image_size( 'blog-thumb', 390, 220, true );
+add_image_size( 'event-thumb', 595, 335, true );
+add_image_size( 'hero', 1920, 700, true );

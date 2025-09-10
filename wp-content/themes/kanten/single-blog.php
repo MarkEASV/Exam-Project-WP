@@ -67,7 +67,7 @@ if (!empty($tags) && is_array($tags)) : ?>
           <?php
             $args = array(
               'post_type'      => 'blog',
-              'posts_per_page' => 4,
+              'posts_per_page' => 3,
               'lang'           => '',
             );
 
@@ -92,7 +92,7 @@ if (!empty($tags) && is_array($tags)) : ?>
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
           <div class="cardImageContainer">
-            <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
+            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>

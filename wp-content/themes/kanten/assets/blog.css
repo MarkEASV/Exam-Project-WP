@@ -103,7 +103,7 @@
 }
 
 .blogRelatedSection a {
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: 2;
   height: auto;
   background-color: var(--secondary-color);

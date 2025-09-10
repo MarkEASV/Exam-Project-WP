@@ -14,7 +14,7 @@
                 $heroImage = get_field('hero_image');
             ?>
             <div class="heroImageContainer">
-                <img src="<?php echo esc_url($heroImage['url']); ?>" alt="<?php echo esc_attr($heroImage['alt']); ?>" />
+                <?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?>
             </div>
 
         </section>
@@ -82,7 +82,7 @@
       <a href="<?php the_permalink(); ?>">
         <div class="eventCard">
           <div class="CardImageContainer">
-            <img src="<?php echo esc_url($eventImage['url']); ?>" alt="<?php echo esc_attr($eventImage['alt']); ?>" />
+            <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($eventTitle); ?></h3>
           <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
@@ -139,7 +139,7 @@
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
           <div class="CardImageContainer">
-            <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
+            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
