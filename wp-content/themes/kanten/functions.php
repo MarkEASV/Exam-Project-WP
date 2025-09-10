@@ -40,6 +40,15 @@ function plp_register_strings() {
     pll_register_string("frontpage", "seneste blogindlæg");
     pll_register_string("frontpage", "af_front");
 
+    pll_register_string("footer", "Kundeservice");
+    pll_register_string("footer", "Om kanten");
+    pll_register_string("footer", "Bliv medlem");
+    pll_register_string("footer", "Bestyrelsen");
+    pll_register_string("footer", "Kontakt");
+    pll_register_string("footer", "Privatlivspolitik");
+    pll_register_string("footer", "Login");
+
+
 }
 add_action('init', 'plp_register_strings');
 
