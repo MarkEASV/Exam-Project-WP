@@ -1,122 +1,119 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
+    <?php if(have_posts()): ?>
+        <?php while(have_posts()): the_post(); ?>
 
-<main class="blog-article">
 
-  <!-- Tags -->
-  <?php
-  $terms = get_the_terms(get_the_ID(), 'tags'); // replace 'tags' with your taxonomy slug
-  if ($terms && !is_wp_error($terms)): ?>
-    <div class="tags">
-      <?php foreach ($terms as $term): ?>
-        <span class="tag"><?php echo esc_html($term->name); ?></span>
-      <?php endforeach; ?>
-    </div>
-  <?php endif; ?>
+                 <?php
+                  $blogImage = get_field('blog_image');
+                  $blogTitle = get_the_title();
+                  $blogTextFull = get_field('blog_full_text');
+                  $blogAuthor = get_the_author_meta('display_name');
+                  $blogDate  = get_the_date('d-m-Y');
+                  $blogCategory = get_field('blog_category');
 
-  <!-- Hero Image -->
-  <?php if (get_field('hero_image')): ?>
-    <div class="hero-image">
-      <img src="<?php the_field('hero_image'); ?>" alt="<?php the_title(); ?>">
-    </div>
-  <?php endif; ?>
-
-  <main class="blog-article">
-
-  <!-- Tags go here -->
-  <?php
-  $terms = get_the_terms(get_the_ID(), 'tags'); // replace with your taxonomy slug
-  if ( $terms && ! is_wp_error( $terms ) ) : ?>
-      <div class="tags">
-          <?php foreach ( $terms as $term ) : ?>
-              <span class="tag"><?php echo esc_html( $term->name ); ?></span>
-          <?php endforeach; ?>
-      </div>
-  <?php endif; ?>
-
-  <!-- Hero Image -->
-  <?php if (get_field('hero_image')): ?>
-      <div class="hero-image">
-          <img src="<?php the_field('hero_image'); ?>" alt="<?php the_title(); ?>">
-      </div>
-  <?php endif; ?>
-
-  <!-- Title -->
-  <h1><?php the_title(); ?></h1>
-
-  <!-- Event Date -->
-  <?php if (get_field('event_date')): ?>
-    <p class="event-date"><?php the_field('event_date'); ?></p>
-  <?php endif; ?>
-
-  <!-- Author -->
-  <div class="author">
-    <?php if (get_field('author_image')): ?>
-      <img src="<?php the_field('author_image'); ?>" alt="<?php the_field('author_name'); ?>">
-    <?php endif; ?>
-    <p><?php the_field('author_name'); ?></p>
-  </div>
-
-  <!-- Content -->
-  <div class="content">
-    <?php the_field('content'); ?>
-  </div>
-
-  <!-- Comments -->
-  <div class="comments">
-    <?php
-    if ( post_password_required() ) {
-        echo '<p>This post is password protected. Enter the password to view comments.</p>';
-        return;
-    }
-
-    if ( have_comments() ) : ?>
-        <h2 class="comments-title">
-            <?php
-            $comments_number = get_comments_number();
-            if ( '1' === $comments_number ) {
-                printf( _x( 'One Comment', 'comments title', 'your-textdomain' ) );
-            } else {
-                printf(
-                    _nx(
-                        '%1$s Comment',
-                        '%1$s Comments',
-                        $comments_number,
-                        'comments title',
-                        'your-textdomain'
-                    ),
-                    number_format_i18n( $comments_number )
-                );
-            }
+                          if ($blogCategory) {
+                              if (is_object($blogCategory)) {
+                              $categoryLabel = $blogCategory->name;
+                                                      }
+                          }
             ?>
-        </h2>
 
-        <ol class="comment-list">
-            <?php
-            wp_list_comments( array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 50,
-            ) );
-            ?>
-        </ol>
+<section class="articleSite">
+        <div>
+                <h2> <?php echo esc_html($categoryLabel); ?></h2>
+            <div class="articleSiteCategory">
+<?php
+$tags = get_field('blog_tags');
 
-        <?php the_comments_navigation(); ?>
+if (!empty($tags) && is_array($tags)) : ?>
+    <div class="articleSiteCategory">
+        <?php foreach ($tags as $tag) : ?>
+            <span class="articleCategoryBox"><?php echo esc_html($tag->name); ?></span>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
+            </div>
+        </div>
 
-    <?php endif; ?>
 
-    <?php
-    comment_form( array(
-        'class_form' => 'custom-comment-form',
-        'title_reply' => 'Leave a Comment',
-        'label_submit' => 'Post Comment',
-    ) );
-    ?>
+
+  <div class="articleImgBox">
+    <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>">
   </div>
 
-</main>
+        
+        <div class="articleSiteSetup">
+            <h1><?php echo esc_html($blogTitle); ?></h1>
+            <div class="articleAuthorText">
+                <div>
+                    <p>Skrevet af</p>
+                    <p><?php echo esc_html($blogAuthor); ?></p>
+                </div>
+                <div>
+                    <?php echo esc_html($blogDate); ?>
+                </div>
+            </div>
 
-<?php
-get_footer();
-?>
+<div class="blogTextFull">
+  <?php echo $blogTextFull; ?>
+</div>
+
+            
+        </div>
+
+        <div>
+      <section class="blogRelatedSection">
+        <h2>Relaterede Blogindlæg</h2>
+          <?php
+            $args = array(
+              'post_type'      => 'blog',
+              'posts_per_page' => 3,
+              'lang'           => '',
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()) :
+              while ($loop->have_posts()) : $loop->the_post();
+
+                $blogImage = get_field('blog_image');
+                $blogTitle = get_the_title();
+                $blogText = get_field('blog_card_text');
+                $blogAuthor = get_the_author_meta('display_name');
+                $blogDate  = get_the_date('d-m-Y');
+                $blogCategory = get_field('blog_category');
+
+                        if ($blogCategory) {
+                            if (is_object($blogCategory)) {
+                            $categoryLabel = $blogCategory->name;
+                                                    }
+                        }
+          ?>
+      <a href="<?php the_permalink(); ?>">
+        <div class="blogCard">
+          <div class="cardImageContainer">
+            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
+          </div>
+          <h3><?php echo esc_html($blogTitle); ?></h3>
+          <h4><?php echo esc_html($categoryLabel); ?></h4>
+          <div class="blogCardDetails">
+            <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+          </div>
+          <div class="cardText"><?php echo wp_kses_post($blogText); ?></div>
+        </div>
+      </a>
+          <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
+              
+
+
+      </section>
+    </section>
+
+            <?php endwhile; ?>
+    <?php endif; ?>
+<?php get_footer(); ?>

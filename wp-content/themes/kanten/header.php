@@ -11,14 +11,15 @@
     <!-- <img src="" alt=""> -->
         <div class="navBarGrid">
             <div class="logoImg">
-                <p>NIGGA INC</p>
+                <p>Kanten</p>
             </div>
+                <ul class="languages"><li><?php pll_the_languages() ?></li></ul>
             <ul class="ulNav">
-                <li><a href="#">Events</a></li>
-                <li><a href="<?php echo site_url('/blog/'); ?>">Blogs</a></li>
-                <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>">Bæredygtighed</a></li>
-                <li><a href="#">Om</a></li>
-                <li><a href="#">Støtte</a></li>
+                <li><a href="#"><?php pll_e("events") ?></a></li>
+                <li><a href="<?php echo site_url('/blogsview/'); ?>"><?php pll_e("blogs") ?></a></li>
+                <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>"><?php pll_e("bæredygtighed") ?></a></li>
+                <li><a href="#"><?php pll_e("om") ?></a></li>
+                <li><a href="#"><?php pll_e("støtte") ?></a></li>
             </ul>
         </div>
     </nav>   

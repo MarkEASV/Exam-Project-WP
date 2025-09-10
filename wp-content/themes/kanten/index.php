@@ -14,7 +14,7 @@
                 $heroImage = get_field('hero_image');
             ?>
             <div class="heroImageContainer">
-                <img src="<?php echo esc_url($heroImage['url']); ?>" alt="<?php echo esc_attr($heroImage['alt']); ?>" />
+                <?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?>
             </div>
 
         </section>
@@ -61,7 +61,7 @@
       </section>
     
       <section class="eventFrontpageSection">
-        <h2>Kommende Events</h2>
+        <h2><?php pll_e("Kommende Events")?></h2>
           <?php
             $args = array(
               'post_type'      => 'event',
@@ -82,16 +82,16 @@
       <a href="<?php the_permalink(); ?>">
         <div class="eventCard">
           <div class="CardImageContainer">
-            <img src="<?php echo esc_url($eventImage['url']); ?>" alt="<?php echo esc_attr($eventImage['alt']); ?>" />
+            <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($eventTitle); ?></h3>
           <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate"><small class="eventDate">Dato: <?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5><?php echo $eventPrice; ?>Gratis</h5>
+                    <h5><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
@@ -110,11 +110,12 @@
       </section>
 
       <section class="blogFrontpageSection">
-        <h2>Seneste Blogindlæg</h2>
+        <h2><?php pll_e("seneste blogindlæg") ?></h2>
           <?php
             $args = array(
               'post_type'      => 'blog',
               'posts_per_page' => 3,
+              'lang'           => '',
             );
 
             $loop = new WP_Query($args);
@@ -138,7 +139,7 @@
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
           <div class="CardImageContainer">
-            <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
+            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
