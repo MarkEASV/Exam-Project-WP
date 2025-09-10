@@ -46,22 +46,22 @@ if (!empty($tags) && is_array($tags)) : ?>
             <h1><?php echo esc_html($blogTitle); ?></h1>
             <div class="articleAuthorText">
                 <div>
-                    <p class="text-xs">Skrevet af</p>
-                    <p class="font-semibold"><?php echo esc_html($blogAuthor); ?></p>
+                    <p>Skrevet af</p>
+                    <p><?php echo esc_html($blogAuthor); ?></p>
                 </div>
-                <div class="text-xs font-medium text-gray-600">
+                <div>
                     <?php echo esc_html($blogDate); ?>
                 </div>
             </div>
 
-            <p class="!mt-4">
-                        <?php echo ($blogTextFull); ?>
-                    </p>
+<div class="blogTextFull">
+  <?php echo $blogTextFull; ?>
+</div>
 
             
         </div>
 
-        <div class="!mt-37.5 !mb-27.5">
+        <div>
       <section class="blogRelatedSection">
         <h2>Relaterede Blogindlæg</h2>
           <?php
@@ -91,7 +91,7 @@ if (!empty($tags) && is_array($tags)) : ?>
           ?>
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
-          <div class="CardImageContainer">
+          <div class="cardImageContainer">
             <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
@@ -100,7 +100,7 @@ if (!empty($tags) && is_array($tags)) : ?>
             <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+          <div class="cardText"><?php echo wp_kses_post($blogText); ?></div>
         </div>
       </a>
           <?php
