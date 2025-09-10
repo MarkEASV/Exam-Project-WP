@@ -110,3 +110,20 @@
     background: #fff;
     color: var(--main-color);
 }
+
+.footerContainer {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  margin-top: 4rem;
+  justify-content: center;
+  display: flex;
+}
+
+.footerGrid {
+  background-color: red;
+  width: var(--grid-width);
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
