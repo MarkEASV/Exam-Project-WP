@@ -11,7 +11,9 @@
     <!-- <img src="" alt=""> -->
         <div class="navBarGrid">
             <div class="logoImg">
-                <p>Kanten</p>
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kantenLogo_white_transparent.webp" alt="Kanten">
+                </a>
             </div>
                 <ul class="languages"><li><?php pll_the_languages() ?></li></ul>
             <ul class="ulNav">
