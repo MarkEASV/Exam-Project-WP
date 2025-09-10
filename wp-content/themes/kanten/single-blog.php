@@ -46,7 +46,7 @@ if (!empty($tags) && is_array($tags)) : ?>
             <h1><?php echo esc_html($blogTitle); ?></h1>
             <div class="articleAuthorText">
                 <div>
-                    <p>Skrevet af</p>
+                    <p><?php pll_e("skrevet af") ?> </p>
                     <p><?php echo esc_html($blogAuthor); ?></p>
                 </div>
                 <div>
@@ -63,7 +63,7 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         <div>
       <section class="blogRelatedSection">
-        <h2>Andre Blogindlæg</h2>
+        <h2><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
 
@@ -104,7 +104,7 @@ if ($blogCategory && is_object($blogCategory)) {
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small class="blogAuthor">Af <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogAuthor"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
           <div class="cardText"><?php echo wp_kses_post($blogText); ?></div>

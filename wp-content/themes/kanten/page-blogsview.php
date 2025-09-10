@@ -57,5 +57,5 @@
 
         <?php endwhile; ?>
     <?php endif; ?>
->>>>>>> cb2f0d5446292e5c7ffe0707527f1c2478d9879f
+
 <?php get_footer(); ?>

@@ -1,8 +1,6 @@
 <?php 
 function custom_theme_styles() {
     wp_enqueue_style('global-style', get_template_directory_uri() . '/style.css');
-
-
     wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
 
     
@@ -17,26 +15,66 @@ function custom_theme_styles() {
         if (is_page('blogsview')) {
             wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
         }
-
         }
 
 add_action('wp_enqueue_scripts', 'custom_theme_styles');
 
 function plp_register_strings() {
     pll_register_string("blogsview", "alle blogindlæg");
+    pll_register_string("blogsview", "af");
+    pll_register_string("blog", "skrevet af");
+    pll_register_string("blog", "Relaterede Blogindlæg");
+
     pll_register_string("header", "events");
     pll_register_string("header", "blogs");
     pll_register_string("header", "bæredygtighed");
     pll_register_string("header", "om");
     pll_register_string("header", "støtte");
+
     pll_register_string("frontpage", "Kommende Events");
     pll_register_string("frontpage", "dato");
     pll_register_string("frontpage", "gratis");
     pll_register_string("frontpage", "seneste blogindlæg");
-    pll_register_string("blogsview", "af");
+    pll_register_string("frontpage", "af_front");
+
+    pll_register_string("footer", "Kundeservice");
+    pll_register_string("footer", "Om kanten");
+    pll_register_string("footer", "Bliv medlem");
+    pll_register_string("footer", "Bestyrelsen");
+    pll_register_string("footer", "Kontakt");
+    pll_register_string("footer", "Privatlivspolitik");
+    pll_register_string("footer", "Login");
+
+
 }
 add_action('init', 'plp_register_strings');
 
 add_image_size( 'blog-thumb', 390, 220, true );
 add_image_size( 'event-thumb', 595, 335, true );
-add_image_size( 'hero', 1920, 700, true );
+
+// Register taxonomy term names with Polylang string translations
+add_action('init', function () {
+    $taxonomy = 'blog-category'; // your taxonomy key
+    $terms = get_terms(array(
+        'taxonomy'   => $taxonomy,
+        'hide_empty' => false,
+    ));
+
+    if (!empty($terms) && !is_wp_error($terms)) {
+        foreach ($terms as $term) {
+            pll_register_string('taxonomy_' . $taxonomy, $term->name, 'Taxonomies');
+        }
+    }
+});
+
+// When getting a term, swap the name for its translation
+add_filter('get_term', function ($term) {
+    if (!is_admin() && isset($term->taxonomy) && $term->taxonomy === 'blog-category') {
+        $translated = pll__($term->name);
+        if ($translated) {
+            $term->name = $translated;
+        }
+    }
+    return $term;
+});
+
