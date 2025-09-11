@@ -1,7 +1,6 @@
 <?php 
 function custom_theme_styles() {
     wp_enqueue_style('global-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
 
     
    if (is_front_page()) {
@@ -14,6 +13,10 @@ function custom_theme_styles() {
 
         if (is_page('blogsview')) {
             wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
+        }
+
+                if (is_page('sustainability-initiatives')) {
+            wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
         }
         }
 

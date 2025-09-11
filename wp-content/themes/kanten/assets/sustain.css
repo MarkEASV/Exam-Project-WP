@@ -1,3 +1,140 @@
-.contentSustain {
-    color: aliceblue;
+.statisticsSection {
+    margin: 150px auto 0 auto;
+    width: var(--grid-width);
 }
+
+.titleArea h1 {
+    font-size: 40px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0 auto 50px auto;
+    max-width: 800px;
+}
+
+.titleArea p {
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 0 auto 50px auto;
+    max-width: 800px;
+}
+
+
+
+.statistic-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 150px auto 0 auto;
+  max-width: 1000px;
+}
+
+.statistic-wrapper .text {
+  flex: 1;
+  color: var(--secondary-color);
+}
+
+.statistic-wrapper .image {
+  flex: 1;
+}
+
+.statistic-wrapper .image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Når billedet skal til venstre */
+.layout-left .statistic-wrapper {
+  flex-direction: row-reverse;
+}
+
+.equalityEventSection {
+    margin: 150px auto 0 auto;
+    width: var(--grid-width);
+}
+
+.equalityEvent {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+        gap: var(--grid-gap);
+}
+
+.equalityEventSection a {
+  grid-column: span 6;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--main-color);
+}
+
+.equalityEventSection a:only-of-type {
+  grid-column: 4 / span 6; 
+}
+
+.CardImageContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden; 
+  border-radius: 12px 12px 0 0; 
+}
+
+.CardImageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  object-position: center; 
+  display: block; 
+}
+
+.eventCard {
+  display: flex;          
+  flex-direction: column;    
+  height: 100%;      
+  border-radius: 20px;
+  background-color: var(--secondary-color);
+}
+
+.eventCard h3 {
+    padding: 15px;
+    font-size: 24px;
+}
+
+.CardText {
+    padding: 0 15px 20px 15px;
+    font-size: 16px;
+}
+
+.eventCardBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+  margin-top: auto;
+}
+
+.eventCardDate {
+    margin: auto 0
+}
+
+.eventCardPrice {
+    margin-left: auto;
+}
+
+  .eventPrice,
+  .eventPriceOff {
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+    background-color: var(--main-color);
+  }

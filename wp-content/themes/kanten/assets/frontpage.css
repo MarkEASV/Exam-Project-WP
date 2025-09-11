@@ -80,7 +80,6 @@
 .eventFrontpageSection a {
   grid-column: span 6;
   grid-row: 2;
-  height: 600px;
   background-color: var(--secondary-color);
   border-radius: 20px;
   position: relative;
@@ -111,7 +110,11 @@
 }
 
 .eventCard {
-  height: 600px;
+  display: flex;          
+  flex-direction: column;    
+  height: 100%;      
+  border-radius: 20px;
+  background-color: var(--secondary-color);
 }
 
 .eventCard h3 {
@@ -120,14 +123,15 @@
 }
 
 .CardText {
-    padding: 0 15px 15px 15px;
+    padding: 0 15px 20px 15px;
     font-size: 16px;
 }
 
 .eventCardBottom {
-    display: flex;
-    padding: 0 15px 15px 15px;
-    margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+  margin-top: auto;
 }
 
 .eventCardDate {

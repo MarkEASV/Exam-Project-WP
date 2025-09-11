@@ -88,7 +88,7 @@
           <h3><?php echo esc_html($eventTitle); ?></h3>
           <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato") ?><?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
