@@ -9,7 +9,7 @@
         <section class="statisticsSection">
             <div class="titleArea">
                 <h2><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
-                <p><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene. ") ?></p>
+                <p><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
             </div>
 <?php
 $args = array(

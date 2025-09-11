@@ -48,6 +48,16 @@ function plp_register_strings() {
     pll_register_string("footer", "Privatlivspolitik");
     pll_register_string("footer", "Login");
 
+    pll_register_string("sustain", "Vi sætter fokus på FN.");
+    pll_register_string("sustain", "På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.");
+    pll_register_string("sustain", "Equality Week Event", "sustain");
+    pll_register_string("sustain", "Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.");
+    pll_register_string("sustain", "dato: ");
+    pll_register_string("sustain", "gratis");
+    pll_register_string("sustain", "Interview med Dansk Kvindesamfund");
+    pll_register_string("sustain", "I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.");
+    pll_register_string("sustain", "Blogindlæg om ligestilling");
+    pll_register_string("sustain", "af_front");
 
 }
 add_action('init', 'plp_register_strings');
