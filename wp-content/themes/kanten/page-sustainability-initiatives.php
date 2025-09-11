@@ -59,7 +59,7 @@ wp_reset_postdata();
 
 <section class="equalityEventSection">
                 <div class="titleArea">
-                <h1><?php pll_e("Equality Week Event") ?></h1>
+                <h2><?php pll_e("Equality Week Event") ?></h1>
                 <p><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
             </div>
             <div class="equalityEvent">
@@ -111,9 +111,93 @@ wp_reset_postdata();
             wp_reset_postdata();
           ?>
             </div>
-           
+            </section>
 
-</section>
+            <section class="equalityInterviewSection">
+                <div class="titleArea">
+                    <h2><?php pll_e("Interview med Dansk Kvindesamfund") ?></h1>
+                    <p><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
+                </div>
+                   <?php
+            $args = array(
+              'post_type'      => 'interview',
+              'posts_per_page' => 3,
+              'lang' => pll_current_language(),
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()) :
+              while ($loop->have_posts()) : $loop->the_post();
+
+                $interviewQuestion = get_field('interview_question');
+                $interviewAnswer = get_field('interview_answer');
+          ?>
+            <div class="interviewQuestion">
+                <p><?php echo wp_kses_post($interviewQuestion); ?></p>
+            </div>
+            <div class="interviewAnswer">
+                <p><?php echo wp_kses_post($interviewAnswer); ?></p>
+            </div>
+          <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
+            </section>
+
+            <div class="titleArea">
+                        <h2><?php pll_e("Blogindlæg om ligestilling") ?></h2>
+                    </div>
+ <section class="blogSustainSection">
+          <?php
+            $args = array(
+              'post_type'      => 'blog',
+              'posts_per_page' => 3,
+              'lang' => pll_current_language(),
+            );
+
+            $loop = new WP_Query($args);
+
+            if ($loop->have_posts()) :
+              while ($loop->have_posts()) : $loop->the_post();
+
+                $blogImage = get_field('blog_image');
+                $blogTitle = get_the_title();
+                $blogText = get_field('blog_card_text');
+                $blogAuthor = get_the_author_meta('display_name');
+                $blogDate  = get_the_date('d-m-Y');
+                $blogCategory = get_field('blog_category');
+
+                        if ($blogCategory) {
+                            if (is_object($blogCategory)) {
+                            $categoryLabel = $blogCategory->name;
+                                                    }
+                        }
+          ?>
+      <a href="<?php the_permalink(); ?>">
+        <div class="blogCard">
+          <div class="CardImageContainer">
+            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
+          </div>
+          <h3><?php echo esc_html($blogTitle); ?></h3>
+          <h4><?php echo esc_html($categoryLabel); ?></h4>
+          <div class="blogCardDetails">
+            <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+          </div>
+          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+        </div>
+      </a>
+          <?php
+              endwhile;
+            endif;
+            wp_reset_postdata();
+          ?>
+              
+
+
+      </section>
 
 
   <?php endwhile; ?>
