@@ -2,10 +2,13 @@
 
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post(); ?>
-
+  <?php 
+    $heroImage = get_field('hero_image');
+  ?>
+<div class="areapic"><?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?></div>
         <section class="statisticsSection">
             <div class="titleArea">
-                <h1><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h1>
+                <h2><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
                 <p><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene. ") ?></p>
             </div>
 <?php
@@ -59,7 +62,7 @@ wp_reset_postdata();
 
 <section class="equalityEventSection">
                 <div class="titleArea">
-                <h2><?php pll_e("Equality Week Event") ?></h1>
+                <h3><?php pll_e("Equality Week Event") ?></h3>
                 <p><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
             </div>
             <div class="equalityEvent">
