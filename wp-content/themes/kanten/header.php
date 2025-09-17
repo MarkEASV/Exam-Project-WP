@@ -8,11 +8,10 @@
     <?php ?>
 </head>
     <nav class="navBar">
-    <!-- <img src="" alt=""> -->
         <div class="navBarGrid">
             <div class="logoImg">
                 <a href="<?php echo home_url(); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kantenLogo_white_transparent.webp" alt="Kanten">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/kantenLogo_white_transparent.webp" alt="Kanten Logo">
                 </a>
             </div>
                 <ul class="languages"><li><?php pll_the_languages() ?></li></ul>

@@ -17,6 +17,7 @@
               while ($loop->have_posts()) : $loop->the_post();
                 
                 $blogImage = get_field('blog_image');
+                
                 $blogTitle = get_the_title();
                 $blogText = get_field('blog_card_text');
                 $blogAuthor = get_the_author_meta('display_name');
@@ -33,7 +34,7 @@
         
         <div class="blogCard">
           <div class="CardImageContainer">
-            <img src="<?php echo esc_url($blogImage['url']); ?>" alt="<?php echo esc_attr($blogImage['alt']); ?>" />
+            <img src="<?php echo esc_url($blogImage['url'])?>" alt="<?php echo esc_attr($blogImage['alt']); ?>">
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
