@@ -22,7 +22,6 @@
                         <section class="merchItemSection">
                             <section class="merchItemSectionTop">
                                 <div class="merchItemImageArea">
-                                    <div class="merchMainImage"><img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>"></div>
                                     <div class="merchSideImages">
                                         <?php 
                                             $images = [$merchImageOptional1, $merchImageOptional2];
@@ -34,6 +33,7 @@
                                             }
                                         ?>
                                     </div>
+                                    <div class="merchMainImage"><img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>"></div>
                                 </div>
                                 <div class="merchItemTextArea">
                                     <h2><?php echo esc_html($merchTitle); ?></h2>

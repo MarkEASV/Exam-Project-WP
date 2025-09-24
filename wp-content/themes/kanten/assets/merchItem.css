@@ -12,29 +12,65 @@
 
 .merchItemImageArea {
     grid-column: span 6;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: var(--grid-gap);
+    display: flex;
+    gap: 1rem; 
 }
 
+
+.merchSideImages {
+    display: flex;
+    flex-direction: column;
+    gap: var(--grid-gap);
+    width: 20%;
+}
+
+.merchSideImages img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    cursor: pointer;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+
 .merchMainImage {
-    grid-column: 3 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .merchMainImage img {
+    width: 100%;
     aspect-ratio: 1/1;
-
-}
-
-.merchSideImages {
-    grid-column: 1 / 2;
-}
-
-.merchSideImages img{
-    transform: scale(0.2);
+    object-fit: contain;
 }
 
 .merchItemTextArea {
     grid-column: 8 / -1;
 }
 
+.merchItemTextArea h2 {
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+.merchItemTextArea h3 {
+  margin: 15px 15px 15px 0px;
+  padding: 3px 10px 5px 10px;
+  width: fit-content;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  background-color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.merchItemTextArea p {
+    font-size: 24px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
