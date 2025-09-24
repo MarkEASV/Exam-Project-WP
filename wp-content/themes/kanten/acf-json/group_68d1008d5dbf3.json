@@ -161,9 +161,9 @@
             },
             "taxonomy": "merch-category",
             "add_term": 0,
-            "save_terms": 0,
-            "load_terms": 1,
-            "return_format": "id",
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "object",
             "field_type": "select",
             "allow_null": 0,
             "allow_in_bindings": 0,
@@ -190,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758528626
+    "modified": 1758698893
 }

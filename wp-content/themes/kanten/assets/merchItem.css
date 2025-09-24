@@ -1,0 +1,40 @@
+.merchItemSection {
+     width: var(--max-width);
+}
+
+.merchItemSectionTop {
+    width: var(--grid-width);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    margin: 150px auto 0 auto;
+}
+
+.merchItemImageArea {
+    grid-column: span 6;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+}
+
+.merchMainImage {
+    grid-column: 3 / -1;
+}
+
+.merchMainImage img {
+    aspect-ratio: 1/1;
+
+}
+
+.merchSideImages {
+    grid-column: 1 / 2;
+}
+
+.merchSideImages img{
+    transform: scale(0.2);
+}
+
+.merchItemTextArea {
+    grid-column: 8 / -1;
+}
+

@@ -19,7 +19,7 @@
                 $merchImage = get_field('merch_image_main');
                 $merchTitle = get_the_title();
                 $merchPrice = get_field('merch_item_price');
-                $merchCategory = get_field('merch_item_catrgory');
+                $merchCategory = get_field('merch_item_category');
 
                         if ($merchCategory) {
                             if (is_object($merchCategory)) {
@@ -33,9 +33,9 @@
           <div class="merchCardImageContainer">
             <img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>">
           </div>
+          <h4><?php echo esc_html($categoryLabel); ?></h4>
           <h3><?php echo esc_html($merchTitle); ?></h3>
-          <!-- add category here once it works -->
-            <p>kr <?php echo esc_html($merchPrice); ?>,-</p>
+          <div class="merchPriceContainer"><p>kr <?php echo esc_html($merchPrice); ?>,-</p></div>
 
   
         </div>
