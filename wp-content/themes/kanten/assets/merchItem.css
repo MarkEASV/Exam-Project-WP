@@ -96,3 +96,24 @@
     margin-left: auto;
     border-radius: 20px;
 }
+
+.merchItemSectionBottom {
+    width: var(--grid-width);
+    margin: 100px auto 150px auto;
+}
+
+.merchItemSectionBottom h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+}
+
+.merchItemSpecifications {
+    color: var(--secondary-color);
+    margin-top: 15px;
+}
+
+.merchItemDescription {
+    color: var(--secondary-color);
+    margin-top: 50px;
+    width: 60%;
+}
