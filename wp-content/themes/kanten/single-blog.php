@@ -18,9 +18,9 @@
                           }
             ?>
 
-<section class="articleSite" aria_labbelledby="categoryLabel articleCategory singleBlogTitle singleBlogSkrevetAf singleBlogAuthor singleBlogDate singleBlogTextFull">
+<section class="articleSite" aria-labbelledby="singleBlogTitle singleBlogSkrevetAf singleBlogAuthor">
         <div>
-                <h2 id="categoryLabel" tabindex="0"> <?php echo esc_html($categoryLabel); ?></h2>
+                <h2 tabindex="0"> <?php echo esc_html($categoryLabel); ?></h2>
             <div class="articleSiteCategory">
 <?php
 $tags = get_field('blog_tags');
@@ -28,7 +28,7 @@ $tags = get_field('blog_tags');
 if (!empty($tags) && is_array($tags)) : ?>
     <div class="articleSiteCategory">
         <?php foreach ($tags as $tag) : ?>
-            <span id="articleCategory" tabindex="0" class="articleCategoryBox"><?php echo esc_html($tag->name); ?></span>
+            <span tabindex="0" class="articleCategoryBox"><?php echo esc_html($tag->name); ?></span>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
@@ -50,11 +50,11 @@ if (!empty($tags) && is_array($tags)) : ?>
                     <p id="singleBlogAuthor" tabindex="0"><?php echo esc_html($blogAuthor); ?></p>
                 </div>
                 <div>
-                    <p id="singleBlogDate" tabindex="0"><?php echo esc_html($blogDate); ?></p>
+                    <p tabindex="0"><?php echo esc_html($blogDate); ?></p>
                 </div>
             </div>
 
-<div id="singleBlogTextFull" class="blogTextFull" tabindex="0">
+<div class="blogTextFull" tabindex="0">
   <?php echo $blogTextFull; ?>
 </div>
 
@@ -62,7 +62,7 @@ if (!empty($tags) && is_array($tags)) : ?>
         </div>
 
         <div>
-      <section class="blogRelatedSection" aria_labbelledby="relateredeBlogindlæg relatedBlogTitle relatedBlogCategory relatedBlogAuthor relatedBlogDate relatedBlogText">
+      <section class="blogRelatedSection" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle relatedBlogAuthor">
         <h2 id="relateredeBlogindlæg" tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
@@ -102,12 +102,12 @@ if ($blogCategory && is_object($blogCategory)) {
             <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
           <h3 id="relatedBlogTitle" tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
-          <h4 id="relatedBlogCategory" tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
+          <h4 tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small id="relatedBlogAuthor" class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
-            <small id="relatedBlogDate" class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
+            <small class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <p id="relatedBlogText" class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></p>
+          <p class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></p>
         </div>
       </a>
           <?php
