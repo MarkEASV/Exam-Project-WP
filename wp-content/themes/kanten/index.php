@@ -44,13 +44,13 @@
               $testimonyGiver = get_the_title();
               $testimonyText  = get_field('testimony_text');
         ?>
-              <div class="testimonyCard">
+              <div class="testimonyCard" aria-labelledby="testimonyGiver testimonyText">
                 <div class="testimonyImageContainer">
                   <img src="<?php echo esc_url($testimonyImage['url']); ?>" alt="<?php echo esc_attr($testimonyImage['alt']); ?>" />
                 </div>
                 <div class="testimonyText">
                   <h3 id="testimonyGiver" tabindex="0"><?php echo esc_html($testimonyGiver); ?></h3>
-                  <p id="testimonyText" aria-labelledby="testimonyGiver testimonyText"><?php echo esc_html($testimonyText); ?></p>
+                  <p id="testimonyText"><?php echo esc_html($testimonyText); ?></p>
                 </div>
               </div>
         <?php
@@ -80,19 +80,19 @@
                 $eventDate  = get_field('event_date');
                 $eventPrice = get_field('event_price');
           ?>
-      <a href="<?php the_permalink(); ?>">
+      <a href="<?php the_permalink(); ?> " aria_labbelledby="eventTitle eventText eventDate eventPrice">
         <div class="eventCard">
           <div class="CardImageContainer">
             <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
-          <h3><?php echo esc_html($eventTitle); ?></h3>
-          <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
+          <h3 id="eventTitle"><?php echo esc_html($eventTitle); ?></h3>
+          <div id="eventText" class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
+            <div id="eventDate" class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
+                    <h5 id="eventPrice"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
@@ -137,18 +137,18 @@
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>">
+      <a href="<?php the_permalink(); ?>" aria_labbelledby="blogTitle blogText blogAuthor blogDate blogCategory">
         <div class="blogCard">
           <div class="CardImageContainer">
             <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
-          <h3><?php echo esc_html($blogTitle); ?></h3>
-          <h4><?php echo esc_html($categoryLabel); ?></h4>
+          <h3 id="blogTitle"><?php echo esc_html($blogTitle); ?></h3>
+          <h4 id="blogCategory"><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
-            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+            <small id="blogAuthor" class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
+            <small id="blogDate" class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+          <p id="blogText" class="CardText"><?php echo wp_kses_post($blogText); ?></p>
         </div>
       </a>
           <?php
