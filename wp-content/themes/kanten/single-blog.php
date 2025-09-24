@@ -62,7 +62,7 @@ if (!empty($tags) && is_array($tags)) : ?>
         </div>
 
         <div>
-      <section class="blogRelatedSection" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle relatedBlogAuthor">
+      <section class="blogRelatedSection" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle">
         <h2 id="relateredeBlogindlæg" tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
@@ -104,7 +104,7 @@ if ($blogCategory && is_object($blogCategory)) {
           <h3 id="relatedBlogTitle" tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
           <h4 tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small id="relatedBlogAuthor" class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
           </div>
           <p class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></p>
