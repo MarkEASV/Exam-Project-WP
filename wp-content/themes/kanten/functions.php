@@ -17,6 +17,10 @@ function custom_theme_styles() {
                 if (is_page('sustainability-initiatives')) {
             wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
         }
+
+                        if (is_page('merchview')) {
+            wp_enqueue_style('merchview-style', get_template_directory_uri() . '/assets/merchview.css');
+        }
         }
 
 add_action('wp_enqueue_scripts', 'custom_theme_styles');

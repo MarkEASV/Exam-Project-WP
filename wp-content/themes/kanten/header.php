@@ -19,8 +19,8 @@
                 <li><a href="#"><?php pll_e("events") ?></a></li>
                 <li><a href="<?php echo site_url('/blogsview/'); ?>"><?php pll_e("blogs") ?></a></li>
                 <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>"><?php pll_e("bæredygtighed") ?></a></li>
+                <li><a href="<?php echo site_url('/merchview/'); ?>"><?php pll_e("Merch") ?></a></li>
                 <li><a href="#"><?php pll_e("om") ?></a></li>
-                <li><a href="#"><?php pll_e("støtte") ?></a></li>
             </ul>
         </div>
     </nav>   
