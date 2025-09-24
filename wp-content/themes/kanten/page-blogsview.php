@@ -3,7 +3,7 @@
         <?php while(have_posts()): the_post(); ?>
         
       <section class="blogviewSection">
-        <h2><?php pll_e("alle blogindlæg") ?></h2>
+        <h2 tabindex="0"><?php pll_e("alle blogindlæg") ?></h2>
           <?php
             $args = array(
               'post_type'      => 'blog',

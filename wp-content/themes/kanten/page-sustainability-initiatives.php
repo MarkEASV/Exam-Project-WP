@@ -8,8 +8,8 @@
 <div class="areapic"><?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?></div>
         <section class="statisticsSection">
             <div class="titleArea">
-                <h2><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
-                <p><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
+                <h2 tabindex="0"><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
+                <p tabindex="0"><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
             </div>
 <?php
 $args = array(
@@ -22,7 +22,7 @@ $index = 0;
 
 if ($loop->have_posts()) :
   while ($loop->have_posts()) : $loop->the_post();
-
+    
     $statisticImage = get_field('statistic_image');
     $statisticText  = get_field('statistic_text');
 
@@ -36,12 +36,12 @@ if ($loop->have_posts()) :
         
         <div class="image">
           <?php if ($statisticImage) : ?>
-            <img src="<?php echo esc_url($statisticImage['url']); ?>" alt="<?php echo esc_attr($statisticImage['alt']); ?>" />
+            <img src="<?php echo esc_url($statisticImage['url']); ?>" tabindex="0" alt="<?php echo esc_attr($statisticImage['alt']); ?>" />
           <?php endif; ?>
         </div>
 
         <div class="text">
-          <div class="content">
+          <div class="content" tabindex="0">
             <?php echo wp_kses_post($statisticText); ?>
           </div>
         </div>
@@ -62,8 +62,8 @@ wp_reset_postdata();
 
 <section class="equalityEventSection">
                 <div class="titleArea">
-                <h3><?php pll_e("Equality Week Event") ?></h3>
-                <p><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
+                <h3 tabindex="0"><?php pll_e("Equality Week Event") ?></h3>
+                <p tabindex="0"><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
             </div>
             <div class="equalityEvent">
                  <?php
@@ -91,13 +91,13 @@ wp_reset_postdata();
             <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($eventTitle); ?></h3>
-          <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
+          <div class="CardText" tabindex="0"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardDate" tabindex="0"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
+                    <h5 tabindex="0"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
@@ -118,8 +118,8 @@ wp_reset_postdata();
 
             <section class="equalityInterviewSection">
                 <div class="titleArea">
-                    <h2><?php pll_e("Interview med Dansk Kvindesamfund") ?></h1>
-                    <p><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
+                    <h2 tabindex="0"><?php pll_e("Interview med Dansk Kvindesamfund") ?></h2>
+                    <p tabindex="0"><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
                 </div>
                    <?php
             $args = array(
@@ -137,10 +137,10 @@ wp_reset_postdata();
                 $interviewAnswer = get_field('interview_answer');
           ?>
             <div class="interviewQuestion">
-                <p><?php echo wp_kses_post($interviewQuestion); ?></p>
+                <p tabindex="0"><?php echo wp_kses_post($interviewQuestion); ?></p>
             </div>
             <div class="interviewAnswer">
-                <p><?php echo wp_kses_post($interviewAnswer); ?></p>
+                <p tabindex="0"><?php echo wp_kses_post($interviewAnswer); ?></p>
             </div>
           <?php
               endwhile;
@@ -150,7 +150,7 @@ wp_reset_postdata();
             </section>
 
             <div class="titleArea">
-                        <h2><?php pll_e("Blogindlæg om ligestilling") ?></h2>
+                        <h2 tabindex="0"><?php pll_e("Blogindlæg om ligestilling") ?></h2>
                     </div>
  <section class="blogSustainSection">
           <?php
@@ -181,7 +181,10 @@ wp_reset_postdata();
       <a href="<?php the_permalink(); ?>">
         <div class="blogCard">
           <div class="CardImageContainer">
-            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
+            <div>
+              <?php echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
+            </div>
+            
           </div>
           <h3><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
