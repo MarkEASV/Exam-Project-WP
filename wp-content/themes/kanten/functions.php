@@ -2,6 +2,14 @@
 function custom_theme_styles() {
     wp_enqueue_style('global-style', get_template_directory_uri() . '/style.css');
 
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/mainJs.js', array(), null, true );
+    
+    wp_enqueue_style(
+        'font-awesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
+        array(), 
+    );
+
     
    if (is_front_page()) {
         wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/frontpage.css');

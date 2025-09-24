@@ -16,12 +16,21 @@
             </div>
                 <ul class="languages"><li><?php pll_the_languages() ?></li></ul>
             <ul class="ulNav">
+                <li>
+                    <button id="searchToggle">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
                 <li><a href="#"><?php pll_e("events") ?></a></li>
                 <li><a href="<?php echo site_url('/blogsview/'); ?>"><?php pll_e("blogs") ?></a></li>
                 <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>"><?php pll_e("bæredygtighed") ?></a></li>
                 <li><a href="<?php echo site_url('/merchview/'); ?>"><?php pll_e("Merch") ?></a></li>
                 <li><a href="#"><?php pll_e("om") ?></a></li>
             </ul>
+
+            <div id="searchBar" class="searchBar">
+                <?php get_search_form(); ?>
+            </div>
         </div>
     </nav>   
 <body <?php body_class(); ?>>

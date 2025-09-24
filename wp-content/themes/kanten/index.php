@@ -4,29 +4,15 @@
   <?php while (have_posts()) : the_post(); ?>
 
     <div class="container">
+      <section class="heroSection">
+          <?php 
+              $heroImage = get_field('hero_image');
+          ?>
+          <div class="heroImageContainer">
+              <?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?>
+          </div>
 
-    <!--
-        * lav en field group til frontpage der indeholder:
-         - et image field med sluggen hero_image
-    -->
-        <section class="heroSection">
-            <?php 
-                $heroImage = get_field('hero_image');
-            ?>
-            <div class="heroImageContainer">
-                <?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?>
-            </div>
-
-        </section>
-
-
-
-    <!-- 
-    * lav en post type med sluggen testimony 
-    * lav en field group til testimonials der indeholder:
-     - et image field med sluggen testimony_image
-     - et text area field med sluggen testimony_text
-    -->
+      </section >
 
       <section class="testimonySection">
         <?php
