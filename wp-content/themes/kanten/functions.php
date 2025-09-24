@@ -25,6 +25,7 @@ function custom_theme_styles() {
                         if (is_singular('merch-item')) {
             wp_enqueue_style('merchItem-style', get_template_directory_uri() . '/assets/merchItem.css');
         }
+        
         }
 
 add_action('wp_enqueue_scripts', 'custom_theme_styles');

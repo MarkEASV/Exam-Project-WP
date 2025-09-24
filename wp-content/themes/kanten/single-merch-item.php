@@ -40,11 +40,13 @@
                                     <h3><?php echo esc_html($categoryLabel); ?></h3>
                                     <p>kr <?php echo esc_html($merchPrice); ?>,-</p>
                                     <div class="sizesArea">
-
+                                            
                                     </div>
                                     <div class="merchItemTextAreaBottom">
-                                        <form action=""></form>
-                                        <button class="Læg i kurv" type="button"></button>
+                                        <form class="buyForm" method="post" action="">
+                                                <input type="number" name="quantity" value="1" min="1">
+                                            <button type="submit" class="buyButton">Læg i kurv</button>
+                                        </form>
                                     </div>
                                 </div>
                             </section>

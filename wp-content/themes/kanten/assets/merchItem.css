@@ -74,3 +74,25 @@
     color: var(--secondary-color);
     font-weight: 500;
 }
+
+.merchItemTextAreaBottom {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.buyForm {
+    display: flex;
+}
+
+.buyForm input {
+  width: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.buyButton {
+    width: 80%;
+    padding: 15px;
+    margin-left: auto;
+    border-radius: 20px;
+}
