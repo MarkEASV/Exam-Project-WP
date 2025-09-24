@@ -30,13 +30,13 @@
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>">
+      <a href="<?php the_permalink(); ?>" aria-labbelledby="blogTitle">
         
         <div class="blogCard">
           <div class="CardImageContainer">
             <img src="<?php echo esc_url($blogImage['url'])?>" alt="<?php echo esc_attr($blogImage['alt']); ?>">
           </div>
-          <h3><?php echo esc_html($blogTitle); ?></h3>
+          <h3 id="blogTitle"><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small class="blogAuthor"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>

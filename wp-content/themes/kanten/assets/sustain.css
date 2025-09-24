@@ -201,7 +201,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, auto); /* bedre end 1fr for content */
   gap: var(--grid-gap);
-  margin: 0 auto 200px auto;
+  margin: 0 auto 0 auto;
 }
 
 .blogSustainSection a {

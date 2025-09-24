@@ -6,9 +6,9 @@
     $heroImage = get_field('hero_image');
   ?>
 <div class="areapic"><?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?></div>
-        <section class="statisticsSection">
+        <section class="statisticsSection" aria-labbelledby="sustainFocus">
             <div class="titleArea">
-                <h2 tabindex="0"><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
+                <h2 id="sustainFocus" tabindex="0"><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
                 <p tabindex="0"><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
             </div>
 <?php
@@ -60,9 +60,9 @@ wp_reset_postdata();
 
         </section>
 
-<section class="equalityEventSection">
+<section class="equalityEventSection" aria-labbelledby="sustainEqualityTitle">
                 <div class="titleArea">
-                <h3 tabindex="0"><?php pll_e("Equality Week Event") ?></h3>
+                <h3 id="sustainEqualityTitle" tabindex="0"><?php pll_e("Equality Week Event") ?></h3>
                 <p tabindex="0"><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
             </div>
             <div class="equalityEvent">
@@ -116,9 +116,9 @@ wp_reset_postdata();
             </div>
             </section>
 
-            <section class="equalityInterviewSection">
+            <section class="equalityInterviewSection" aria-labbelledby="sustainInterviewTitle">
                 <div class="titleArea">
-                    <h2 tabindex="0"><?php pll_e("Interview med Dansk Kvindesamfund") ?></h2>
+                    <h2 id="sustainInterviewTitle" tabindex="0"><?php pll_e("Interview med Dansk Kvindesamfund") ?></h2>
                     <p tabindex="0"><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
                 </div>
                    <?php
@@ -152,7 +152,7 @@ wp_reset_postdata();
             <div class="titleArea">
                         <h2 tabindex="0"><?php pll_e("Blogindlæg om ligestilling") ?></h2>
                     </div>
- <section class="blogSustainSection">
+ <section class="blogSustainSection" aria-labbelledby="sustainBlogTitle ">
           <?php
             $args = array(
               'post_type'      => 'blog',
@@ -186,7 +186,7 @@ wp_reset_postdata();
             </div>
             
           </div>
-          <h3><?php echo esc_html($blogTitle); ?></h3>
+          <h3 id="sustainBlogTitle"><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>

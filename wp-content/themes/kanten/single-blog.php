@@ -18,7 +18,7 @@
                           }
             ?>
 
-<section class="articleSite">
+<section class="articleSite" aria-labbelledby="singleBlogTitle singleBlogSkrevetAf singleBlogAuthor">
         <div>
                 <h2 tabindex="0"> <?php echo esc_html($categoryLabel); ?></h2>
             <div class="articleSiteCategory">
@@ -43,11 +43,11 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         
         <div class="articleSiteSetup">
-            <h1 tabindex="0"><?php echo esc_html($blogTitle); ?></h1>
+            <h2 id="singleBlogTitle" tabindex="0"><?php echo esc_html($blogTitle); ?></h2>
             <div class="articleAuthorText">
                 <div>
-                    <p tabindex="0"><?php pll_e("skrevet af") ?> </p>
-                    <p tabindex="0"><?php echo esc_html($blogAuthor); ?></p>
+                    <p id="singleBlogSkrevetAf" tabindex="0"><?php pll_e("skrevet af") ?> </p>
+                    <p id="singleBlogAuthor" tabindex="0"><?php echo esc_html($blogAuthor); ?></p>
                 </div>
                 <div>
                     <p tabindex="0"><?php echo esc_html($blogDate); ?></p>
@@ -62,8 +62,8 @@ if (!empty($tags) && is_array($tags)) : ?>
         </div>
 
         <div>
-      <section class="blogRelatedSection">
-        <h2 tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
+      <section class="blogRelatedSection" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle">
+        <h2 id="relateredeBlogindlæg" tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
 
@@ -101,13 +101,13 @@ if ($blogCategory && is_object($blogCategory)) {
           <div class="cardImageContainer">
             <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
-          <h3 tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
+          <h3 id="relatedBlogTitle" tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
           <h4 tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></div>
+          <p class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></p>
         </div>
       </a>
           <?php
