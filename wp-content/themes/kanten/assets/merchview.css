@@ -68,7 +68,7 @@
 
 .merchPriceContainer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end;  
   padding: 10px 15px 15px 0;
 }
 
