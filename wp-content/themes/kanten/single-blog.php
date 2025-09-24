@@ -62,7 +62,7 @@ if (!empty($tags) && is_array($tags)) : ?>
         </div>
 
         <div>
-      <section class="blogRelatedSection" aria_labbelledby="relateredeBlogindlæg ">
+      <section class="blogRelatedSection" aria_labbelledby="relateredeBlogindlæg relatedBlogTitle relatedBlogCategory relatedBlogAuthor relatedBlogDate relatedBlogText">
         <h2 id="relateredeBlogindlæg" tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');

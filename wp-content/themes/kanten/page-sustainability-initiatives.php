@@ -6,10 +6,10 @@
     $heroImage = get_field('hero_image');
   ?>
 <div class="areapic"><?php  echo wp_get_attachment_image( $heroImage['ID'], 'hero' ); ?></div>
-        <section class="statisticsSection">
+        <section class="statisticsSection" aria_labbelledby="sustainFocus sustainFocusText sustainText">
             <div class="titleArea">
-                <h2 tabindex="0"><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
-                <p tabindex="0"><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
+                <h2 id="sustainFocus" tabindex="0"><?php pll_e("Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.") ?></h2>
+                <p id="sustainFocusText" tabindex="0"><?php pll_e("På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.") ?></p>
             </div>
 <?php
 $args = array(
@@ -41,7 +41,7 @@ if ($loop->have_posts()) :
         </div>
 
         <div class="text">
-          <div class="content" tabindex="0">
+          <div id="sustainText" class="content" tabindex="0">
             <?php echo wp_kses_post($statisticText); ?>
           </div>
         </div>
@@ -60,10 +60,10 @@ wp_reset_postdata();
 
         </section>
 
-<section class="equalityEventSection">
+<section class="equalityEventSection" aria_labbelledby="sustainEqualityTitle sustainEqualityText sustainEventText sustainEventDate sustainEventPrice sustainEventPrice" >
                 <div class="titleArea">
-                <h3 tabindex="0"><?php pll_e("Equality Week Event") ?></h3>
-                <p tabindex="0"><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
+                <h3 id="sustainEqualityTitle" tabindex="0"><?php pll_e("Equality Week Event") ?></h3>
+                <p id="sustainEqualityText" tabindex="0"><?php pll_e("Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.") ?></p>
             </div>
             <div class="equalityEvent">
                  <?php
@@ -91,17 +91,17 @@ wp_reset_postdata();
             <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
           <h3><?php echo esc_html($eventTitle); ?></h3>
-          <div class="CardText" tabindex="0"><?php echo wp_kses_post($eventText); ?></div>
+          <div id="sustainEventText" class="CardText" tabindex="0"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div class="eventCardDate" tabindex="0"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
+            <div id="sustainEventDate" class="eventCardDate" tabindex="0"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5 tabindex="0"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
+                    <h5 id="sustainEventPrice" tabindex="0"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
-                      <h5><?php echo $eventPrice; ?>.-</h5>
+                      <h5 id="sustainEventPrice"><?php echo $eventPrice; ?>.-</h5>
                     </div>
                 <?php endif; ?>
             </div>
@@ -116,10 +116,10 @@ wp_reset_postdata();
             </div>
             </section>
 
-            <section class="equalityInterviewSection">
+            <section class="equalityInterviewSection" aria_labbelledby="sustainInterviewTitle sustainInterviewText sustainInterviewQuestions sustainInterviewAnswers">
                 <div class="titleArea">
-                    <h2 tabindex="0"><?php pll_e("Interview med Dansk Kvindesamfund") ?></h2>
-                    <p tabindex="0"><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
+                    <h2 id="sustainInterviewTitle" tabindex="0"><?php pll_e("Interview med Dansk Kvindesamfund") ?></h2>
+                    <p id="sustainInterviewText" tabindex="0"><?php pll_e("I forbindelse med vores ligestillingsuge har vi talt med en repræsentant fra Dansk Kvindesamfund. Interviewet giver et indblik i de udfordringer og muligheder, der præger arbejdet med ligestilling i erhvervslivet, og sætter fokus på, hvorfor temaet også er vigtigt på scenen hos os på Kanten.") ?></p>
                 </div>
                    <?php
             $args = array(
@@ -137,10 +137,10 @@ wp_reset_postdata();
                 $interviewAnswer = get_field('interview_answer');
           ?>
             <div class="interviewQuestion">
-                <p tabindex="0"><?php echo wp_kses_post($interviewQuestion); ?></p>
+                <p id="sustainInterviewQuestions" tabindex="0"><?php echo wp_kses_post($interviewQuestion); ?></p>
             </div>
             <div class="interviewAnswer">
-                <p tabindex="0"><?php echo wp_kses_post($interviewAnswer); ?></p>
+                <p id="sustainInterviewAnswers" tabindex="0"><?php echo wp_kses_post($interviewAnswer); ?></p>
             </div>
           <?php
               endwhile;
@@ -152,7 +152,7 @@ wp_reset_postdata();
             <div class="titleArea">
                         <h2 tabindex="0"><?php pll_e("Blogindlæg om ligestilling") ?></h2>
                     </div>
- <section class="blogSustainSection">
+ <section class="blogSustainSection" aria_labbelledby="sustainBlogTitle sustainBlogCategory sustainBlogAuthor sustainBlogDate sustainBlogText">
           <?php
             $args = array(
               'post_type'      => 'blog',
@@ -186,13 +186,13 @@ wp_reset_postdata();
             </div>
             
           </div>
-          <h3><?php echo esc_html($blogTitle); ?></h3>
-          <h4><?php echo esc_html($categoryLabel); ?></h4>
+          <h3 id="sustainBlogTitle"><?php echo esc_html($blogTitle); ?></h3>
+          <h4 id="sustainBlogCategory"><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
-            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+            <small id="sustainBlogAuthor" class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
+            <small id="sustainBlogDate" class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+          <div id="sustainBlogText" class="CardText"><?php echo wp_kses_post($blogText); ?></div>
         </div>
       </a>
           <?php
