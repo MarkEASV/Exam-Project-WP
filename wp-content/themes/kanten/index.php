@@ -49,7 +49,7 @@
                   <img src="<?php echo esc_url($testimonyImage['url']); ?>" alt="<?php echo esc_attr($testimonyImage['alt']); ?>" />
                 </div>
                 <div class="testimonyText">
-                  <h3><?php echo esc_html($testimonyGiver); ?></h3>
+                  <h3 tabindex="0"><?php echo esc_html($testimonyGiver); ?></h3>
                   <p><?php echo esc_html($testimonyText); ?></p>
                 </div>
               </div>
@@ -61,7 +61,7 @@
       </section>
     
       <section class="eventFrontpageSection">
-        <h2><?php pll_e("Kommende Events")?></h2>
+        <h2 tabindex="0"><?php pll_e("Kommende Events")?></h2>
           <?php
             $args = array(
               'post_type'      => 'event',
@@ -111,7 +111,7 @@
       </section>
 
       <section class="blogFrontpageSection">
-        <h2><?php pll_e("seneste blogindlæg") ?></h2>
+        <h2 tabindex="0"><?php pll_e("seneste blogindlæg") ?></h2>
           <?php
             $args = array(
               'post_type'      => 'blog',

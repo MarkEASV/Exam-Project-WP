@@ -20,7 +20,7 @@
 
 <section class="articleSite">
         <div>
-                <h2> <?php echo esc_html($categoryLabel); ?></h2>
+                <h2 tabindex="0"> <?php echo esc_html($categoryLabel); ?></h2>
             <div class="articleSiteCategory">
 <?php
 $tags = get_field('blog_tags');
@@ -28,7 +28,7 @@ $tags = get_field('blog_tags');
 if (!empty($tags) && is_array($tags)) : ?>
     <div class="articleSiteCategory">
         <?php foreach ($tags as $tag) : ?>
-            <span class="articleCategoryBox"><?php echo esc_html($tag->name); ?></span>
+            <span tabindex="0" class="articleCategoryBox"><?php echo esc_html($tag->name); ?></span>
         <?php endforeach; ?>
     </div>
 <?php endif; ?>
@@ -43,18 +43,18 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         
         <div class="articleSiteSetup">
-            <h1><?php echo esc_html($blogTitle); ?></h1>
+            <h1 tabindex="0"><?php echo esc_html($blogTitle); ?></h1>
             <div class="articleAuthorText">
                 <div>
-                    <p><?php pll_e("skrevet af") ?> </p>
-                    <p><?php echo esc_html($blogAuthor); ?></p>
+                    <p tabindex="0"><?php pll_e("skrevet af") ?> </p>
+                    <p tabindex="0"><?php echo esc_html($blogAuthor); ?></p>
                 </div>
                 <div>
-                    <?php echo esc_html($blogDate); ?>
+                    <p tabindex="0"><?php echo esc_html($blogDate); ?></p>
                 </div>
             </div>
 
-<div class="blogTextFull">
+<div class="blogTextFull" tabindex="0">
   <?php echo $blogTextFull; ?>
 </div>
 
@@ -63,7 +63,7 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         <div>
       <section class="blogRelatedSection">
-        <h2><?php pll_e("Relaterede Blogindlæg") ?></h2>
+        <h2 tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
 
@@ -101,13 +101,13 @@ if ($blogCategory && is_object($blogCategory)) {
           <div class="cardImageContainer">
             <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
-          <h3><?php echo esc_html($blogTitle); ?></h3>
-          <h4><?php echo esc_html($categoryLabel); ?></h4>
+          <h3 tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
+          <h4 tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small class="blogAuthor"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
-            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+            <small class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="cardText"><?php echo wp_kses_post($blogText); ?></div>
+          <div class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></div>
         </div>
       </a>
           <?php

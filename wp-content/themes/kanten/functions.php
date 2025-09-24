@@ -10,7 +10,6 @@ function custom_theme_styles() {
         if (is_singular('blog')) {
         wp_enqueue_style('blog-style', get_template_directory_uri() . '/assets/blog.css');
     }
-
         if (is_page('blogsview')) {
             wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
         }
@@ -67,7 +66,7 @@ add_image_size( 'event-thumb', 595, 335, true );
 
 // Register taxonomy term names with Polylang string translations
 add_action('init', function () {
-    $taxonomy = 'blog-category'; // your taxonomy key
+    $taxonomy = 'blog-category'; // taxonomy key
     $terms = get_terms(array(
         'taxonomy'   => $taxonomy,
         'hide_empty' => false,
