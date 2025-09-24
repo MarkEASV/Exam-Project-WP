@@ -80,19 +80,19 @@
                 $eventDate  = get_field('event_date');
                 $eventPrice = get_field('event_price');
           ?>
-      <a href="<?php the_permalink(); ?> " aria_labbelledby="eventTitle eventText eventDate eventPrice">
+      <a href="<?php the_permalink(); ?> " aria-labbelledby="eventTitle">
         <div class="eventCard">
           <div class="CardImageContainer">
             <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
           </div>
           <h3 id="eventTitle"><?php echo esc_html($eventTitle); ?></h3>
-          <div id="eventText" class="CardText"><?php echo wp_kses_post($eventText); ?></div>
+          <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
           <div class="eventCardBottom">
-            <div id="eventDate" class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
+            <div class="eventCardDate"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
             <div class="eventCardPrice">
                 <?php if ($eventPrice < 1) : ?>
                   <div class="eventPrice">
-                    <h5 id="eventPrice"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
+                    <h5><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
                   </div>
                   <?php else : ?>
                     <div class="eventPriceOff">
@@ -137,18 +137,18 @@
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>" aria_labbelledby="blogTitle blogText blogAuthor blogDate blogCategory">
+      <a href="<?php the_permalink(); ?>" aria-labbelledby="blogTitle">
         <div class="blogCard">
           <div class="CardImageContainer">
             <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
           </div>
           <h3 id="blogTitle"><?php echo esc_html($blogTitle); ?></h3>
-          <h4 id="blogCategory"><?php echo esc_html($categoryLabel); ?></h4>
+          <h4 ><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
-            <small id="blogAuthor" class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
-            <small id="blogDate" class="blogDate"><?php echo esc_html($blogDate); ?></small>
+            <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>
+            <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <p id="blogText" class="CardText"><?php echo wp_kses_post($blogText); ?></p>
+          <p class="CardText"><?php echo wp_kses_post($blogText); ?></p>
         </div>
       </a>
           <?php
