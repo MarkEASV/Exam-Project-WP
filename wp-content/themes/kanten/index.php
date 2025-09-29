@@ -14,7 +14,7 @@
       </section>
 
       <!-- Testimonials -->
-      <section class="testimonySection" aria-labelledby="testimonyHeading">
+      <section class="testimonySection" role="main" aria-labelledby="testimonyHeading">
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
@@ -29,7 +29,7 @@
               <img src="<?php echo esc_url($testimonyImage['url']); ?>" alt="<?php echo esc_attr($testimonyImage['alt']); ?>" />
             </div>
             <div class="testimonyText">
-              <h3><?php echo esc_html($testimonyGiver); ?></h3>
+              <h3 id="testimonyHeader"><?php echo esc_html($testimonyGiver); ?></h3>
               <p><?php echo esc_html($testimonyText); ?></p>
             </div>
           </article>

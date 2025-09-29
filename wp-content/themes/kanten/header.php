@@ -32,7 +32,6 @@
                 <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
                     <input type="text" name="s" placeholder="Search for...">
                     <button type="submit">Søg</button>
-
                 </form>
             </div>
         </div>
