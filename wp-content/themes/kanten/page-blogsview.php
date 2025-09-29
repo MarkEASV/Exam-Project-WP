@@ -30,7 +30,7 @@
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>" aria-labbelledby="blogTitle">
+      <a href="<?php the_permalink(); ?>" aria-labbelledby="blogTitle blogText">
         
         <div class="blogCard">
           <div class="CardImageContainer">
@@ -42,7 +42,7 @@
             <small class="blogAuthor"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
             <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
           </div>
-          <div class="CardText"><?php echo wp_kses_post($blogText); ?></div>
+          <div id="blogText" class="CardText"><?php echo wp_kses_post($blogText); ?></div>
         </div>
       </a>
           <?php

@@ -27,15 +27,15 @@
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>">
+      <a href="<?php the_permalink(); ?>" aria-labbelledby="merchCardTitle merchCardPrice">
         
         <div class="merchCard">
           <div class="merchCardImageContainer">
             <img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>">
           </div>
           <span><?php echo esc_html($categoryLabel); ?></span>
-          <h4><?php echo esc_html($merchTitle); ?></h4>
-          <div class="merchPriceContainer"><p>kr <?php echo esc_html($merchPrice); ?>,-</p></div>
+          <h4 id="merchCardTitle"><?php echo esc_html($merchTitle); ?></h4>
+          <div id="merchCardPrice" class="merchPriceContainer"><p>kr <?php echo esc_html($merchPrice); ?>,-</p></div>
 
   
         </div>
