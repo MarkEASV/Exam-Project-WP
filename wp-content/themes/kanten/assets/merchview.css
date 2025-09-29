@@ -48,11 +48,11 @@
   display: block; 
 }
 
-.merchCard h3 {
+.merchCard h4 {
   padding: 0px 15px 0px 15px;
 }
 
-.merchCard h4 {
+.merchCard span {
   margin: 15px 15px 5px 15px;
   padding: 3px 10px 5px 10px;
   width: fit-content;

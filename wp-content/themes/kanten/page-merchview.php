@@ -33,8 +33,8 @@
           <div class="merchCardImageContainer">
             <img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>">
           </div>
-          <h4><?php echo esc_html($categoryLabel); ?></h4>
-          <h3><?php echo esc_html($merchTitle); ?></h3>
+          <span><?php echo esc_html($categoryLabel); ?></span>
+          <h4><?php echo esc_html($merchTitle); ?></h4>
           <div class="merchPriceContainer"><p>kr <?php echo esc_html($merchPrice); ?>,-</p></div>
 
   

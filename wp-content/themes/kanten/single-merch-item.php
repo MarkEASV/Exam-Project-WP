@@ -44,7 +44,8 @@
                                     </div>
                                     <div class="merchItemTextAreaBottom">
                                         <form class="buyForm" method="post" action="">
-                                                <input type="number" name="quantity" value="1" min="1">
+                                            <label for="purchase-amount" class="sr-only">Purchase amount</label>
+                                            <input id="purchase-amount" type="number" name="quantity" value="1" min="1">
                                             <button type="submit" class="buyButton">Læg i kurv</button>
                                         </form>
                                     </div>
@@ -90,7 +91,7 @@
                                 <div class="merchCardImageContainer">
                                     <img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>">
                                 </div>
-                                <h5><?php echo esc_html($categoryLabel); ?></h5>
+                                <span><?php echo esc_html($categoryLabel); ?></span>
                                 <h4><?php echo esc_html($merchTitle); ?></h4>
                                 <div class="merchPriceContainer"><p>kr <?php echo esc_html($merchPrice); ?>,-</p></div>
 
