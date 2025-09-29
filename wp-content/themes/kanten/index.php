@@ -13,8 +13,15 @@
         </div>
       </section>
 
+      <section aria-labelledby="frontpageHeading">
+        <h1 id="frontpageHeading" class="h1Hidden">
+          Kanten Esbjerg
+        </h1>
+      </section>
+
       <!-- Testimonials -->
       <section class="testimonySection" role="main" aria-labelledby="testimonyHeading">
+        <h2>Velkommen til kanten!</h2>
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
