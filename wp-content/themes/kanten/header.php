@@ -17,7 +17,7 @@
                 <ul class="languages"><li><?php pll_the_languages() ?></li></ul>
             <ul class="ulNav">
                 <li>
-                    <button id="searchToggle">
+                    <button id="searchToggle" alt="search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </li>
@@ -29,7 +29,11 @@
             </ul>
 
             <div id="searchBar" class="searchBar">
-                <?php get_search_form(); ?>
+                <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
+                    <input type="text" name="s" placeholder="Search for...">
+                    <button type="submit">Søg</button>
+
+                </form>
             </div>
         </div>
     </nav>   
