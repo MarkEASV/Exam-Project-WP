@@ -36,7 +36,7 @@
                                     <div class="merchMainImage"><img src="<?php echo esc_url($merchImage['url'])?>" alt="<?php echo esc_attr($merchImage['alt']); ?>"></div>
                                 </div>
                                 <div class="merchItemTextArea">
-                                    <h2><?php echo esc_html($merchTitle); ?></h2>
+                                    <h2 aria-labbelledby="ProductTitle productDescription" id="ProductTitle" tabindex="0"><?php echo esc_html($merchTitle); ?></h2>
                                     <h3><?php echo esc_html($categoryLabel); ?></h3>
                                     <p>kr <?php echo esc_html($merchPrice); ?>,-</p>
                                     <div class="sizesArea">
@@ -56,7 +56,7 @@
                                 <div class="merchItemSpecifications">
                                     <?php echo $merchSpecifications; ?>
                                 </div>
-                                <div class="merchItemDescription">
+                                <div id="productDescription" class="merchItemDescription">
                                     <?php echo $merchDescription; ?>
                                 </div>
                             </section>
