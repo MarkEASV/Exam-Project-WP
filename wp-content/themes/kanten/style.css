@@ -139,6 +139,29 @@
   
 }
 
+.sr-only-button {
+    position: relative; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em;
+    font-size: 1rem;
+    color: inherit;
+}
+
+
+.sr-only-button .sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden;
+    padding: 0; 
+    position: absolute;
+    width: 1px; 
+    white-space: nowrap;
+}
+
 
 .languages {
   list-style: none;

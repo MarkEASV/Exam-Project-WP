@@ -17,8 +17,8 @@
                 <ul class="languages"><li><?php pll_the_languages() ?></li></ul>
             <ul class="ulNav">
                 <li>
-                    <button id="searchToggle" alt="search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                    <button id="searchToggle" class="sr-only-button" aria-label="søg">    
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
                     </button>
                 </li>
                 <li><a href="#"><?php pll_e("events") ?></a></li>
