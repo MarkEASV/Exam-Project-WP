@@ -15,14 +15,14 @@
       
       <!-- Hidden header -->
       <section class="heroTextSection">
-        <h1 class="h1Hidden" aria-labelledby="Kanten Esbjerg">
+        <h1 class="h1Hidden">
           Kanten Esbjerg
         </h1>
       </section>
 
       <!-- Testimonials -->
       <section class="testimonySection" role="main">
-        <h2 tabindex="0" aria-labelledby="testimonyHeading">Velkommen til kanten!</h2>
+        <h2 tabindex="0" id="welcomeKanten" aria-labelledby="welcomeKanten testimonyHeading">Velkommen til kanten!</h2>
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
