@@ -12,9 +12,10 @@
           <?php echo wp_get_attachment_image($heroImage['ID'], 'hero'); ?>
         </div>
       </section>
-
-      <section>
-        <h1 class="h1Hidden">
+      
+      <!-- Hidden header -->
+      <section class="heroTextSection">
+        <h1 class="h1Hidden" aria-labelledby="Kanten Esbjerg">
           Kanten Esbjerg
         </h1>
       </section>
