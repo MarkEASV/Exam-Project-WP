@@ -116,11 +116,16 @@
   color: var(--main-color);
 }
 
+#relatedBlogTitle {
+  display: none;
+}
+
 .CardImageContainer {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden; 
   border-radius: 12px 12px 0 0; 
+  margin-bottom: 1rem;
 }
 
 .CardImageContainer img {
