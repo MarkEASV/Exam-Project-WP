@@ -4,7 +4,7 @@
     margin: 100px auto 0 auto;
 }
 
-.articleSite h3 {
+.articleSite h2 {
     margin-top: 5px;
     color: var(--secondary-color);
     font-size: 2.5rem;
@@ -13,7 +13,6 @@
 .articleSite h3 {
     margin-top: 5px;
     color: var(--secondary-color);
-    text-decoration: underline;
     font-size: 1.8rem;
 }
 
@@ -116,11 +115,16 @@
   color: var(--main-color);
 }
 
+#relatedBlogTitle {
+  display: none;
+}
+
 .CardImageContainer {
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden; 
   border-radius: 12px 12px 0 0; 
+  margin-bottom: 1rem;
 }
 
 .CardImageContainer img {

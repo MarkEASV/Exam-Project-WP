@@ -1,0 +1,229 @@
+0000.002 (0) Opened log file at time: Wed, 01 Oct 2025 09:24:03 +0000 on http://examprojekt3rd.local
+0000.042 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.25.7 WP: 6.8.2 PHP: 8.2.27 (cgi-fcgi, Windows NT LAPTOP-59UPHKNH 10.0 build 26100 (Windows 11) AMD64) MySQL: 8.0.43-34 (max packet size=104857600) WPLANG: en_US Server: nginx/1.26.1 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 5.6M | 6M) multisite: N openssl: OpenSSL 3.0.15 3 Sep 2024 mcrypt: N LANG:  WP Proxy: disabled ZipArchive::addFile: Y
+0000.055 (0) Free space on disk containing Updraft's temporary directory: 112430 MB
+0000.111 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.136 (0) Semaphore (fd, wp_options) being initialised
+0000.188 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.226 (0) Set semaphore last lock (fd) time to 2025-10-01 09:24:03
+0000.237 (0) Semaphore lock (fd) complete
+0000.305 (0) Backup run: resumption=0, nonce=68dd2100a255, file_nonce=68dd2100a255 begun at=1759310643 (0s ago), job type=backup
+0000.346 (0) Scheduling a resumption (1) after 300 seconds (1759310943) in case this run gets aborted
+0000.483 (0) Checking if we have a zip executable available
+0000.515 (0) Creation of backups of directories: beginning
+0000.611 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0002.108 (0) Total entities for the zip file: 402 directories, 2712 files (0 skipped as non-modified), 51.6 MB
+0002.203 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0002.293 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0002.385 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0002.492 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0002.570 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0002.650 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0002.732 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0002.811 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0002.890 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0002.998 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1000 files added (on-disk size: 0 KB)
+0003.009 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (24.7 MB, 2712 files batched, 1001 (1001) added so far); re-opening (prior size: 0 KB)
+0042.320 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1100 files added (on-disk size: 7923.8 KB)
+0042.393 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1200 files added (on-disk size: 7923.8 KB)
+0042.477 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1300 files added (on-disk size: 7923.8 KB)
+0042.557 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1400 files added (on-disk size: 7923.8 KB)
+0042.635 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1500 files added (on-disk size: 7923.8 KB)
+0042.712 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1600 files added (on-disk size: 7923.8 KB)
+0042.960 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1700 files added (on-disk size: 7923.8 KB)
+0043.195 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1800 files added (on-disk size: 7923.8 KB)
+0043.414 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 1900 files added (on-disk size: 7923.8 KB)
+0043.500 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2000 files added (on-disk size: 7923.8 KB)
+0043.512 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (22.7 MB, 2712 files batched, 1001 (2002) added so far); re-opening (prior size: 7923.8 KB)
+0057.024 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2100 files added (on-disk size: 14655.6 KB)
+0057.113 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2200 files added (on-disk size: 14655.6 KB)
+0057.192 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2300 files added (on-disk size: 14655.6 KB)
+0057.298 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2400 files added (on-disk size: 14655.6 KB)
+0057.384 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2500 files added (on-disk size: 14655.6 KB)
+0057.606 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2600 files added (on-disk size: 14655.6 KB)
+0057.714 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.tmp: 2700 files added (on-disk size: 14655.6 KB)
+0058.792 (0) Creating zip file manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.list-temp.tmp)
+0058.833 (0) Successfully created zip file manifest (size: 211164)
+0059.186 (0) Created plugins zip (0) - 16018.8 KB in 58.5 s (273.7 KB/s) (sha1: 61a44a2a1f22cf368087c753b104e42eac0af5ce, sha256: 63473dbed297b44fbe07c9711aa35faffa991b89546e9a6d80ffd06f6e5467e0)
+0059.220 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0059.231 (0) No remote despatch: user chose no remote backup service
+0059.252 (0) Recording as successfully uploaded: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip
+0059.274 (0) Deleting zip manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip.list.tmp)
+0059.334 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0059.355 (0) Number of backup sets in history: 0; groups (db): 1
+0059.365 (0) Number of backup sets in history: 0; groups (files): 1
+0059.375 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0059.442 (0) Beginning creation of dump of themes (split every: 400 MB)
+0060.167 (0) Total entities for the zip file: 51 directories, 424 files (0 skipped as non-modified), 13.7 MB
+0060.349 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0060.525 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0060.752 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0060.994 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0075.676 (0) Creating zip file manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.list-temp.tmp)
+0075.690 (0) Successfully created zip file manifest (size: 29623)
+0075.890 (0) Created themes zip (0) - 12917.7 KB in 16.4 s (786.5 KB/s) (sha1: 94b4fbac17e63938dfe49b743ac709ea5306b3ba, sha256: f3e4c1e55442b8329d567b8fa0d9e3b5556caa03c2d8a919554a05c8b720eb9c)
+0075.926 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0075.953 (0) No remote despatch: user chose no remote backup service
+0075.973 (0) Recording as successfully uploaded: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip
+0075.995 (0) Deleting zip manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip.list.tmp)
+0076.026 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0076.055 (0) Number of backup sets in history: 0; groups (db): 1
+0076.065 (0) Number of backup sets in history: 0; groups (files): 1
+0076.074 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0076.147 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots,wp-staging
+0076.157 (0) Looking for candidates to backup in: C:\Users\noahm\Local Sites\examprojekt3rd\app\public/wp-content/uploads
+0076.168 (0) finding files: 2025: adding to list (1)
+0076.181 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0076.471 (0) Total entities for the zip file: 4 directories, 231 files (0 skipped as non-modified), 11.8 MB
+0076.588 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0076.705 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip.tmp: 200 files added (on-disk size: 0 KB)
+0081.106 (0) Creating zip file manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip.list-temp.tmp)
+0081.125 (0) Successfully created zip file manifest (size: 17488)
+0081.459 (0) Created uploads zip (0) - 12015 KB in 5.3 s (2287.3 KB/s) (sha1: f2c08039af49ad6cb74424500d07790eb5f35a4f, sha256: c7b8b9e8ce4a0df41ae9319c665d6c57503d96a906fb889f8d683166e69f18f9)
+0081.487 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0081.497 (0) No remote despatch: user chose no remote backup service
+0081.516 (0) Recording as successfully uploaded: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip
+0081.537 (0) Deleting zip manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip.list.tmp)
+0081.569 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0081.589 (0) Number of backup sets in history: 0; groups (db): 1
+0081.600 (0) Number of backup sets in history: 0; groups (files): 1
+0081.610 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0081.667 (0) No backup of mu-plugins: excluded by user's options
+0081.686 (0) Beginning backup of other directories found in the content directory (index: 0)
+0081.707 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0081.720 (0) Looking for candidates to backup in: C:\Users\noahm\Local Sites\examprojekt3rd\app\public/wp-content
+0081.730 (0) finding files: ai1wm-backups: skipping: excluded by options (glob)
+0081.741 (0) finding files: index.php: adding to list (1)
+0081.750 (0) finding files: languages: adding to list (2)
+0081.760 (0) finding files: plugins: skipping: this is the plugins directory
+0081.770 (0) finding files: themes: skipping: this is the themes directory
+0081.780 (0) finding files: updraft: skipping: this is the updraft directory
+0081.790 (0) finding files: upgrade: skipping: excluded by options
+0081.799 (0) finding files: uploads: skipping: this is the uploads directory
+0081.987 (0) Total entities for the zip file: 1 directories, 142 files (0 skipped as non-modified), 7.3 MB
+0082.139 (0) Zip: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0086.595 (0) Creating zip file manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-others.zip.list-temp.tmp)
+0086.609 (0) Successfully created zip file manifest (size: 8509)
+0086.674 (0) Created others zip (0) - 1888.5 KB in 4.8 s (389.5 KB/s) (sha1: da1ce8a4d3d2186922c8d7272db1d9ee5c5d68af, sha256: 10bdf27b0b8625e2ca668fec193ccb7fc2e863537f3e2c94481b39449be65dc9)
+0086.707 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0086.717 (0) No remote despatch: user chose no remote backup service
+0086.737 (0) Recording as successfully uploaded: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-others.zip
+0086.757 (0) Deleting zip manifest (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-others.zip.list.tmp)
+0086.786 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0086.805 (0) Number of backup sets in history: 0; groups (db): 1
+0086.815 (0) Number of backup sets in history: 0; groups (files): 1
+0086.825 (0) Retain: saving new backup history (sets now: 0) and finishing retain operation
+0086.909 (0) Saving backup status to database (elements: 8)
+0086.948 (0) Beginning creation of database dump (WordPress DB)
+0086.977 (0) SQL compatibility mode is: NO_ENGINE_SUBSTITUTION
+0087.119 (0) Table wp_options: Total expected rows (via COUNT): 222
+0087.130 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0087.364 (0) Table wp_options: Rows added in this batch (next record: 1267): 218 (uncompressed bytes in this segment=1110127) in 0.29 seconds
+0087.406 (0) Table wp_options: finishing file(s) (2, 219.8 KB)
+0087.680 (0) Table wp_users: Total expected rows (via COUNT): 1
+0087.690 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0087.731 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1397) in 0.30 seconds
+0087.780 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0087.862 (0) Table wp_usermeta: Total expected rows (via COUNT): 33
+0087.872 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0087.911 (0) Table wp_usermeta: Rows added in this batch (next record: 33): 33 (uncompressed bytes in this segment=4477) in 0.10 seconds
+0087.964 (0) Table wp_usermeta: finishing file(s) (2, 1.7 KB)
+0088.266 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0088.298 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=677) in 0.30 seconds
+0088.353 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0088.419 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0088.429 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0088.467 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=2118) in 0.08 seconds
+0088.510 (0) Table wp_comments: finishing file(s) (2, 0.7 KB)
+0088.577 (0) Table wp_links: Total expected rows (via COUNT): 0
+0088.609 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1298) in 0.06 seconds
+0088.648 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0088.732 (0) Table wp_postmeta: Total expected rows (via COUNT): 499
+0088.743 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0088.802 (0) Table wp_postmeta: Rows added in this batch (next record: 563): 499 (uncompressed bytes in this segment=114019) in 0.12 seconds
+0088.858 (0) Table wp_postmeta: finishing file(s) (2, 24.5 KB)
+0088.944 (0) Table wp_posts: Total expected rows (via COUNT): 136
+0088.954 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0089.008 (0) Table wp_posts: Rows added in this batch (next record: 162): 136 (uncompressed bytes in this segment=93367) in 0.11 seconds
+0089.061 (0) Table wp_posts: finishing file(s) (2, 13.9 KB)
+0089.116 (0) Table wp_term_relationships: Total expected rows (approximate): 19
+0089.155 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 116 (uncompressed bytes in this segment=2316) in 0.06 seconds
+0089.199 (0) Table wp_term_relationships: finishing file(s) (2, 0.7 KB)
+0089.285 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 54
+0089.296 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0089.334 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 55): 54 (uncompressed bytes in this segment=3635) in 0.10 seconds
+0089.383 (0) Table wp_term_taxonomy: finishing file(s) (2, 1 KB)
+0089.469 (0) Table wp_termmeta: Total expected rows (via COUNT): 2
+0089.479 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0089.522 (0) Table wp_termmeta: Rows added in this batch (next record: 2): 2 (uncompressed bytes in this segment=8213) in 0.11 seconds
+0089.577 (0) Table wp_termmeta: finishing file(s) (2, 2.1 KB)
+0089.639 (0) Table wp_terms: Total expected rows (via COUNT): 54
+0089.649 (0) Table is relatively small; fetch_rows will thus be: 100 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0089.688 (0) Table wp_terms: Rows added in this batch (next record: 55): 54 (uncompressed bytes in this segment=2959) in 0.08 seconds
+0089.729 (0) Table wp_terms: finishing file(s) (2, 1 KB)
+0089.739 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_commentmeta
+0089.749 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_comments
+0089.761 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_links
+0089.770 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_options
+0089.780 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_postmeta
+0089.790 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_posts
+0089.800 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_term_relationships
+0089.810 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_term_taxonomy
+0089.819 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_termmeta
+0089.830 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_terms
+0089.841 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_usermeta
+0089.851 (0) Skipping table (lacks our prefix (wp_)): clkc311d48a15_users
+0089.861 (0) PHP event: code E_WARNING: filemtime(): stat failed for C:\Users\noahm\Local Sites\examprojekt3rd\app\public/wp-content/updraft/backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db.gz (line 1923, C:\Users\noahm\Local Sites\examprojekt3rd\app\public\wp-content\plugins\updraftplus\backup.php)
+0089.898 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_options.table.tmpr1268.gz (1/24/fopen): adding to final database dump
+0089.936 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_options.table.gz (2/24/fopen): adding to final database dump
+0089.947 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_users.table.tmpr2.gz (3/24/fopen): adding to final database dump
+0089.957 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_users.table.gz (4/24/fopen): adding to final database dump
+0089.968 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_usermeta.table.tmpr34.gz (5/24/fopen): adding to final database dump
+0089.979 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_usermeta.table.gz (6/24/fopen): adding to final database dump
+0089.989 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_commentmeta.table.tmpr0.gz (7/24/fopen): adding to final database dump
+0090.000 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_commentmeta.table.gz (8/24/fopen): adding to final database dump
+0090.011 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_comments.table.tmpr2.gz (9/24/fopen): adding to final database dump
+0090.022 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_comments.table.gz (10/24/fopen): adding to final database dump
+0090.033 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_links.table.tmpr0.gz (11/24/fopen): adding to final database dump
+0090.045 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_links.table.gz (12/24/fopen): adding to final database dump
+0090.056 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_postmeta.table.tmpr564.gz (13/24/fopen): adding to final database dump
+0090.071 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_postmeta.table.gz (14/24/fopen): adding to final database dump
+0090.081 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_posts.table.tmpr163.gz (15/24/fopen): adding to final database dump
+0090.094 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_posts.table.gz (16/24/fopen): adding to final database dump
+0090.105 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_term_relationships.table.tmpr100001.gz (17/24/fopen): adding to final database dump
+0090.116 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_term_relationships.table.gz (18/24/fopen): adding to final database dump
+0090.127 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_term_taxonomy.table.tmpr56.gz (19/24/fopen): adding to final database dump
+0090.139 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_term_taxonomy.table.gz (20/24/fopen): adding to final database dump
+0090.149 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_termmeta.table.tmpr3.gz (21/24/fopen): adding to final database dump
+0090.161 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_termmeta.table.gz (22/24/fopen): adding to final database dump
+0090.171 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_terms.table.tmpr56.gz (23/24/fopen): adding to final database dump
+0090.182 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db-table-wp_terms.table.gz (24/24/fopen): adding to final database dump
+0090.228 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db.gz: finished writing out complete database file (267.5 KB)
+0090.309 (0) Total database tables backed up: 12 (backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db.gz, size: 274021, sha1: 681d17f30bdea09051c3baa3bca11895fa2f4c05, sha256: b0a4b92f7c22c1b2da26f6d7cfd2c27ce542bb5fcf53c36b13deb599b8543d44)
+0090.405 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-plugins.zip: plugins: This file has already been successfully processed
+0090.415 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-themes.zip: themes: This file has already been successfully processed
+0090.425 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-uploads.zip: uploads: This file has already been successfully processed
+0090.434 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-others.zip: others: This file has already been successfully processed
+0090.445 (0) backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db.gz: db: This file has not yet been successfully uploaded: will queue
+0090.458 (0) Saving backup history. Total backup size: 42.1 MB
+0090.494 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0090.524 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0090.535 (0) No remote despatch: user chose no remote backup service
+0090.553 (0) Recording as successfully uploaded: backup_2025-10-01-0924_Exam_Project_3rd_68dd2100a255-db.gz
+0090.593 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0090.613 (0) Number of backup sets in history: 1; groups (db): 1
+0090.622 (0) Examining (for databases) backup set with group_id=0, nonce=68dd2100a255, datestamp=1759310643 (Oct 01 2025 09:24:03)
+0090.632 (0) This backup set is the backup set just made, so will not be deleted.
+0090.632 (0) Number of backup sets in history: 1; groups (files): 1
+0090.641 (0) Examining (for files) backup set with nonce=68dd2100a255, datestamp=1759310643 (Oct 01 2025 09:24:03)
+0090.642 (0) This backup set is the backup set just made, so will not be deleted.
+0090.651 (0) This backup set is the backup set just made, so will not be deleted.
+0090.652 (0) This backup set is the backup set just made, so will not be deleted.
+0090.652 (0) This backup set is the backup set just made, so will not be deleted.
+0090.652 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0090.663 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0090.702 (0) Resume backup (68dd2100a255, 0): finish run
+0090.729 (0) Decremented the semaphore (fd) by 1
+0090.751 (0) Semaphore (fd) unlocked
+0090.760 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0090.799 (0) No email will/can be sent - the user has not configured an email address.
+0090.809 (0) The backup succeeded and is now complete

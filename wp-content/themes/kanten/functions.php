@@ -107,3 +107,39 @@ add_filter('get_term', function ($term) {
     return $term;
 });
 
+function form_handler() {
+    // Sanitize input
+    $name     = sanitize_text_field($_POST['name']);
+    $age      = intval($_POST['age']);
+    $color    = sanitize_text_field($_POST['color']);
+    $feedback = sanitize_textarea_field($_POST['feedback']);
+
+    // Insert as a custom post
+    $post_id = wp_insert_post([
+        'post_type'   => 'survey_response',
+        'post_status' => 'private',
+        'post_title'  => 'Survey from ' . $name,
+        'post_content'=> "Age: $age\nColor: $color\nFeedback: $feedback",
+    ]);
+
+    // Redirect back with success flag
+    wp_redirect($_SERVER["HTTP_REFERER"] . "?submitted=true");
+    exit;
+}
+add_action('admin_post_handle_form_submission', 'form_handler');
+add_action('admin_post_nopriv_handle_form_submission', 'form_handler');
+
+
+
+// Register Survey Response post type
+function register_survey_response_cpt() {
+    register_post_type('survey_response', [
+        'label' => 'Survey Responses',
+        'public' => false,        // not visible on frontend
+        'show_ui' => true,        // visible in admin dashboard
+        'menu_position' => 25,
+        'menu_icon' => 'dashicons-feedback', // nice icon
+        'supports' => ['title','editor'],
+    ]);
+}
+add_action('init', 'register_survey_response_cpt');

@@ -13,7 +13,7 @@
 
                           if ($blogCategory) {
                               if (is_object($blogCategory)) {
-                              $categoryLabel = $blogCategory->name;
+                              $categoryLabel = $blogCategory->name; 
                                                       }
                           }
             ?>
@@ -63,7 +63,7 @@ if (!empty($tags) && is_array($tags)) : ?>
 
         <div>
       <section class="blogRelatedSection">
-        <h2 tabindex="0" id="relateredeBlogindlæg" tabindex="0" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle"><?php pll_e("Relaterede Blogindlæg") ?></h2>
+        <h2 tabindex="0" id="relateredeBlogindlæg" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
 
