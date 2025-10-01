@@ -13,7 +13,7 @@
 
                           if ($blogCategory) {
                               if (is_object($blogCategory)) {
-                              $categoryLabel = $blogCategory->name;
+                              $categoryLabel = $blogCategory->name; 
                                                       }
                           }
             ?>
