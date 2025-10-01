@@ -13,15 +13,15 @@
         </div>
       </section>
 
-      <section aria-labelledby="frontpageHeading">
-        <h1 id="frontpageHeading" class="h1Hidden">
+      <section>
+        <h1 class="h1Hidden">
           Kanten Esbjerg
         </h1>
       </section>
 
       <!-- Testimonials -->
-      <section class="testimonySection" role="main" aria-labelledby="testimonyHeading">
-        <h2>Velkommen til kanten!</h2>
+      <section class="testimonySection" role="main">
+        <h2 tabindex="0" aria-labelledby="testimonyHeading">Velkommen til kanten!</h2>
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
@@ -44,7 +44,7 @@
       </section>
     
       <!-- Events -->
-      <section class="eventFrontpageSection" aria-labelledby="eventHeading">
+      <section class="eventFrontpageSection">
         <h2 id="eventHeading"><?php pll_e("Kommende Events"); ?></h2>
         <?php
           $args = [
@@ -62,7 +62,7 @@
               $eventPrice = get_field('event_price');
               $eventID = 'eventTitle-' . get_the_ID();
         ?>
-       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-label="<?php echo esc_attr($eventTitle); ?>">
+       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-labelledby="eventHeading" ?>">
   <article class="eventCard">
     <div class="CardImageContainer">
       <?php echo wp_get_attachment_image($eventImage['ID'], 'event-thumb'); ?>
@@ -90,7 +90,7 @@
       </section>
 
       <!-- Blog -->
-      <section class="blogFrontpageSection" aria-labelledby="blogHeading">
+      <section class="blogFrontpageSection">
         <h2 id="blogHeading"><?php pll_e("Seneste blogindlæg"); ?></h2>
         <?php
           $args = [
@@ -110,7 +110,7 @@
               $categoryLabel = is_object($blogCategory) ? $blogCategory->name : '';
               $blogID = 'blogTitle-' . get_the_ID();
         ?>
-        <a href="<?php the_permalink(); ?>" aria-labelledby="<?php echo $blogID; ?>">
+        <a href="<?php the_permalink(); ?>" aria-labelledby="blogHeading">
           <article class="blogCard">
             <div class="CardImageContainer">
               <?php echo wp_get_attachment_image($blogImage['ID'], 'blog-thumb'); ?>
