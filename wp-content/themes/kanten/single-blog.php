@@ -18,9 +18,9 @@
                           }
             ?>
 
-<section class="articleSite" aria-labbelledby="singleBlogTitle singleBlogSkrevetAf singleBlogAuthor">
+<section class="articleSite">
         <div>
-                <h2 tabindex="0"> <?php echo esc_html($categoryLabel); ?></h2>
+            <h3 tabindex="0" aria-labbelledby="singleBlogTitle singleBlogSkrevetAf singleBlogAuthor"> <?php echo esc_html($categoryLabel); ?></h3>
             <div class="articleSiteCategory">
 <?php
 $tags = get_field('blog_tags');
@@ -62,8 +62,8 @@ if (!empty($tags) && is_array($tags)) : ?>
         </div>
 
         <div>
-      <section class="blogRelatedSection" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle">
-        <h2 id="relateredeBlogindlæg" tabindex="0"><?php pll_e("Relaterede Blogindlæg") ?></h2>
+      <section class="blogRelatedSection">
+        <h2 tabindex="0" id="relateredeBlogindlæg" tabindex="0" aria-labbelledby="relateredeBlogindlæg relatedBlogTitle"><?php pll_e("Relaterede Blogindlæg") ?></h2>
           <?php
           $blogCategory = get_field('blog_category');
 

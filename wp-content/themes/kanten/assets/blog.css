@@ -4,13 +4,13 @@
     margin: 100px auto 0 auto;
 }
 
-.articleSite h2 {
+.articleSite h3 {
     margin-top: 5px;
     color: var(--secondary-color);
     font-size: 2.5rem;
 }
 
-.articleSite h2 {
+.articleSite h3 {
     margin-top: 5px;
     color: var(--secondary-color);
     text-decoration: underline;
