@@ -62,7 +62,7 @@
               $eventPrice = get_field('event_price');
               $eventID = 'eventTitle-' . get_the_ID();
         ?>
-       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-labelledby="eventHeading" ?>">
+       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-labelledby="eventHeading" ?>
   <article class="eventCard">
     <div class="CardImageContainer">
       <?php echo wp_get_attachment_image($eventImage['ID'], 'event-thumb'); ?>

@@ -255,3 +255,7 @@
   height: 30px;
   width: 30px;
 }
+
+  .footerUL li i {
+    margin-top: 5px;
+  }
