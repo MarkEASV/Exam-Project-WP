@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const toggleBtn = document.getElementById("searchToggle");
+    const toggleButton = document.getElementById("searchToggle");
     const searchBar = document.getElementById("searchBar");
 
-    if (toggleBtn && searchBar) {
-        toggleBtn.addEventListener("click", function () {
+    if (toggleButton && searchBar) {
+        toggleButton.addEventListener("click", function () {
             searchBar.classList.toggle("active");
         });
     }

@@ -117,25 +117,49 @@
 }
 
 .searchBar {
-    grid-column: 1 / -1;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    z-index: 999;
-    background-color: var(--main-color);
-    transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  grid-column: 1 / -1;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  padding: 0;
+  text-align: center;
 }
 
 .searchBar.active {
-    padding: 6vh 0;
-    opacity: 1;
-    margin: 0;
-    background-color: red;
+ max-height: 160px; 
+  opacity: 1;
+  padding: 1rem 0;
 }
 
 .searchBar form {
   display: flex;
-  
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.searchField {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;
+  max-width: var(--max-width);
+}
+
+.searchSubmit {
+  padding: 0.8rem 1.2rem;
+  background: #fff;
+  color: var(--main-color);
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .sr-only-button {

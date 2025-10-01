@@ -29,9 +29,9 @@
             </ul>
 
             <div id="searchBar" class="searchBar">
-                <form role="search" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                    <input type="text" name="s" placeholder="Search for..." tabindex="-1" alt="">
-                    <button type="submit" tabindex="-1" alt="">Søg</button>
+                <form role="search" method="get" class="searchForm" action="<?php echo home_url('/'); ?>">
+                    <input type="search" class="searchField" placeholder="Søg efter..." value="<?php echo get_search_query(); ?>" name="s" />
+                    <button type="submit" class="searchSubmit">Søg</button>
                 </form>
             </div>
         </div>
