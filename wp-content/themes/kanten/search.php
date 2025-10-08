@@ -8,7 +8,8 @@
             <ul class="searchResultsList">
                 <?php while (have_posts()): the_post(); ?>
                     <li>
-                        <?php
+                        <div>
+                            <?php
                             if (get_post_type() === 'blog') {
                                 $blogImage = get_field('blog_image');
                                 if ($blogImage) {
@@ -21,6 +22,7 @@
                                 }
                             }
                         ?>
+                        </div>
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                     </li>
                 <?php endwhile; ?>
