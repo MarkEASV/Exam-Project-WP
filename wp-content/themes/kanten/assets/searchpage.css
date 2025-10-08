@@ -36,3 +36,11 @@
     justify-content: flex-start;
     padding-left: 2rem;
 }
+
+.searchResultThumb {
+    height: 80px;
+    width: 120px;
+    object-fit: cover;
+    border-radius: 2rem;
+    margin-right: 1rem;
+}
