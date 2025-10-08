@@ -121,7 +121,8 @@ function form_handler() {
     // Sanitize input
     $name     = sanitize_text_field($_POST['name']);
     $age      = intval($_POST['age']);
-    $color    = sanitize_text_field($_POST['color']);
+    $preferred_day = sanitize_text_field($_POST['preferred_day']);
+    $artists  = sanitize_text_field($_POST['artists']);
     $feedback = sanitize_textarea_field($_POST['feedback']);
 
     // Insert as a custom post
@@ -129,7 +130,7 @@ function form_handler() {
         'post_type'   => 'survey_response',
         'post_status' => 'private',
         'post_title'  => 'Survey from ' . $name,
-        'post_content'=> "Age: $age\nColor: $color\nFeedback: $feedback",
+        'post_content'=> "Age: $age\nPreferred Day: $preferred_day\nArtists: $artists\nFeedback: $feedback",
     ]);
 
     // Redirect back with success flag

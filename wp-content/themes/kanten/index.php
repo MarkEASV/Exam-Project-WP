@@ -152,14 +152,17 @@
         <label for="age">Your Age:</label>
         <input type="number" name="age" id="age">
 
-        <label>Favorite Color:</label>
+        <label>Which day do you prefer for concerts to be held?</label>
         <div class="options">
-            <label><input type="radio" name="color" value="Red"> Red</label>
-            <label><input type="radio" name="color" value="Blue"> Blue</label>
-            <label><input type="radio" name="color" value="Green"> Green</label>
+            <label><input type="radio" name="preferred_day" value="Thursday"> Thursday</label>
+            <label><input type="radio" name="preferred_day" value="Friday"> Friday</label>
+            <label><input type="radio" name="preferred_day" value="Saturday"> Saturday</label>
         </div>
 
-        <label for="feedback">Any feedback?</label>
+        <label for="artists">Any artists you want to see live?</label>
+        <input type="text" name="artists" id="artists">
+
+        <label for="feedback">Any feedback on past concerts?</label>
         <textarea name="feedback" id="feedback" rows="4"></textarea>
 
         <input type="submit" value="Send">
