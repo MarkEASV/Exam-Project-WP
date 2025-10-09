@@ -8,7 +8,7 @@
             <ul class="searchResultsList">
                 <?php while (have_posts()): the_post(); ?>
                     <li>
-                        <div>
+                        <div class="searchResultsListImage">
                             <?php
                             if (get_post_type() === 'blog') {
                                 $blogImage = get_field('blog_image');
