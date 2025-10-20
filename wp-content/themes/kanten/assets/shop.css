@@ -18,9 +18,22 @@ h2 {
   color: var(--secondary-color);
 }
 
+.woocommerce .woocommerce-ordering select {
+height: 40px;
+font-size: 16px;
+margin-bottom: 30px;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  margin-bottom: 100px;
+}
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) a.button {
     border-radius: 0;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a {
+  color: var(--secondary-color);
 }
 
 .woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
@@ -59,4 +72,10 @@ input {
 
 .posted_in a {
     color: var(--secondary-color);
+}
+
+.footerContainer {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
