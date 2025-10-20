@@ -44,9 +44,18 @@ add_action('wp_enqueue_scripts', 'enqueue_search_styles');
             wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
         }
         
+            wp_enqueue_style('shop-style', get_template_directory_uri() . "/assets/shop.css");
+        
         }
 
 add_action('wp_enqueue_scripts', 'custom_theme_styles');
+
+function shop_enable_woocommerce() {
+    add_theme_support('woocommerce');
+}
+add_action("after_setup_theme", "shop_enable_woocommerce");
+
+
 
 function plp_register_strings() {
     pll_register_string("blogsview", "alle blogindlæg");
