@@ -99,7 +99,7 @@
     
 }
 
-.ulNav li i {
+.ulNav li i{
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -109,6 +109,9 @@
     text-align: center;
 }
 
+.ulNav li a i{
+    padding: 0;
+}
 
 .ulNav li a:hover, .ulnav li i:hover, .ulNav li button:hover {
     background: #fff;

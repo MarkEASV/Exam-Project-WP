@@ -26,8 +26,8 @@
                 <li><a href="<?php echo site_url('/sustainability-initiatives/'); ?>"><?php pll_e("bæredygtighed") ?></a></li>
                 <li><a href="<?php echo site_url('/shop/'); ?>"><?php pll_e("Merch") ?></a></li>
                 <li><a href="#"><?php pll_e("om") ?></a></li>
-                <li><a href="<?php echo site_url('/cart/'); ?>"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a></li>
-                <li><a href="<?php echo site_url('/my-account/'); ?>"></a></li>
+                <li><a href="<?php echo site_url('/cart/'); ?>"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li><a href="<?php echo site_url('/my-account/'); ?>"><i class="fa-solid fa-user"></i></a></li>
             </ul>
 
             <div id="searchBar" class="searchBar">
