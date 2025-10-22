@@ -147,8 +147,60 @@ section.related.products h2{
   color: var(--secondary-color);
 }
 
-.td.actions .coupon .input-text {
-  width: 100px;
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+  width: 200px;
+}
+
+
+
+form.woocommerce-shipping-calculator a {
+  color: var(--secondary-color);
+}
+
+.woocommerce-cart table.cart img {
+  width: 50px;
+}
+
+div.woocommerce-billing-fields__field-wrapper {
+  color: var(--secondary-color);
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.woocommerce-info {
+  border-color: var(--wc-highlight);
+}
+
+div.woocommerce-info::before {
+  color: var(--main-color);
+}
+
+div.woocommerce-notices-wrapper {
+  background-color: var(--wc-hightlight);
+}
+
+a.showcoupon {
+  color: var(--main-color)
+}
+
+div.woocommerce-shipping-fields {
+  color: var(--secondary-color);
+}
+
+label.woocommerce-form__label.woocommerce-form__label-for-checkbox.checkbox {
+  margin: auto 0;
+}
+
+input#ship-to-different-address-checkbox {
+  width: 25px;
+  height: 25px;
+}
+
+.woocommerce form .form-row label {
+  color: var(--secondary-color);
 }
 
 .footerContainer {
