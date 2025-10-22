@@ -143,6 +143,14 @@ section.related.products h2{
   color: var(--secondary-color);
 }
 
+.woocommerce-cart table.cart td a{
+  color: var(--secondary-color);
+}
+
+.td.actions .coupon .input-text {
+  width: 100px;
+}
+
 .footerContainer {
   width: 100vw;
   margin-left: 50%;
