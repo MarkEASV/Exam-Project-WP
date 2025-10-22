@@ -1,62 +1,71 @@
 <?php 
 function custom_theme_styles() {
+    // Global stylesheet
     wp_enqueue_style('global-style', get_template_directory_uri() . '/style.css');
 
-    wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/mainJs.js', array(), null, true );
-    
+    // Main JavaScript
+    wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/mainJs.js', array(), null, true);
+
+    // Font Awesome
     wp_enqueue_style(
         'font-awesome',
         'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
-        array(), 
+        array()
     );
 
-add_action('wp_enqueue_scripts', 'enqueue_search_styles');
-    
-   if (is_front_page()) {
+    // Search styles (your custom hook)
+    add_action('wp_enqueue_scripts', 'enqueue_search_styles');
+
+    // Conditional styles
+    if (is_front_page()) {
         wp_enqueue_style('frontpage-style', get_template_directory_uri() . '/assets/frontpage.css');
     }
 
-        if (is_singular('blog')) {
+    if (is_singular('blog')) {
         wp_enqueue_style('blog-style', get_template_directory_uri() . '/assets/blog.css');
     }
 
-      if (is_search()) {
+    if (is_search()) {
         wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
     }
-    
-        if (is_page('blogsview')) {
-            wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
-        }
 
-                if (is_page('sustainability-initiatives')) {
-            wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
-        }
+    if (is_page('blogsview')) {
+        wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
+    }
 
-                        if (is_page('merchview')) {
-            wp_enqueue_style('merchview-style', get_template_directory_uri() . '/assets/merchview.css');
-        }
+    if (is_page('sustainability-initiatives')) {
+        wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
+    }
 
-                        if (is_singular('merch-item')) {
-            wp_enqueue_style('merchItem-style', get_template_directory_uri() . '/assets/merchItem.css');
-        }
+    if (is_page('merchview')) {
+        wp_enqueue_style('merchview-style', get_template_directory_uri() . '/assets/merchview.css');
+    }
 
-                        if (is_page('searchpage')) {
-            wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
-        }
-        
-                        if (is_shop() || is_product()) {
-            wp_enqueue_style('shop-style', get_template_directory_uri() . '/assets/shop.css');
-        }
-        
-        }
+    if (is_singular('merch-item')) {
+        wp_enqueue_style('merchItem-style', get_template_directory_uri() . '/assets/merchItem.css');
+    }
 
+    if (is_page('searchpage')) {
+        wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
+    }
+
+    if (is_shop() || is_product() || is_product_category() || is_cart() || is_checkout() || is_account_page()) {
+        wp_enqueue_style('shop-style', get_template_directory_uri() . '/assets/shop.css');
+        add_filter('woocommerce_enqueue_styles', '__return_empty_array');
+
+        wp_enqueue_style('woocommerce-desktop', plugins_url('woocommerce/assets/css/woocommerce.min.css'), array(), WC()->version);
+    }
+}
 add_action('wp_enqueue_scripts', 'custom_theme_styles');
 
+// Enable WooCommerce support
 function shop_enable_woocommerce() {
     add_theme_support('woocommerce');
 }
-add_action("after_setup_theme", "shop_enable_woocommerce");
- 
+add_action('after_setup_theme', 'shop_enable_woocommerce');
+
+// Disable WooCommerce block styles (optional)
+add_filter('woocommerce_blocks_register_assets', '__return_false');
 
 
 function plp_register_strings() {

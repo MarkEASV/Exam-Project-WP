@@ -1,0 +1,137 @@
+Log created: 2025-10-22 07:13:31
+Type: backup
+[2025-10-22 07:13:31][notice]Start backing up.
+[2025-10-22 07:13:31][notice]server info fcgi:On max execution time: 180 wp version:6.8.3 php version:8.2.27 db version:8.0.43 php ini:safe_mode: memory_limit:512M memory_get_usage:15.07 MB memory_get_peak_usage:15.83 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2025-10-22 07:13:31][notice]Prepare to backup backup_db files.
+[2025-10-22 07:13:32][notice]Start exporting database.
+[2025-10-22 07:13:32][notice]Preparing to dump table wp_wfls_role_counts
+[2025-10-22 07:13:32][notice]Preparing to dump table wp_moppm_user_report_table
+[2025-10-22 07:13:32][notice]Preparing to dump table wp_wc_admin_notes
+[2025-10-22 07:13:32][notice]Preparing to dump table wp_wc_category_lookup
+[2025-10-22 07:13:32][notice]Preparing to dump table wp_wc_reserved_stock
+[2025-10-22 07:13:33][notice]Preparing to dump table wp_wfauditevents
+[2025-10-22 07:13:33][notice]Preparing to dump table wp_wfblockediplog
+[2025-10-22 07:13:33][notice]Preparing to dump table wp_wfconfig
+[2025-10-22 07:13:34][notice]Preparing to dump table wp_wfcrawlers
+[2025-10-22 07:13:34][notice]Preparing to dump table wp_wffilechanges
+[2025-10-22 07:13:34][notice]Preparing to dump table wp_wflocs
+[2025-10-22 07:13:34][notice]Preparing to dump table wp_wfls_settings
+[2025-10-22 07:13:34][notice]Preparing to dump table wp_wfnotifications
+[2025-10-22 07:13:35][notice]Preparing to dump table wp_wfreversecache
+[2025-10-22 07:13:35][notice]Preparing to dump table wp_wfsecurityevents
+[2025-10-22 07:13:35][notice]Preparing to dump table wp_wftrafficrates
+[2025-10-22 07:13:35][notice]Preparing to dump table wp_wfwaffailures
+[2025-10-22 07:13:36][notice]Preparing to dump table wp_woocommerce_shipping_zone_methods
+[2025-10-22 07:13:36][notice]Preparing to dump table wp_woocommerce_shipping_zones
+[2025-10-22 07:13:36][notice]Preparing to dump table wp_wpmailsmtp_debug_events
+[2025-10-22 07:13:36][notice]Preparing to dump table wp_wpmailsmtp_tasks_meta
+[2025-10-22 07:13:37][notice]Preparing to dump table wp_actionscheduler_claims
+[2025-10-22 07:13:37][notice]Preparing to dump table wp_actionscheduler_groups
+[2025-10-22 07:13:37][notice]Preparing to dump table wp_links
+[2025-10-22 07:13:37][notice]Preparing to dump table wp_term_relationships
+[2025-10-22 07:13:37][notice]Preparing to dump table wp_tm_tasks
+[2025-10-22 07:13:38][notice]Preparing to dump table wp_wc_admin_note_actions
+[2025-10-22 07:13:38][notice]Preparing to dump table wp_wc_product_attributes_lookup
+[2025-10-22 07:13:38][notice]Preparing to dump table wp_wc_product_download_directories
+[2025-10-22 07:13:38][notice]Preparing to dump table wp_wc_rate_limits
+[2025-10-22 07:13:39][notice]Preparing to dump table wp_wc_tax_rate_classes
+[2025-10-22 07:13:39][notice]Preparing to dump table wp_wc_webhooks
+[2025-10-22 07:13:39][notice]Preparing to dump table wp_wfhoover
+[2025-10-22 07:13:39][notice]Preparing to dump table wp_wflivetraffichuman
+[2025-10-22 07:13:39][notice]Preparing to dump table wp_wfls_2fa_secrets
+[2025-10-22 07:13:40][notice]Preparing to dump table wp_woocommerce_attribute_taxonomies
+[2025-10-22 07:13:40][notice]Preparing to dump table wp_woocommerce_log
+[2025-10-22 07:13:40][notice]Preparing to dump table wp_woocommerce_order_items
+[2025-10-22 07:13:40][notice]Preparing to dump table wp_woocommerce_payment_tokens
+[2025-10-22 07:13:41][notice]Preparing to dump table wp_woocommerce_sessions
+[2025-10-22 07:13:41][notice]Preparing to dump table wp_actionscheduler_logs
+[2025-10-22 07:13:41][notice]Preparing to dump table wp_commentmeta
+[2025-10-22 07:13:41][notice]Preparing to dump table wp_term_taxonomy
+[2025-10-22 07:13:42][notice]Preparing to dump table wp_termmeta
+[2025-10-22 07:13:42][notice]Preparing to dump table wp_terms
+[2025-10-22 07:13:42][notice]Preparing to dump table wp_tm_taskmeta
+[2025-10-22 07:13:42][notice]Preparing to dump table wp_usermeta
+[2025-10-22 07:13:43][notice]Preparing to dump table wp_wc_customer_lookup
+[2025-10-22 07:13:43][notice]Preparing to dump table wp_wc_download_log
+[2025-10-22 07:13:43][notice]Preparing to dump table wp_wc_order_coupon_lookup
+[2025-10-22 07:13:44][notice]Preparing to dump table wp_wc_order_operational_data
+[2025-10-22 07:13:44][notice]Preparing to dump table wp_wc_order_tax_lookup
+[2025-10-22 07:13:44][notice]Preparing to dump table wp_wc_orders_meta
+[2025-10-22 07:13:44][notice]Preparing to dump table wp_wflogins
+[2025-10-22 07:13:45][notice]Preparing to dump table wp_wfstatus
+[2025-10-22 07:13:45][notice]Preparing to dump table wp_woocommerce_api_keys
+[2025-10-22 07:13:45][notice]Preparing to dump table wp_woocommerce_order_itemmeta
+[2025-10-22 07:13:46][notice]Preparing to dump table wp_woocommerce_payment_tokenmeta
+[2025-10-22 07:13:46][notice]Preparing to dump table wp_woocommerce_shipping_zone_locations
+[2025-10-22 07:13:46][notice]Preparing to dump table wp_woocommerce_tax_rate_locations
+[2025-10-22 07:13:46][notice]Preparing to dump table wp_users
+[2025-10-22 07:13:47][notice]Preparing to dump table wp_wc_order_stats
+[2025-10-22 07:13:47][notice]Preparing to dump table wp_wfblocks7
+[2025-10-22 07:13:47][notice]Preparing to dump table wp_wfhits
+[2025-10-22 07:13:47][notice]Preparing to dump table wp_wfsnipcache
+[2025-10-22 07:13:47][notice]Preparing to dump table wp_wpo_404_detector
+[2025-10-22 07:13:48][notice]Preparing to dump table wp_wc_order_addresses
+[2025-10-22 07:13:48][notice]Preparing to dump table wp_wfissues
+[2025-10-22 07:13:48][notice]Preparing to dump table wp_wfpendingissues
+[2025-10-22 07:13:48][notice]Preparing to dump table wp_woocommerce_downloadable_product_permissions
+[2025-10-22 07:13:48][notice]Preparing to dump table wp_woocommerce_tax_rates
+[2025-10-22 07:13:49][notice]Preparing to dump table wp_comments
+[2025-10-22 07:13:49][notice]Preparing to dump table wp_wc_order_product_lookup
+[2025-10-22 07:13:49][notice]Preparing to dump table wp_wc_orders
+[2025-10-22 07:13:49][notice]Preparing to dump table wp_wc_product_meta_lookup
+[2025-10-22 07:13:49][notice]Preparing to dump table wp_posts
+[2025-10-22 07:13:50][notice]Preparing to dump table wp_actionscheduler_actions
+[2025-10-22 07:13:50][notice]Preparing to dump table wp_postmeta
+[2025-10-22 07:13:50][notice]Preparing to dump table wp_wfknownfilelist
+[2025-10-22 07:13:51][notice]Preparing to dump table wp_wffilemods
+[2025-10-22 07:13:51][notice]Preparing to dump table wp_options
+[2025-10-22 07:13:52][notice]Exporting database finished.
+[2025-10-22 07:13:52][notice]Start compressing database
+[2025-10-22 07:13:52][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_db.sql
+[2025-10-22 07:13:53][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_db.part001.zip, filesize: 1.86 MB
+[2025-10-22 07:13:53][notice]Compressing database completed
+[2025-10-22 07:13:53][notice]Backing up backup_db completed.
+[2025-10-22 07:13:53][notice]Prepare to backup backup_themes files.
+[2025-10-22 07:13:54][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_themes.part001.zip index:431
+[2025-10-22 07:14:12][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_themes.part001.zip success. index:431 file size:12.61 MB
+[2025-10-22 07:14:12][notice]Backing up backup_themes completed.
+[2025-10-22 07:14:13][notice]Prepare to backup backup_plugin files.
+[2025-10-22 07:14:20][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_plugin.part001.zip index:8619
+[2025-10-22 07:19:55][notice]Start backing up.
+[2025-10-22 07:19:55][notice]server info fcgi:On max execution time: 180 wp version:6.8.3 php version:8.2.27 db version:8.0.43 php ini:safe_mode: memory_limit:512M memory_get_usage:14.64 MB memory_get_peak_usage:15.42 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2025-10-22 07:19:55][notice]Prepare to backup backup_plugin files.
+[2025-10-22 07:20:02][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_plugin.part001.zip index:8619
+[2025-10-22 07:25:50][error]Task timed out.
+[2025-10-22 07:26:13][notice]Start backing up.
+[2025-10-22 07:26:13][notice]server info fcgi:On max execution time: 180 wp version:6.8.3 php version:8.2.27 db version:8.0.43 php ini:safe_mode: memory_limit:512M memory_get_usage:14.64 MB memory_get_peak_usage:15.42 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2025-10-22 07:26:13][notice]Prepare to backup backup_plugin files.
+[2025-10-22 07:26:19][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_plugin.part001.zip index:8619
+[2025-10-22 07:26:38][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_plugin.part001.zip success. index:8619 file size:38.61 MB
+[2025-10-22 07:26:39][notice]Backing up backup_plugin completed.
+[2025-10-22 07:26:39][notice]Prepare to backup backup_uploads files.
+[2025-10-22 07:26:40][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_uploads.part001.zip index:569
+[2025-10-22 07:26:44][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_uploads.part001.zip success. index:569 file size:18.77 MB
+[2025-10-22 07:26:44][notice]Backing up backup_uploads completed.
+[2025-10-22 07:26:44][notice]Prepare to backup backup_content files.
+[2025-10-22 07:26:44][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_content.part001.zip index:155
+[2025-10-22 07:26:57][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_content.part001.zip success. index:155 file size:7.33 MB
+[2025-10-22 07:26:57][notice]Backing up backup_content completed.
+[2025-10-22 07:26:58][notice]Prepare to backup backup_core files.
+[2025-10-22 07:27:00][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_core.part001.zip index:2807
+[2025-10-22 07:28:49][notice]Compressing zip file:examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_core.part001.zip success. index:2807 file size:14.49 MB
+[2025-10-22 07:28:50][notice]Backing up backup_core completed.
+[2025-10-22 07:28:50][notice]Prepare to backup backup_merge files.
+[2025-10-22 07:28:50][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_db.zip
+[2025-10-22 07:28:50][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 1.86 MB
+[2025-10-22 07:28:50][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_themes.zip
+[2025-10-22 07:28:51][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 14.41 MB
+[2025-10-22 07:28:51][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_plugin.zip
+[2025-10-22 07:28:54][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 50.91 MB
+[2025-10-22 07:28:54][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_uploads.zip
+[2025-10-22 07:28:56][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 69.63 MB
+[2025-10-22 07:28:56][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_content.zip
+[2025-10-22 07:28:56][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 76.55 MB
+[2025-10-22 07:28:56][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_core.zip
+[2025-10-22 07:28:57][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-630167b7dc25f_2025-10-22-07-13_backup_all.part001.zip, filesize: 90.60 MB
+[2025-10-22 07:28:59][notice]Backing up backup_merge completed.
+[2025-10-22 07:28:59][notice]Backup completed.

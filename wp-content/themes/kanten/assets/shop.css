@@ -100,10 +100,47 @@ input {
   border-radius: 0px;
 }
 
+div.woocommerce-variation-price {
+  margin: 0 0 10px 0;
+}
+
+.woocommerce div.product form.cart .button {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+.woocommerce div.product form.cart .variations th {
+  color: var(--secondary-color);
+}
+
+.woocommerce div.product form.cart .variations select {
+  color: var(--secondary-color);
+}
+
+.woocommerce div.product form.cart .variations select option{
+  color: var(--main-color);
+}
+
+.woocommerce div.product form.cart .woocommerce-variation-description p {
+  color: var(--secondary-color);
+}
+
+.woocommerce div.product form.cart .reset_variations {
+  color: var(--secondary-color);
+}
+
+.woocommerce table.shop_attributes th {
+  color: var(--secondary-color);
+}
+
 section.related.products h2{
   text-align: center;
   margin: 150px 0 50px 0;
   font-size: 50px;
+}
+
+.woocommerce table.shop_table {
+  color: var(--secondary-color);
 }
 
 .footerContainer {
