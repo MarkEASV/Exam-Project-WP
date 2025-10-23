@@ -67,6 +67,22 @@ add_action('after_setup_theme', 'shop_enable_woocommerce');
 // Disable WooCommerce block styles (optional)
 add_filter('woocommerce_blocks_register_assets', '__return_false');
 
+// Disable WooCommerce Admin & Marketing
+add_filter( 'woocommerce_admin_disabled', '__return_true' );
+add_filter( 'woocommerce_disable_marketplace_suggestions', '__return_true' );
+
+// Disable cart fragments except on cart/checkout
+add_action( 'wp_enqueue_scripts', function() {
+    if ( ! is_cart() && ! is_checkout() && ! is_account_page() ) {
+        wp_dequeue_script( 'wc-cart-fragments' );
+    }
+}, 999 );
+
+// Disable WooCommerce Blocks
+add_filter( 'woocommerce_blocks_register_assets', '__return_false' );
+
+
+
 
 function plp_register_strings() {
     pll_register_string("blogsview", "alle blogindlæg");
