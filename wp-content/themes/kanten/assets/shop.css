@@ -256,6 +256,83 @@ input#ship-to-different-address-checkbox {
   color: var(--secondary-color);
 }
 
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  margin-bottom: 2rem;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+::marker {
+  color: var(--secondary-color)
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content p {
+  margin-bottom: 1rem;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content a {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content a {
+  background-color: var(--main-color);
+
+}
+
+header.woocommerce-Address-title.title {
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+
+header.woocommerce-Address-title.title h2 {
+  margin-bottom: 1rem;
+}
+
+form#add_payment_method {
+  background-color: var(--main-color);
+}
+
+#add_payment_method #payment div.payment_box::before {
+  display: none;
+}
+
+#add_payment_method #payment div.payment_box {
+  background-color: var(--secondary-color);
+}
+
+.woocommerce-account .woocommerce-MyAccount-content a {
+  background-color: transparent;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
+legend {
+  color: var(--secondary-color);
+}
+
+.wfls-flex-row .wfls-flex-item-full-width {
+  color: var(--main-color);
+}
+
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce button.button {
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+}
+
 .footerContainer {
   width: 100vw;
   margin-left: 50%;
