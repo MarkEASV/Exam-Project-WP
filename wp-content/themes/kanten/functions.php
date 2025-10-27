@@ -1,4 +1,26 @@
 <?php 
+// Disable WooCommerce Admin, Analytics, Marketing
+add_filter( 'woocommerce_admin_disabled', '__return_true' );
+add_filter( 'woocommerce_disable_marketplace_suggestions', '__return_true' );
+
+// Prevent analytics, marketing, and notes from loading
+add_action( 'before_woocommerce_init', function() {
+    if ( class_exists( '\Automattic\WooCommerce\Admin\Loader' ) ) {
+        remove_action( 'admin_init', [ \Automattic\WooCommerce\Admin\Loader::class, 'init' ] );
+    }
+});
+
+add_action('init', function() {
+    // Disable usage tracking
+    remove_action('init', 'wc_tracker_send_tracking_data');
+    remove_action('woocommerce_init', 'wc_tracker_send_tracking_data');
+    add_filter('woocommerce_apply_tracking', '__return_false');
+});
+
+add_action('wp_dashboard_setup', function() {
+    remove_meta_box('woocommerce_dashboard_status', 'dashboard', 'normal');
+});
+
 function custom_theme_styles() {
     // Global stylesheet
     wp_enqueue_style('global-style', get_template_directory_uri() . '/style.css');
