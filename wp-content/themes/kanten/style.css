@@ -113,11 +113,12 @@
     padding: 0;
 }
 
-.ulNav li a:hover, .ulnav li i:hover, .ulNav li button:hover {
+.ulNav li a:hover, .ulnav li i:hover, .ulNav li button:hover,     .ulNav li a:hover i {
     background: #fff;
     color: var(--main-color);
     cursor: pointer;
 }
+
 
 .searchBar {
   grid-column: 1 / -1;
