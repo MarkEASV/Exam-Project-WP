@@ -239,6 +239,10 @@ a.showcoupon {
   color: var(--main-color)
 }
 
+a.woocommerce-remove-coupon {
+  color: var(--secondary-color);
+}
+
 div.woocommerce-shipping-fields {
   color: var(--secondary-color);
 }
@@ -391,6 +395,27 @@ h3#order_review_heading {
 }
 
 .woocommerce-checkout #payment div.payment_box label {
+  color: var(--main-color);
+}
+
+.woocommerce-order {
+  color: var(--secondary-color);
+}
+
+.woocommerce-order p {
+  margin-bottom: 2rem;
+}
+
+td.download-product a{
+  color: var(--secondary-color);
+}
+
+td.woocommerce-table__product-name.product-name a{
+  color: var(--secondary-color);
+}
+
+:where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt {
+  background-color: var(--secondary-color);
   color: var(--main-color);
 }
 
