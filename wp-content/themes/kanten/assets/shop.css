@@ -369,6 +369,31 @@ div#wfls-prompt-wrapper {
   color: var(--secondary-color);
 }
 
+div.woocommerce-billing-fields h3 {
+  color: var(--secondary-color)
+}
+
+h3#order_review_heading {
+  color: var(--secondary-color);
+  margin-top: 3rem;
+}
+
+.woocommerce-checkout #payment ul.payment_methods {
+  color: var(--secondary-color);
+}
+
+.woocommerce-checkout #payment div.payment_box::before {
+  display: none;
+}
+
+.woocommerce-checkout #payment div.payment_box {
+  background-color: var(--secondary-color);
+}
+
+.woocommerce-checkout #payment div.payment_box label {
+  color: var(--main-color);
+}
+
 .footerContainer {
   width: 100vw;
   margin-left: 50%;
