@@ -177,10 +177,8 @@ add_filter('get_term', function ($term) {
 
 function form_handler() {
     // Sanitize input
-    $name     = sanitize_text_field($_POST['name']);
-    $age      = intval($_POST['age']);
-    $preferred_day = sanitize_text_field($_POST['preferred_day']);
-    $artists  = sanitize_text_field($_POST['artists']);
+    $name     = sanitize_text_field(wp_get_current_user()->user_login);
+    $preferred_theme = sanitize_text_field($_POST['preferred_theme']);
     $feedback = sanitize_textarea_field($_POST['feedback']);
 
     // Insert as a custom post
@@ -188,7 +186,7 @@ function form_handler() {
         'post_type'   => 'survey_response',
         'post_status' => 'private',
         'post_title'  => 'Survey from ' . $name,
-        'post_content'=> "Age: $age\nPreferred Day: $preferred_day\nArtists: $artists\nFeedback: $feedback",
+        'post_content'=> "Preferred Theme: $preferred_theme\nFeedback: $feedback",
     ]);
 
     // Redirect back with success flag

@@ -105,3 +105,28 @@ Type: backup
 [2025-10-29 13:33:09][notice]Backing up backup_uploads completed.
 [2025-10-29 13:33:09][notice]Prepare to backup backup_content files.
 [2025-10-29 13:33:09][notice]Compressing zip file:examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_content.part001.zip index:155
+[2025-10-29 13:37:41][notice]Start backing up.
+[2025-10-29 13:37:41][notice]server info fcgi:On max execution time: 180 wp version:6.8.3 php version:8.2.29 db version:8.0.43 php ini:safe_mode: memory_limit:512M memory_get_usage:14.75 MB memory_get_peak_usage:15.55 MB extensions:PDO enabled curl enabled zlib enabled   is_multisite:0
+[2025-10-29 13:37:41][notice]Prepare to backup backup_content files.
+[2025-10-29 13:37:41][notice]Compressing zip file:examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_content.part001.zip index:155
+[2025-10-29 13:37:46][notice]Compressing zip file:examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_content.part001.zip success. index:155 file size:7.33 MB
+[2025-10-29 13:37:46][notice]Backing up backup_content completed.
+[2025-10-29 13:37:46][notice]Prepare to backup backup_core files.
+[2025-10-29 13:37:47][notice]Compressing zip file:examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_core.part001.zip index:2805
+[2025-10-29 13:38:21][notice]Compressing zip file:examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_core.part001.zip success. index:2805 file size:14.49 MB
+[2025-10-29 13:38:21][notice]Backing up backup_core completed.
+[2025-10-29 13:38:21][notice]Prepare to backup backup_merge files.
+[2025-10-29 13:38:21][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_db.zip
+[2025-10-29 13:38:21][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 2.59 MB
+[2025-10-29 13:38:21][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_themes.zip
+[2025-10-29 13:38:22][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 15.14 MB
+[2025-10-29 13:38:22][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_plugin.zip
+[2025-10-29 13:38:23][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 51.84 MB
+[2025-10-29 13:38:23][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_uploads.zip
+[2025-10-29 13:38:23][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 70.56 MB
+[2025-10-29 13:38:23][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_content.zip
+[2025-10-29 13:38:24][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 77.48 MB
+[2025-10-29 13:38:24][notice]Prepare to zip file. file: examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_core.zip
+[2025-10-29 13:38:24][notice]Adding zip files completed.examprojekt3rd.local_wpvivid-a00435e962d3c_2025-10-29-13-30_backup_all.part001.zip, filesize: 91.52 MB
+[2025-10-29 13:38:25][notice]Backing up backup_merge completed.
+[2025-10-29 13:38:25][notice]Backup completed.

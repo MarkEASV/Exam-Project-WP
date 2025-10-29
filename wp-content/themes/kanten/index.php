@@ -141,23 +141,14 @@
         <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
             <input type="hidden" name="action" value="handle_form_submission">
 
-            <label for="name">Your Name:</label>
-            <input type="text" name="name" id="name" required>
-
-            <label for="age">Your Age:</label>
-            <input type="number" name="age" id="age">
-
-            <label>Which day do you prefer for concerts to be held?</label>
+            <label>Hvad skal være temaet for vores næste event</label>
             <div class="options">
-                <label><input type="radio" name="preferred_day" value="Thursday"> Thursday</label>
-                <label><input type="radio" name="preferred_day" value="Friday"> Friday</label>
-                <label><input type="radio" name="preferred_day" value="Saturday"> Saturday</label>
+                <label><input type="radio" name="preferred_theme" value="Thursday"> Rasta</label>
+                <label><input type="radio" name="preferred_theme" value="Friday"> Punk</label>
+                <label><input type="radio" name="preferred_theme" value="Saturday"> Disco</label>
             </div>
 
-            <label for="artists">Any artists you want to see live?</label>
-            <input type="text" name="artists" id="artists">
-
-            <label for="feedback">Any feedback on past concerts?</label>
+            <label for="feedback">Forslag til andre temaer?</label>
             <textarea name="feedback" id="feedback" rows="4"></textarea>
 
             <input type="submit" value="Send">
