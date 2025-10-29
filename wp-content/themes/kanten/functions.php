@@ -36,7 +36,7 @@ function custom_theme_styles() {
     );
 
     // Search styles (your custom hook)
-    add_action('wp_enqueue_scripts', 'enqueue_search_styles');
+    // add_action('wp_enqueue_scripts', 'enqueue_search_styles');
 
     // Conditional styles
     if (is_front_page()) {
@@ -118,10 +118,11 @@ function plp_register_strings() {
     pll_register_string("header", "om");
     pll_register_string("header", "støtte");
 
+    pll_register_string("frontpage", "Velkommen til kanten!");
     pll_register_string("frontpage", "Kommende Events");
     pll_register_string("frontpage", "dato");
     pll_register_string("frontpage", "gratis");
-    pll_register_string("frontpage", "seneste blogindlæg");
+    pll_register_string("frontpage", "Seneste blogindlæg");
     pll_register_string("frontpage", "af_front");
 
     pll_register_string("footer", "Kundeservice");
@@ -132,9 +133,9 @@ function plp_register_strings() {
     pll_register_string("footer", "Privatlivspolitik");
     pll_register_string("footer", "Login");
 
-    pll_register_string("sustain", "Vi sætter fokus på FN.");
+    pll_register_string("sustain", "Vi sætter fokus på FN’s Verdensmål 5: Ligestilling mellem kønnene.");
     pll_register_string("sustain", "På Kanten arbejder vi for at skabe en kulturscene, hvor alle har lige muligheder. Musik og kunst kan være med til at åbne øjne og skabe forandring, og derfor har vi valgt at sætte fokus på ligestilling mellem kønnene.");
-    pll_register_string("sustain", "Equality Week Event", "sustain");
+    pll_register_string("sustain", "Equality Week Event");
     pll_register_string("sustain", "Drop det sædvanlige. Kom til Equality Week og oplev en uge med snak, idéer og oplevelser, der faktisk betyder noget. Mød folk, bliv provokeret, bliv inspireret og vær med til at rykke tingene.");
     pll_register_string("sustain", "dato: ");
     pll_register_string("sustain", "gratis");
@@ -143,8 +144,37 @@ function plp_register_strings() {
     pll_register_string("sustain", "Blogindlæg om ligestilling");
     pll_register_string("sustain", "af_front");
 
+    pll_register_string("search", "Søger efter:");
+    pll_register_string("search", "Intet fundet 404");
+    pll_register_string("header", "Søg");
+    pll_register_string("header", "Søg efter...");
+
 }
 add_action('init', 'plp_register_strings');
+
+if (!function_exists('kanten_pll_permalink_by_path')) {
+    function kanten_pll_permalink_by_path($path, $post_type = 'page') {
+        $path = trim($path, '/');
+        $page = get_page_by_path($path, OBJECT, $post_type);
+        if (!$page) {
+            return home_url('/' . $path . '/');
+        }
+        $id = function_exists('pll_get_post') ? pll_get_post($page->ID) : $page->ID;
+        return get_permalink($id);
+    }
+}
+
+if (!function_exists('kanten_pll_wc_page_url')) {
+    function kanten_pll_wc_page_url($key) {
+        if (!function_exists('wc_get_page_id')) return home_url('/');
+        $id = wc_get_page_id($key);
+        if ($id <= 0) return home_url('/');
+        if (function_exists('pll_get_post')) {
+            $id = pll_get_post($id);
+        }
+        return get_permalink($id);
+    }
+}
 
 add_image_size( 'blog-thumb', 390, 220, true );
 add_image_size( 'event-thumb', 595, 335, true );
@@ -174,6 +204,8 @@ add_filter('get_term', function ($term) {
     }
     return $term;
 });
+
+
 
 function form_handler() {
     // Sanitize input

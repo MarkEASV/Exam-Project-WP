@@ -22,7 +22,7 @@
 
       <!-- Testimonials -->
       <section class="testimonySection" role="main">
-        <h2 tabindex="0" id="welcomeKanten" aria-labelledby="welcomeKanten testimonyHeading">Velkommen til kanten!</h2>
+        <h2 tabindex="0" id="welcomeKanten" aria-labelledby="welcomeKanten testimonyHeading"><?php pll_e("Velkommen til kanten!"); ?></h2>
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
