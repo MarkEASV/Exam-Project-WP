@@ -87,6 +87,15 @@ a.woocommerce-review-link {
     color: var(--secondary-color);
 }
 
+.tagged_as {
+  color: var(--secondary-color);
+  margin-left: 2rem;
+}
+
+.tagged_as a {
+  color: var(--secondary-color);
+}
+
 .woocommerce div.product .woocommerce-tabs .panel p {
   color: var(--secondary-color);
   margin-top: 20px;
@@ -417,6 +426,11 @@ td.woocommerce-table__product-name.product-name a{
 :where(body:not(.woocommerce-block-theme-has-button-styles)):where(:not(.edit-post-visual-editor)) .woocommerce a.button.alt {
   background-color: var(--secondary-color);
   color: var(--main-color);
+}
+
+
+div.term-description p {
+  display: none;
 }
 
 .footerContainer {

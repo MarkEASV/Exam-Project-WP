@@ -1,0 +1,93 @@
+[2025-10-29 14:58:15 : INFO] - Cache for URL: http://examprojekt3rd.local/product/wordpress-pennant/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 15:35:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:35:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:35:29 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-1/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:35:31 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-1/ has been purged, triggered by action: save_post 
+[2025-10-29 15:35:31 : INFO] - Cache for archive page associated with post_type: product and Title: "Band T-Shirt 1" has been purged, triggered by action: save_post 
+[2025-10-29 15:38:15 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:38:16 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:38:17 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-2/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:38:19 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-2/ has been purged, triggered by action: save_post 
+[2025-10-29 15:38:19 : INFO] - Cache for archive page associated with post_type: product and Title: "Band T-shirt 2" has been purged, triggered by action: save_post 
+[2025-10-29 15:39:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:39:54 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:39:56 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-3/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:39:57 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-3/ has been purged, triggered by action: save_post 
+[2025-10-29 15:39:57 : INFO] - Cache for archive page associated with post_type: product and Title: "Band T-shirt 3" has been purged, triggered by action: save_post 
+[2025-10-29 15:43:57 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:43:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:44:00 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-1/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:44:01 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-1/ has been purged, triggered by action: save_post 
+[2025-10-29 15:44:01 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Hoodie 1" has been purged, triggered by action: save_post 
+[2025-10-29 15:45:10 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:45:11 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:45:13 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-3/ has been purged, triggered by action: save_post 
+[2025-10-29 15:45:13 : INFO] - Cache for archive page associated with post_type: product and Title: "Band T-shirt 3" has been purged, triggered by action: save_post 
+[2025-10-29 15:45:44 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:45:44 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:45:46 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-t-shirt-2/ has been purged, triggered by action: save_post 
+[2025-10-29 15:45:46 : INFO] - Cache for archive page associated with post_type: product and Title: "Band T-shirt 2" has been purged, triggered by action: save_post 
+[2025-10-29 15:55:37 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:55:38 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:55:40 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-2/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:55:41 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-2/ has been purged, triggered by action: save_post 
+[2025-10-29 15:55:41 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Hoodie 2" has been purged, triggered by action: save_post 
+[2025-10-29 15:56:33 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:56:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:56:36 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-1/ has been purged, triggered by action: save_post 
+[2025-10-29 15:56:36 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Hoodie 1" has been purged, triggered by action: save_post 
+[2025-10-29 15:59:35 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:59:35 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 15:59:37 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-3/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 15:59:39 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-hoodie-3/ has been purged, triggered by action: save_post 
+[2025-10-29 15:59:39 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Hoodie 3" has been purged, triggered by action: save_post 
+[2025-10-29 16:02:42 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:02:42 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:02:44 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-1/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 16:02:46 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-1/ has been purged, triggered by action: save_post 
+[2025-10-29 16:02:46 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Poster 1" has been purged, triggered by action: save_post 
+[2025-10-29 16:20:24 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:20:24 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:20:26 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-1/ has been purged, triggered by action: save_post 
+[2025-10-29 16:20:26 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Poster 1" has been purged, triggered by action: save_post 
+[2025-10-29 16:24:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:24:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:25:00 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-1/ has been purged, triggered by action: save_post 
+[2025-10-29 16:25:00 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Poster 1" has been purged, triggered by action: save_post 
+[2025-10-29 16:27:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:27:17 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:27:19 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-2/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 16:27:20 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-2/ has been purged, triggered by action: save_post 
+[2025-10-29 16:27:20 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Poster 2" has been purged, triggered by action: save_post 
+[2025-10-29 16:29:12 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:29:12 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:29:14 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-3/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 16:29:15 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-poster-3/ has been purged, triggered by action: save_post 
+[2025-10-29 16:29:15 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Poster 3" has been purged, triggered by action: save_post 
+[2025-10-29 16:30:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:30:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:31:00 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-stickers-1/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 16:31:01 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-stickers-1/ has been purged, triggered by action: save_post 
+[2025-10-29 16:31:01 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Stickers 1" has been purged, triggered by action: save_post 
+[2025-10-29 16:34:04 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:34:05 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-29 16:34:06 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-stickers-2/ has been purged, triggered by action: woocommerce_product_set_stock 
+[2025-10-29 16:34:07 : INFO] - Cache for URL: http://examprojekt3rd.local/product/band-stickers-2/ has been purged, triggered by action: save_post 
+[2025-10-29 16:34:07 : INFO] - Cache for archive page associated with post_type: product and Title: "Band Stickers 2" has been purged, triggered by action: save_post 
+[2025-10-29 16:34:54 : INFO] - Cache for URL: http://examprojekt3rd.local/product/logo-collection/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:55 : INFO] - Cache for URL: http://examprojekt3rd.local/product/beanie-with-logo/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:56 : INFO] - Cache for URL: http://examprojekt3rd.local/product/t-shirt-with-logo/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:56 : INFO] - Cache for URL: http://examprojekt3rd.local/product/single/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:57 : INFO] - Cache for URL: http://examprojekt3rd.local/product/album/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:58 : INFO] - Cache for URL: http://examprojekt3rd.local/product/polo/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:58 : INFO] - Cache for URL: http://examprojekt3rd.local/product/long-sleeve-tee/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:34:59 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie-with-zipper/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:00 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie-with-pocket/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:21 : INFO] - Cache for URL: http://examprojekt3rd.local/product/sunglasses/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:21 : INFO] - Cache for URL: http://examprojekt3rd.local/product/cap/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:22 : INFO] - Cache for URL: http://examprojekt3rd.local/product/belt/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:23 : INFO] - Cache for URL: http://examprojekt3rd.local/product/beanie/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:24 : INFO] - Cache for URL: http://examprojekt3rd.local/product/t-shirt/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:24 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie-with-logo/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:26 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie/ has been purged, triggered by action: wp_trash_post 
+[2025-10-29 16:35:28 : INFO] - Cache for URL: http://examprojekt3rd.local/product/v-neck-t-shirt/ has been purged, triggered by action: wp_trash_post 

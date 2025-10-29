@@ -71,7 +71,7 @@ function custom_theme_styles() {
         wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
     }
 
-    if (is_shop() || is_product() || is_product_category() || is_cart() || is_checkout() || is_account_page()) {
+    if (is_shop() || is_product() || is_product_category() || is_cart() || is_checkout() || is_account_page() || is_product_tag()) {
         wp_enqueue_style('shop-style', get_template_directory_uri() . '/assets/shop.css');
         add_filter('woocommerce_enqueue_styles', '__return_empty_array');
 
