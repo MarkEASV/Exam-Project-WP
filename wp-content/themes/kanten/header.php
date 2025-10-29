@@ -26,10 +26,10 @@
     <li><a href="#"><?php pll_e("events") ?></a></li>
     <li><a href="<?php echo esc_url( kanten_pll_permalink_by_path('blogsview') ); ?>"><?php pll_e("blogs") ?></a></li>
     <li><a href="<?php echo esc_url( kanten_pll_permalink_by_path('sustainability-initiatives') ); ?>"><?php pll_e("bæredygtighed") ?></a></li>
-    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('shop') ); ?>"><?php pll_e("Merch") ?></a></li>
+    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('shop') ); ?>"><?php pll_e('Merch'); ?></a></li>
     <li><a href="#"><?php pll_e("om") ?></a></li>
-    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('cart') ); ?>"><i class="fa-solid fa-cart-shopping"></i></a></li>
-    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('myaccount') ); ?>"><i class="fa-solid fa-user"></i></a></li>
+    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('cart') ); ?>" aria-label="<?php pll_e('Cart'); ?>"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i></a></li>
+    <li><a href="<?php echo esc_url( kanten_pll_wc_page_url('myaccount') ); ?>" aria-label="<?php pll_e('My Account'); ?>"><i class="fa-solid fa-user" aria-hidden="true"></i></a></li>
 </ul>
 
             <div id="searchBar" class="searchBar">

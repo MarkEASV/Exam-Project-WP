@@ -116,7 +116,9 @@ function plp_register_strings() {
     pll_register_string("header", "blogs");
     pll_register_string("header", "bæredygtighed");
     pll_register_string("header", "om");
-    pll_register_string("header", "støtte");
+    pll_register_string("header", "Merch");
+    pll_register_string("header", "Cart");
+    pll_register_string("header", "My Account");
 
     pll_register_string("frontpage", "Velkommen til kanten!");
     pll_register_string("frontpage", "Kommende Events");
