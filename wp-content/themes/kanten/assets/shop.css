@@ -3,6 +3,10 @@ body  {
   margin: 150px auto 0 auto;
 }
 
+div.woocommerce {
+  min-height: 50%;
+}
+
 h1 {
   text-align: center;
   margin: 0 0 50px 0;
