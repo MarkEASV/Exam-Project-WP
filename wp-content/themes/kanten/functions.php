@@ -260,43 +260,230 @@ function register_survey_response_cpt() {
 add_action( 'init', 'register_survey_response_cpt' );
 
 
+function review_form_handler() {
+
+    // 🔒 Verify nonce for CSRF protection
+    if (
+        ! isset( $_POST['review_form_nonce'] ) ||
+        ! wp_verify_nonce( $_POST['review_form_nonce'], 'review_form_action' )
+    ) {
+        wp_die( 'Sikkerhedstjek mislykkedes. Prøv venligst igen.' );
+    }
+
+    // 🧼 Sanitize and validate input
+    $user    = wp_get_current_user();
+    $name    = $user && $user->exists() ? sanitize_text_field( $user->user_login ) : 'Anonymous';
+    $review  = sanitize_textarea_field( $_POST['review'] ?? '' );
+
+    if ( empty( $review ) ) {
+        wp_die( 'Du skal skrive en anmeldelse, før du sender formularen.' );
+    }
+
+    // 🗂 Save as a private custom post
+    $post_id = wp_insert_post([
+        'post_type'   => 'kanten_review',
+        'post_status' => 'private',
+        'post_title'  => 'Review from ' . $name,
+        'post_content'=> $review,
+    ]);
+
+    // 🚦 Redirect safely back with a success flag
+    wp_safe_redirect( add_query_arg( 'submitted', 'true', wp_get_referer() ) );
+    exit;
+}
+add_action( 'admin_post_handle_review_submission', 'review_form_handler' );
+add_action( 'admin_post_nopriv_handle_review_submission', 'review_form_handler' );
+
+/**
+  * Register the "Kanten Reviews" custom post type
+ */
+function register_kanten_review_cpt() {
+    register_post_type( 'kanten_review', [
+        'label'         => 'Kanten Reviews',
+        'public'        => true,                // visible on frontend
+        'publicly_queryable' => false,          // not directly accessible via single URLs
+        'exclude_from_search' => true,          // keeps them out of site search
+        'show_ui'       => true,                // visible in admin dashboard
+        'menu_position' => 26,
+        'menu_icon'     => 'dashicons-admin-comments',
+        'supports'      => [ 'title', 'editor' ],
+    ] );
+}
+add_action( 'init', 'register_kanten_review_cpt' );
+
+
+/**
+ * Add "Approval Status" checkbox in the Review editor
+ */
+function kanten_review_meta_box() {
+    add_meta_box(
+        'kanten_review_approval',
+        'Approval Status',
+        'kanten_review_approval_meta_box_callback',
+        'kanten_review',
+        'side',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'kanten_review_meta_box' );
+
+function kanten_review_approval_meta_box_callback( $post ) {
+    $approved = get_post_meta( $post->ID, '_kanten_review_approved', true );
+    wp_nonce_field( 'kanten_review_save_meta', 'kanten_review_meta_nonce' );
+    ?>
+    <p>
+        <label>
+            <input type="checkbox" name="kanten_review_approved" value="1" <?php checked( $approved, '1' ); ?> />
+            Mark as approved for display
+        </label>
+    </p>
+    <?php
+}
+
+function kanten_review_save_meta( $post_id ) {
+    if (
+        ! isset( $_POST['kanten_review_meta_nonce'] ) ||
+        ! wp_verify_nonce( $_POST['kanten_review_meta_nonce'], 'kanten_review_save_meta' )
+    ) {
+        return;
+    }
+
+    $approved = isset( $_POST['kanten_review_approved'] ) ? '1' : '0';
+    update_post_meta( $post_id, '_kanten_review_approved', $approved );
+}
+add_action( 'save_post_kanten_review', 'kanten_review_save_meta' );
+
+
+/**
+ * Handle review form submission
+ */
+function handle_review_submission() {
+    // Check login (prevents manual POSTs)
+    if ( ! is_user_logged_in() ) {
+        wp_die( 'Du skal være logget ind for at indsende en anmeldelse.' );
+    }
+
+    // Verify nonce
+    if (
+        ! isset( $_POST['review_form_nonce'] ) ||
+        ! wp_verify_nonce( $_POST['review_form_nonce'], 'review_form_action' )
+    ) {
+        wp_die( 'Sikkerhedsfejl – prøv igen.' );
+    }
+
+    // Sanitize input
+    $user    = wp_get_current_user();
+    $review  = sanitize_textarea_field( $_POST['review'] ?? '' );
+    $review  = mb_substr( $review, 0, 200 ); // enforce 200-character limit
+
+    if ( empty( $review ) ) {
+        wp_die( 'Du skal skrive en anmeldelse, før du sender formularen.' );
+    }
+
+    // Insert review post (public but only shown when approved)
+    wp_insert_post( [
+        'post_type'    => 'kanten_review',
+        'post_status'  => 'publish', // make it public (so can be queried)
+        'post_title'   => 'Review from ' . $user->user_login,
+        'post_content' => $review,
+        'meta_input'   => [
+            '_kanten_review_approved' => '0', // not approved by default
+        ],
+    ] );
+
+    // Redirect back with success flag
+    wp_safe_redirect( add_query_arg( 'submitted', 'true', wp_get_referer() ) );
+    exit;
+}
+add_action( 'admin_post_handle_review_submission', 'handle_review_submission' );
+add_action( 'admin_post_nopriv_handle_review_submission', 'handle_review_submission' );
+
+
+/**
+ * Remove "Privat:" / "Private:" / "Protected:" prefixes from titles on the frontend
+ */
+add_filter( 'the_title', function( $title, $post_id ) {
+    $post = get_post( $post_id );
+
+    // Only target Kanten Reviews on the frontend
+    if ( is_admin() || ! $post || $post->post_type !== 'kanten_review' ) {
+        return $title;
+    }
+
+    $prefixes = [ 'Privat:', 'Private:', 'Protected:' ];
+    foreach ( $prefixes as $prefix ) {
+        if ( stripos( $title, $prefix ) === 0 ) {
+            $title = trim( substr( $title, strlen( $prefix ) ) );
+            break;
+        }
+    }
+
+    return $title;
+}, 10, 2 );
+
+
+/**
+ * 🔒 Enforce password rules site-wide for WooCommerce users
+ */
+
+// Apply on "My Account" password update
 add_action( 'woocommerce_save_account_details_errors', function( $errors, $user ) {
     if ( isset( $_POST['password_1'] ) && ! empty( $_POST['password_1'] ) ) {
         $password = sanitize_text_field( $_POST['password_1'] );
 
-        // 🔒 Example rules — adjust these to match your plugin’s requirements:
-        if ( strlen( $password ) < 10 ) {
-            $errors->add( 'password_too_short', __( 'Password must be at least 10 characters long.', 'your-textdomain' ) );
-        }
-
-        if ( ! preg_match( '/[A-Z]/', $password ) ) {
-            $errors->add( 'password_missing_uppercase', __( 'Password must include at least one uppercase letter.', 'your-textdomain' ) );
-        }
-
-        if ( ! preg_match( '/[a-z]/', $password ) ) {
-            $errors->add( 'password_missing_lowercase', __( 'Password must include at least one lowercase letter.', 'your-textdomain' ) );
-        }
-
-        if ( ! preg_match( '/[0-9]/', $password ) ) {
-            $errors->add( 'password_missing_number', __( 'Password must include at least one number.', 'your-textdomain' ) );
-        }
-
-        if ( ! preg_match( '/[\W_]/', $password ) ) {
-            $errors->add( 'password_missing_symbol', __( 'Password must include at least one special character.', 'your-textdomain' ) );
-        }
+        kanten_validate_password_strength( $password, $errors );
     }
 }, 10, 2 );
 
-// Registration form validation
+
+// Apply on registration
 add_filter( 'woocommerce_registration_errors', function( $errors, $username, $email ) {
     if ( isset( $_POST['password'] ) && ! empty( $_POST['password'] ) ) {
         $password = sanitize_text_field( $_POST['password'] );
 
-        // Reuse your same password checks here
-        if ( strlen( $password ) < 10 ) {
-            $errors->add( 'password_too_short', __( 'Password must be at least 10 characters long.', 'your-textdomain' ) );
-        }
-        // ... etc.
+        kanten_validate_password_strength( $password, $errors );
     }
     return $errors;
 }, 10, 3 );
+
+
+// Apply on password reset ("Lost your password?")
+add_action( 'validate_password_reset', function( $errors, $user ) {
+    if ( isset( $_POST['pass1'] ) && ! empty( $_POST['pass1'] ) ) {
+        $password = sanitize_text_field( $_POST['pass1'] );
+
+        kanten_validate_password_strength( $password, $errors );
+    }
+}, 10, 2 );
+
+
+/**
+ * Helper: password validation logic shared across all contexts
+ */
+function kanten_validate_password_strength( $password, $errors ) {
+    if ( strlen( $password ) < 12 ) {
+        $errors->add( 'password_too_short', __( 'Password must be at least 12 characters long.', 'your-textdomain' ) );
+    }
+
+    if ( ! preg_match( '/[A-Z]/', $password ) ) {
+        $errors->add( 'password_missing_uppercase', __( 'Password must include at least one uppercase letter.', 'your-textdomain' ) );
+    }
+
+    if ( ! preg_match( '/[a-z]/', $password ) ) {
+        $errors->add( 'password_missing_lowercase', __( 'Password must include at least one lowercase letter.', 'your-textdomain' ) );
+    }
+
+    if ( ! preg_match( '/[0-9]/', $password ) ) {
+        $errors->add( 'password_missing_number', __( 'Password must include at least one number.', 'your-textdomain' ) );
+    }
+
+    if ( ! preg_match( '/[\W_]/', $password ) ) {
+        $errors->add( 'password_missing_symbol', __( 'Password must include at least one special character.', 'your-textdomain' ) );
+    }
+}
+
+//remove password strength message box
+add_action( 'wp_enqueue_scripts', function() {
+    wp_dequeue_script( 'wc-password-strength-meter' );
+    wp_deregister_script( 'wc-password-strength-meter' );
+}, 100 );

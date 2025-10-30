@@ -157,6 +157,69 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </section>
 
+      <section class="testimonySection">
+             <h2 id="userTestimonyHeading"><?php pll_e("Brugeranmeldelser"); ?></h2>
+
+<?php
+// Query: Approved reviews only
+$args = [
+    'post_type'      => 'kanten_review',
+    'posts_per_page' => 6,
+    'lang'           => function_exists( 'pll_current_language' ) ? pll_current_language() : '', // safe fallback if Polylang disabled
+    'post_status'    => 'private', // only pull private reviews
+    'meta_query'     => [
+        [
+            'key'   => '_kanten_review_approved',
+            'value' => '1',
+        ],
+    ],
+];
+
+$loop = new WP_Query( $args );
+
+if ( $loop->have_posts() ) :
+    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        <div class="userTestimonyCard">
+            <p><?php echo nl2br( esc_html( get_the_content() ) ); ?></p>
+            <p class="review-author">— <?php echo esc_html( get_the_title() ); ?></p>
+        </div>
+    <?php endwhile;
+    wp_reset_postdata();
+else :
+    echo '<p class="noReviews">Ingen godkendte anmeldelser endnu.</p>';
+endif;
+?>
+
+<?php if ( is_user_logged_in() ) : ?>
+<h3 class="surveyHeading">Læg en anmeldelse og efterlad dit præg på siden</h3>
+
+<div class="survey-form">
+
+        <?php if ( isset( $_GET['submitted'] ) ) : ?>
+            <p class="thank-you">Tak for dit svar!</p>
+        <?php endif; ?>
+
+        <form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="POST">
+            <?php wp_nonce_field( 'review_form_action', 'review_form_nonce' ); ?>
+            <input type="hidden" name="action" value="handle_review_submission">
+
+            <label for="review">Hvad synes du om Kanten?</label>
+            <textarea name="review" id="review" rows="4" maxlength="200" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+
+    <?php else : ?>
+
+        <p class="login-notice">
+            Du skal være logget ind for at skrive en anmeldelse.
+            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">Log ind her</a>.
+        </p>
+
+    <?php endif; ?>
+</div>
+      </section>
+
     </div>
   <?php endwhile; ?>
 <?php endif; ?>

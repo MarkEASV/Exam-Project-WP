@@ -317,3 +317,37 @@
   color: #2ecc71;
   font-weight: bold;
 }
+
+.testimonySection:last-of-type {
+  margin-bottom: 150px;
+}
+
+.userTestimonyCard {
+  grid-column: span 4;
+  min-height: 150px;
+  background-color: var(--secondary-color);
+  border-radius: 20px;
+  position: relative;
+  padding: 15px 15px 45px 15px;
+  font-size: 20px;
+}
+
+.review-author {
+    margin-top: 10px;
+    text-align: right;
+    font-size: 16px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.noReviews {
+  grid-column: 1 / span 12;
+  color: var(--secondary-color);
+  text-align: center;
+  font-size: 24px;
+}
+
+.login-notice {
+  display: none;
+}

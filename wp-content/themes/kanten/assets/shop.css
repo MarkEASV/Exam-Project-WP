@@ -433,6 +433,22 @@ div.term-description p {
   display: none;
 }
 
+p.woocommerce-LostPassword.lost_password a {
+  color: var(--secondary-color);
+}
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+  color: var(--secondary-color);
+}
+
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register p{
+  margin-bottom: 6px ;
+}
+
+div#password_strength.woocommerce-password-strength {
+  display: none;
+}
+
 .footerContainer {
   width: 100vw;
   margin-left: 50%;
