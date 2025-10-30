@@ -96,20 +96,22 @@ if ($blogCategory && is_object($blogCategory)) {
                                                     }
                         }
           ?>
-      <a href="<?php the_permalink(); ?>">
-        <div class="blogCard">
-          <div class="cardImageContainer">
-            <?php  echo wp_get_attachment_image( $blogImage['ID'], 'blog-thumb' ); ?>
-          </div>
-          <h3 id="relatedBlogTitle" tabindex="0"><?php echo esc_html($blogTitle); ?></h3>
-          <h4 tabindex="0" ><?php echo esc_html($categoryLabel); ?></h4>
-          <div class="blogCardDetails">
-            <small class="blogAuthor" tabindex="0"><?php pll_e("af") ?> <?php echo esc_html($blogAuthor); ?></small>
-            <small class="blogDate" tabindex="0"><?php echo esc_html($blogDate); ?></small>
-          </div>
-          <p class="cardText" tabindex="0"><?php echo wp_kses_post($blogText); ?></p>
-        </div>
-      </a>
+       <a href="<?php the_permalink(); ?>" aria-labelledby="blogHeading">
+          <article class="blogCard">
+            <div class="CardImageContainer">
+              <?php echo wp_get_attachment_image($blogImage['ID'], 'blog-thumb'); ?>
+            </div>
+            <h3 id="<?php echo esc_html($blogTitle); ?>"><?php echo esc_html($blogTitle); ?></h3>
+            <?php if ($categoryLabel): ?>
+              <p class="blogCategory"><?php echo esc_html($categoryLabel); ?></p>
+            <?php endif; ?>
+            <div class="blogCardDetails">
+              <small class="blogAuthor"><?php pll_e("af_front"); ?> <?php echo esc_html($blogAuthor); ?></small>
+              <small class="blogDate"><?php echo esc_html($blogDate); ?></small>
+            </div>
+            <p class="CardText"><?php echo wp_kses_post($blogText); ?></p>
+          </article>
+        </a>
           <?php
               endwhile;
             endif;

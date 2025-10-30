@@ -37,7 +37,7 @@
               <img src="<?php echo esc_url($testimonyImage['url']); ?>" alt="<?php echo esc_attr($testimonyImage['alt']); ?>" />
             </div>
             <div class="testimonyText">
-              <h3 id="testimonyHeader"><?php echo esc_html($testimonyGiver); ?></h3>
+              <h3 id="<?php echo esc_html($testimonyGiver); ?>"><?php echo esc_html($testimonyGiver); ?></h3>
               <p><?php echo esc_html($testimonyText); ?></p>
             </div>
           </article>
@@ -153,7 +153,7 @@
             <div class="CardImageContainer">
               <?php echo wp_get_attachment_image($blogImage['ID'], 'blog-thumb'); ?>
             </div>
-            <h3 id="<?php echo $blogID; ?>"><?php echo esc_html($blogTitle); ?></h3>
+            <h3 id="<?php echo esc_html($blogTitle); ?>"><?php echo esc_html($blogTitle); ?></h3>
             <?php if ($categoryLabel): ?>
               <p class="blogCategory"><?php echo esc_html($categoryLabel); ?></p>
             <?php endif; ?>

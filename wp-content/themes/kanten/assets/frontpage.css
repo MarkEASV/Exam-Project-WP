@@ -323,7 +323,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--grid-gap);
-    margin: 100px auto 150px auto;
+    margin: 100px auto 0 auto;
   }
 
   #userTestimonyHeading {

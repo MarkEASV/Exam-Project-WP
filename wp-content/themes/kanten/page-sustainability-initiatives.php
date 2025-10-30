@@ -85,29 +85,30 @@ wp_reset_postdata();
                 $eventDate  = get_field('event_date');
                 $eventPrice = get_field('event_price');
           ?>
-      <a href="<?php the_permalink(); ?>">
-        <div class="eventCard">
-          <div class="CardImageContainer">
-            <?php  echo wp_get_attachment_image( $eventImage['ID'], 'event-thumb' ); ?>
-          </div>
-          <h3><?php echo esc_html($eventTitle); ?></h3>
-          <div class="CardText" tabindex="0"><?php echo wp_kses_post($eventText); ?></div>
-          <div class="eventCardBottom">
-            <div class="eventCardDate" tabindex="0"><small class="eventDate"><?php pll_e("dato: ") ?><?php echo esc_html($eventDate); ?></small></div>
-            <div class="eventCardPrice">
-                <?php if ($eventPrice < 1) : ?>
-                  <div class="eventPrice">
-                    <h5 tabindex="0"><?php echo $eventPrice; ?><?php pll_e("gratis") ?></h5>
-                  </div>
-                  <?php else : ?>
-                    <div class="eventPriceOff">
-                      <h5><?php echo $eventPrice; ?>.-</h5>
-                    </div>
-                <?php endif; ?>
-            </div>
-          </div>
-        </div>
-      </a>
+       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-labelledby="eventHeading" ?>
+  <article class="eventCard">
+    <div class="CardImageContainer">
+      <?php echo wp_get_attachment_image($eventImage['ID'], 'event-thumb'); ?>
+    </div>
+
+    <h3><?php echo esc_html($eventTitle); ?></h3>
+
+    <div class="CardText"><?php echo wp_kses_post($eventText); ?></div>
+
+    <div class="eventCardBottom">
+      <div class="eventCardDate">
+        <small class="eventDate"><?php pll_e("dato: "); ?><?php echo esc_html($eventDate); ?></small>
+      </div>
+      <div class="eventCardPrice">
+        <?php if ($eventPrice < 1) : ?>
+          <div class="eventPrice"><?php pll_e("gratis"); ?></div>
+        <?php else : ?>
+          <div class="eventPriceOff"><?php echo $eventPrice; ?>.-</div>
+        <?php endif; ?>
+      </div>
+    </div>
+  </article>
+</a>
           <?php
               endwhile;
             endif;
@@ -186,7 +187,7 @@ wp_reset_postdata();
             </div>
             
           </div>
-          <h3 id="sustainBlogTitle"><?php echo esc_html($blogTitle); ?></h3>
+          <h3 id="sustainBlogTitle <?php echo esc_html($blogTitle); ?>"><?php echo esc_html($blogTitle); ?></h3>
           <h4><?php echo esc_html($categoryLabel); ?></h4>
           <div class="blogCardDetails">
             <small class="blogAuthor"><?php pll_e("af_front")?> <?php echo esc_html($blogAuthor); ?></small>

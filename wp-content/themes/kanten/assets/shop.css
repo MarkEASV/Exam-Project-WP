@@ -191,9 +191,6 @@ form.woocommerce-cart-form {
   width: 50%;
 }
 
-table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents {
-}
-
 td.actions button.button {
   height: 50px;
 }
@@ -448,6 +445,10 @@ p.woocommerce-LostPassword.lost_password a {
 div#password_strength.woocommerce-password-strength {
   display: none;
 }
+
+.woocommerce nav.woocommerce-pagination ul li span.current {
+  color: var(--main-color);
+} 
 
 .footerContainer {
   width: 100vw;
