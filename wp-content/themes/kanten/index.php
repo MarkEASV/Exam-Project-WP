@@ -167,7 +167,7 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </section>
 
-      <section class="testimonySection">
+      <section class="userTestimonySection">
              <h2 id="userTestimonyHeading"><?php pll_e("Brugeranmeldelser"); ?></h2>
 
 <?php

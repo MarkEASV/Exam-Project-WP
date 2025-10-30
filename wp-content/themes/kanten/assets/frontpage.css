@@ -318,9 +318,21 @@
   font-weight: bold;
 }
 
-.testimonySection:last-of-type {
-  margin-bottom: 150px;
-}
+.userTestimonySection {
+    width: var(--grid-width);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--grid-gap);
+    margin: 100px auto 150px auto;
+  }
+
+  #userTestimonyHeading {
+      grid-column: 1 / -1;
+  grid-row: 1;
+  margin: 0 auto 50px auto;
+  font-size: 60px;
+  color: var(--secondary-color);
+  }
 
 .userTestimonyCard {
   grid-column: span 4;
