@@ -210,12 +210,26 @@ add_filter('get_term', function ($term) {
 
 
 function form_handler() {
-    // Sanitize input
-    $name     = sanitize_text_field(wp_get_current_user()->user_login);
-    $preferred_theme = sanitize_text_field($_POST['preferred_theme']);
-    $feedback = sanitize_textarea_field($_POST['feedback']);
 
-    // Insert as a custom post
+    // 🔒 Verify nonce for CSRF protection
+    if (
+        ! isset( $_POST['survey_form_nonce'] ) ||
+        ! wp_verify_nonce( $_POST['survey_form_nonce'], 'survey_form_action' )
+    ) {
+        wp_die( 'Sikkerhedstjek mislykkedes. Prøv venligst igen.' );
+    }
+
+    // 🧼 Sanitize and validate inputs
+    $user          = wp_get_current_user();
+    $name          = $user && $user->exists() ? sanitize_text_field( $user->user_login ) : 'Anonymous';
+    $preferred_theme = sanitize_text_field( $_POST['preferred_theme'] ?? '' );
+    $feedback        = sanitize_textarea_field( $_POST['feedback'] ?? '' );
+
+    if ( empty( $preferred_theme ) ) {
+        wp_die( 'Vælg venligst et tema før du sender formularen.' );
+    }
+
+    // 🗂 Save as private custom post
     $post_id = wp_insert_post([
         'post_type'   => 'survey_response',
         'post_status' => 'private',
@@ -223,27 +237,27 @@ function form_handler() {
         'post_content'=> "Preferred Theme: $preferred_theme\nFeedback: $feedback",
     ]);
 
-    // Redirect back with success flag
-    wp_redirect($_SERVER["HTTP_REFERER"] . "?submitted=true");
+    // 🚦 Redirect safely back with success flag
+    wp_safe_redirect( add_query_arg( 'submitted', 'true', wp_get_referer() ) );
     exit;
 }
-add_action('admin_post_handle_form_submission', 'form_handler');
-add_action('admin_post_nopriv_handle_form_submission', 'form_handler');
+add_action( 'admin_post_handle_form_submission', 'form_handler' );
+add_action( 'admin_post_nopriv_handle_form_submission', 'form_handler' );
 
-
-
-// Register Survey Response post type
+/**
+ * Register the "Survey Responses" custom post type
+ */
 function register_survey_response_cpt() {
-    register_post_type('survey_response', [
-        'label' => 'Survey Responses',
-        'public' => false,        // not visible on frontend
-        'show_ui' => true,        // visible in admin dashboard
+    register_post_type( 'survey_response', [
+        'label'         => 'Survey Responses',
+        'public'        => false,       // not visible on frontend
+        'show_ui'       => true,        // visible in admin
         'menu_position' => 25,
-        'menu_icon' => 'dashicons-feedback', // nice icon
-        'supports' => ['title','editor'],
-    ]);
+        'menu_icon'     => 'dashicons-feedback',
+        'supports'      => ['title', 'editor'],
+    ] );
 }
-add_action('init', 'register_survey_response_cpt');
+add_action( 'init', 'register_survey_response_cpt' );
 
 
 add_action( 'woocommerce_save_account_details_errors', function( $errors, $user ) {

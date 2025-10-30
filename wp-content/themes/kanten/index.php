@@ -93,26 +93,27 @@
           <h3 class="surveyHeading">Giv din stemme på næste begivenheds tema!</h3>
             
     <div class="survey-form">
-        <?php if (isset($_GET['submitted'])): ?>
-            <p class="thank-you">Thanks for your response!</p>
-        <?php endif; ?>
+    <?php if (isset($_GET['submitted'])): ?>
+        <p class="thank-you">Tak for dit svar!</p>
+    <?php endif; ?>
 
-        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
-            <input type="hidden" name="action" value="handle_form_submission">
+    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
+        <?php wp_nonce_field( 'survey_form_action', 'survey_form_nonce' ); ?>
+        <input type="hidden" name="action" value="handle_form_submission">
 
-            <label>Hvad skal være temaet for vores næste event</label>
-            <div class="options">
-                <label><input type="radio" name="preferred_theme" value="Thursday"> Rasta</label>
-                <label><input type="radio" name="preferred_theme" value="Friday"> Punk</label>
-                <label><input type="radio" name="preferred_theme" value="Saturday"> Disco</label>
-            </div>
+        <label for="preferred_theme">Hvad skal være temaet for vores næste event?</label>
+        <div class="options">
+            <label><input type="radio" name="preferred_theme" value="Rasta"> Rasta</label>
+            <label><input type="radio" name="preferred_theme" value="Punk"> Punk</label>
+            <label><input type="radio" name="preferred_theme" value="Disco"> Disco</label>
+        </div>
 
-            <label for="feedback">Forslag til andre temaer?</label>
-            <textarea name="feedback" id="feedback" rows="4"></textarea>
+        <label for="feedback">Forslag til andre temaer?</label>
+        <textarea name="feedback" id="feedback" rows="4"></textarea>
 
-            <input type="submit" value="Send">
-        </form>
-    </div>
+        <input type="submit" value="Send">
+    </form>
+</div>
 
       </section>
 
