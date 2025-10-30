@@ -47,4 +47,4 @@
         </div>
     </nav>
 
-<body <?php body_class() ?>>
+<body>

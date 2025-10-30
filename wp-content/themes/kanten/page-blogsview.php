@@ -1,6 +1,11 @@
+<?php
+/*
+Template Name: blogs View
+*/
+?>
 <?php get_header(); ?>
-<?php if(have_posts()): ?>
-        <?php while(have_posts()): the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+  <?php the_content(); ?>
         
       <section class="blogviewSection">
         <h1 tabindex="0"><?php pll_e("alle blogindlæg") ?></h1>
@@ -45,7 +50,6 @@
       </section>
 
 
-        <?php endwhile; ?>
-    <?php endif; ?>
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

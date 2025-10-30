@@ -51,11 +51,11 @@ function custom_theme_styles() {
         wp_enqueue_style('searchpage-style', get_template_directory_uri() . '/assets/searchpage.css');
     }
 
-    if (is_page('blogsview')) {
+    if (is_page_template('page-blogsview.php')) {
         wp_enqueue_style('blogsview-style', get_template_directory_uri() . '/assets/blogsview.css');
     }
 
-    if (is_page('sustainability-initiatives')) {
+    if (is_page_template('page-sustainability-initiatives.php')) {
         wp_enqueue_style('sustain-style', get_template_directory_uri() . '/assets/sustain.css');
     }
 

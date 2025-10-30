@@ -91,3 +91,80 @@
 [2025-10-29 16:35:24 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie-with-logo/ has been purged, triggered by action: wp_trash_post 
 [2025-10-29 16:35:26 : INFO] - Cache for URL: http://examprojekt3rd.local/product/hoodie/ has been purged, triggered by action: wp_trash_post 
 [2025-10-29 16:35:28 : INFO] - Cache for URL: http://examprojekt3rd.local/product/v-neck-t-shirt/ has been purged, triggered by action: wp_trash_post 
+[2025-10-30 23:00:50 : INFO] - Cache for associated Polylang translation posts for Title: "Sustainability Initiatives" have been purged 
+[2025-10-30 23:00:50 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Sustainability Initiatives" have been purged 
+[2025-10-30 23:00:50 : INFO] - Cache for URL: http://examprojekt3rd.local/sustainability-initiatives/ has been purged, triggered by action: save_post 
+[2025-10-30 23:00:50 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Sustainability Initiatives" has been purged, triggered by action: save_post 
+[2025-10-30 23:01:01 : INFO] - Cache for associated Polylang translation posts for Title: "Sustainability Initiatives" have been purged 
+[2025-10-30 23:01:01 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Sustainability Initiatives" have been purged 
+[2025-10-30 23:01:01 : INFO] - Cache for URL: http://examprojekt3rd.local/sustainability-initiatives/ has been purged, triggered by action: save_post 
+[2025-10-30 23:01:01 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Sustainability Initiatives" has been purged, triggered by action: save_post 
+[2025-10-30 23:02:29 : INFO] - Cache for associated Polylang translation posts for Title: "Sustainability Initiatives &#8211; English" have been purged 
+[2025-10-30 23:02:29 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Sustainability Initiatives &#8211; English" have been purged 
+[2025-10-30 23:02:29 : INFO] - Cache for URL: http://examprojekt3rd.local/en/sustainability-initiatives_english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:02:29 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Sustainability Initiatives &#8211; English" has been purged, triggered by action: save_post 
+[2025-10-30 23:02:37 : INFO] - Cache for associated Polylang translation posts for Title: "Sustainability Initiatives &#8211; English" have been purged 
+[2025-10-30 23:02:37 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Sustainability Initiatives &#8211; English" have been purged 
+[2025-10-30 23:02:37 : INFO] - Cache for URL: http://examprojekt3rd.local/en/sustainability-initiatives_english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:02:37 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Sustainability Initiatives &#8211; English" has been purged, triggered by action: save_post 
+[2025-10-30 23:20:41 : INFO] - Cache for associated Polylang translation posts for Title: "" have been purged 
+[2025-10-30 23:20:41 : INFO] - Cache for URL: http://examprojekt3rd.local/statistic/121/ has been purged, triggered by action: save_post 
+[2025-10-30 23:20:52 : INFO] - Cache for associated Polylang translation posts for Title: "Kodas Kønsstatistik" have been purged 
+[2025-10-30 23:20:52 : INFO] - Cache for URL: http://examprojekt3rd.local/statistic/kodas-konsstatistik/ has been purged, triggered by action: save_post 
+[2025-10-30 23:21:01 : INFO] - Cache for associated Polylang translation posts for Title: "festival statistic" have been purged 
+[2025-10-30 23:21:01 : INFO] - Cache for URL: http://examprojekt3rd.local/statistic/114/ has been purged, triggered by action: save_post 
+[2025-10-30 23:21:11 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:21:44 : INFO] - Cache for associated Polylang translation posts for Title: "" have been purged 
+[2025-10-30 23:21:44 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "" have been purged 
+[2025-10-30 23:21:44 : INFO] - Cache for URL: http://examprojekt3rd.local/en/statistic/342/ has been purged, triggered by action: save_post 
+[2025-10-30 23:22:08 : INFO] - Cache for associated Polylang translation posts for Title: "1 in 3 women" have been purged 
+[2025-10-30 23:22:08 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "1 in 3 women" have been purged 
+[2025-10-30 23:22:08 : INFO] - Cache for URL: http://examprojekt3rd.local/en/statistic/342/ has been purged, triggered by action: save_post 
+[2025-10-30 23:22:57 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:23:43 : INFO] - Cache for associated Polylang translation posts for Title: "kodas english" have been purged 
+[2025-10-30 23:23:43 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "kodas english" have been purged 
+[2025-10-30 23:23:43 : INFO] - Cache for URL: http://examprojekt3rd.local/en/statistic/kodas-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:24:12 : INFO] - Cache for associated Polylang translation posts for Title: "1 in 3 women english" have been purged 
+[2025-10-30 23:24:12 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "1 in 3 women english" have been purged 
+[2025-10-30 23:24:12 : INFO] - Cache for URL: http://examprojekt3rd.local/en/statistic/342/ has been purged, triggered by action: save_post 
+[2025-10-30 23:24:28 : INFO] - Cache for associated Polylang translation posts for Title: "1 in 3 women" have been purged 
+[2025-10-30 23:24:28 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "1 in 3 women" have been purged 
+[2025-10-30 23:24:28 : INFO] - Cache for URL: http://examprojekt3rd.local/statistic/121/ has been purged, triggered by action: save_post 
+[2025-10-30 23:24:43 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:25:36 : INFO] - Cache for associated Polylang translation posts for Title: "festival statistic english" have been purged 
+[2025-10-30 23:25:36 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "festival statistic english" have been purged 
+[2025-10-30 23:25:36 : INFO] - Cache for URL: http://examprojekt3rd.local/en/statistic/festival-statistic-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:29:18 : INFO] - Cache for associated Polylang translation posts for Title: "question 3" have been purged 
+[2025-10-30 23:29:18 : INFO] - Cache for URL: http://examprojekt3rd.local/interview/question-3/ has been purged, triggered by action: save_post 
+[2025-10-30 23:29:28 : INFO] - Cache for associated Polylang translation posts for Title: "question 2" have been purged 
+[2025-10-30 23:29:28 : INFO] - Cache for URL: http://examprojekt3rd.local/interview/131/ has been purged, triggered by action: save_post 
+[2025-10-30 23:29:31 : INFO] - Cache for associated Polylang translation posts for Title: "question 1" have been purged 
+[2025-10-30 23:29:31 : INFO] - Cache for URL: http://examprojekt3rd.local/interview/question-1/ has been purged, triggered by action: save_post 
+[2025-10-30 23:29:58 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:30:37 : INFO] - Cache for associated Polylang translation posts for Title: "question 3 english" have been purged 
+[2025-10-30 23:30:37 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "question 3 english" have been purged 
+[2025-10-30 23:30:37 : INFO] - Cache for URL: http://examprojekt3rd.local/en/interview/question-3-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:31:06 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:31:51 : INFO] - Cache for associated Polylang translation posts for Title: "question 2 english" have been purged 
+[2025-10-30 23:31:51 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "question 2 english" have been purged 
+[2025-10-30 23:31:51 : INFO] - Cache for URL: http://examprojekt3rd.local/en/interview/question-2-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:32:27 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-30 23:33:13 : INFO] - Cache for associated Polylang translation posts for Title: "question 1 english" have been purged 
+[2025-10-30 23:33:13 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "question 1 english" have been purged 
+[2025-10-30 23:33:13 : INFO] - Cache for URL: http://examprojekt3rd.local/en/interview/question-1-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:36:06 : INFO] - Cache for associated Polylang translation posts for Title: "BlogsView" have been purged 
+[2025-10-30 23:36:06 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "BlogsView" have been purged 
+[2025-10-30 23:36:06 : INFO] - Cache for URL: http://examprojekt3rd.local/blogsview/ has been purged, triggered by action: save_post 
+[2025-10-30 23:36:06 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "BlogsView" has been purged, triggered by action: save_post 
+[2025-10-30 23:36:20 : INFO] - Cache for associated Polylang translation posts for Title: "BlogsView" have been purged 
+[2025-10-30 23:36:20 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "BlogsView" have been purged 
+[2025-10-30 23:36:20 : INFO] - Cache for URL: http://examprojekt3rd.local/blogsview/ has been purged, triggered by action: save_post 
+[2025-10-30 23:36:20 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "BlogsView" has been purged, triggered by action: save_post 
+[2025-10-30 23:38:17 : INFO] - Cache for associated Polylang translation posts for Title: "Blogsview &#8211; English" have been purged 
+[2025-10-30 23:38:17 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Blogsview &#8211; English" have been purged 
+[2025-10-30 23:38:17 : INFO] - Cache for URL: http://examprojekt3rd.local/en/blogsview-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:38:17 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Blogsview &#8211; English" has been purged, triggered by action: save_post 
+[2025-10-30 23:38:40 : INFO] - Cache for associated Polylang translation posts for Title: "Blogsview &#8211; English" have been purged 
+[2025-10-30 23:38:40 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Blogsview &#8211; English" have been purged 
+[2025-10-30 23:38:40 : INFO] - Cache for URL: http://examprojekt3rd.local/en/blogsview-english/ has been purged, triggered by action: save_post 
+[2025-10-30 23:38:40 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Blogsview &#8211; English" has been purged, triggered by action: save_post 
