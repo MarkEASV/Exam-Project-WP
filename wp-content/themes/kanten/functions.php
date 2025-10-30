@@ -245,6 +245,7 @@ function register_survey_response_cpt() {
 }
 add_action('init', 'register_survey_response_cpt');
 
+
 add_action( 'woocommerce_save_account_details_errors', function( $errors, $user ) {
     if ( isset( $_POST['password_1'] ) && ! empty( $_POST['password_1'] ) ) {
         $password = sanitize_text_field( $_POST['password_1'] );
