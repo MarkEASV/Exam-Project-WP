@@ -244,3 +244,44 @@ function register_survey_response_cpt() {
     ]);
 }
 add_action('init', 'register_survey_response_cpt');
+
+add_action( 'woocommerce_save_account_details_errors', function( $errors, $user ) {
+    if ( isset( $_POST['password_1'] ) && ! empty( $_POST['password_1'] ) ) {
+        $password = sanitize_text_field( $_POST['password_1'] );
+
+        // 🔒 Example rules — adjust these to match your plugin’s requirements:
+        if ( strlen( $password ) < 10 ) {
+            $errors->add( 'password_too_short', __( 'Password must be at least 10 characters long.', 'your-textdomain' ) );
+        }
+
+        if ( ! preg_match( '/[A-Z]/', $password ) ) {
+            $errors->add( 'password_missing_uppercase', __( 'Password must include at least one uppercase letter.', 'your-textdomain' ) );
+        }
+
+        if ( ! preg_match( '/[a-z]/', $password ) ) {
+            $errors->add( 'password_missing_lowercase', __( 'Password must include at least one lowercase letter.', 'your-textdomain' ) );
+        }
+
+        if ( ! preg_match( '/[0-9]/', $password ) ) {
+            $errors->add( 'password_missing_number', __( 'Password must include at least one number.', 'your-textdomain' ) );
+        }
+
+        if ( ! preg_match( '/[\W_]/', $password ) ) {
+            $errors->add( 'password_missing_symbol', __( 'Password must include at least one special character.', 'your-textdomain' ) );
+        }
+    }
+}, 10, 2 );
+
+// Registration form validation
+add_filter( 'woocommerce_registration_errors', function( $errors, $username, $email ) {
+    if ( isset( $_POST['password'] ) && ! empty( $_POST['password'] ) ) {
+        $password = sanitize_text_field( $_POST['password'] );
+
+        // Reuse your same password checks here
+        if ( strlen( $password ) < 10 ) {
+            $errors->add( 'password_too_short', __( 'Password must be at least 10 characters long.', 'your-textdomain' ) );
+        }
+        // ... etc.
+    }
+    return $errors;
+}, 10, 3 );
