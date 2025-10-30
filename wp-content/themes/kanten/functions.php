@@ -126,6 +126,16 @@ function plp_register_strings() {
     pll_register_string("frontpage", "gratis");
     pll_register_string("frontpage", "Seneste blogindlæg");
     pll_register_string("frontpage", "af_front");
+    pll_register_string("frontpage", "Giv din stemme på næste begivenheds tema!");
+    pll_register_string("frontpage", "Tak for dit svar!");
+    pll_register_string("frontpage", "Hvad skal være temaet for vores næste event?");
+    pll_register_string("frontpage", "Forslag til andre temaer?");
+    pll_register_string("frontpage", "Du skal være logget ind for at skrive en anmeldelse.");
+    pll_register_string("frontpage", "Log ind her");
+    pll_register_string("frontpage", "Læg en anmeldelse og efterlad dit præg på siden");
+    pll_register_string("frontpage", "Hvad synes du om Kanten?");
+    pll_register_string("frontpage", "Brugeranmeldelser");
+    
 
     pll_register_string("footer", "Kundeservice");
     pll_register_string("footer", "Om kanten");

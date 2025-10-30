@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <nav class="navBar">
+    <nav class="navBar" aria-label="Navigation Bar">
         <div class="navBarGrid">
             <div class="logoImg">
 <a href="<?php echo esc_url( pll_home_url() ); ?>">

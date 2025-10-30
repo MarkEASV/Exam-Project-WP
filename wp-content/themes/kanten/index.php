@@ -22,7 +22,7 @@
 
       <!-- Testimonials -->
       <section class="testimonySection" role="main">
-        <h2 tabindex="0" id="welcomeKanten" aria-labelledby="welcomeKanten testimonyHeading"><?php pll_e("Velkommen til kanten!"); ?></h2>
+        <h2 tabindex="0" id="welcomeKanten" aria-labelledby="welcomeKanten"><?php pll_e("Velkommen til kanten!"); ?></h2>
         <?php
           $args = ['post_type' => 'testimony','posts_per_page' => 3];
           $loop = new WP_Query($args);
@@ -63,7 +63,7 @@
               $eventPrice = get_field('event_price');
               $eventID = 'eventTitle-' . get_the_ID();
         ?>
-       <a href="<?php the_permalink(); ?>" class="eventCardLink" aria-labelledby="eventHeading" ?>
+       <a href="<?php the_permalink(); ?>" class="eventCardLink"z aria-labelledby="eventHeading" ?>
   <article class="eventCard">
     <div class="CardImageContainer">
       <?php echo wp_get_attachment_image($eventImage['ID'], 'event-thumb'); ?>
@@ -92,25 +92,25 @@
         
             <!-- Form -->
              <?php if ( is_user_logged_in() ) : ?>
-          <h3 class="surveyHeading">Giv din stemme på næste begivenheds tema!</h3>
+          <h3 class="surveyHeading"><?php pll_e("Giv din stemme på næste begivenheds tema!"); ?></h3>
             
     <div class="survey-form">
     <?php if (isset($_GET['submitted'])): ?>
-        <p class="thank-you">Tak for dit svar!</p>
+        <p class="thank-you"><?php pll_e("Tak for dit svar!"); ?></p>
     <?php endif; ?>
 
     <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST">
         <?php wp_nonce_field( 'survey_form_action', 'survey_form_nonce' ); ?>
         <input type="hidden" name="action" value="handle_form_submission">
 
-        <label for="preferred_theme">Hvad skal være temaet for vores næste event?</label>
+        <label for="preferred_theme"><?php pll_e("Hvad skal være temaet for vores næste event?"); ?></label>
         <div class="options">
             <label><input type="radio" name="preferred_theme" value="Rasta"> Rasta</label>
             <label><input type="radio" name="preferred_theme" value="Punk"> Punk</label>
             <label><input type="radio" name="preferred_theme" value="Disco"> Disco</label>
         </div>
 
-        <label for="feedback">Forslag til andre temaer?</label>
+        <label for="feedback"><?php pll_e("Forslag til andre temaer?"); ?></label>
         <textarea name="feedback" id="feedback" rows="4"></textarea>
 
         <input type="submit" value="Send">
@@ -118,8 +118,8 @@
         <?php else : ?>
 
         <p class="login-notice">
-            Du skal være logget ind for at skrive en anmeldelse.
-            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">Log ind her</a>.
+            <?php pll_e("Du skal være logget ind for at skrive en anmeldelse."); ?>
+            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>"><?php pll_e("Log ind her"); ?></a>.
         </p>
 
     <?php endif; ?>
@@ -201,19 +201,19 @@ endif;
 ?>
 
 <?php if ( is_user_logged_in() ) : ?>
-<h3 class="surveyHeading">Læg en anmeldelse og efterlad dit præg på siden</h3>
+<h3 class="surveyHeading"><?php pll_e("Læg en anmeldelse og efterlad dit præg på siden"); ?></h3>
 
 <div class="survey-form">
 
         <?php if ( isset( $_GET['submitted'] ) ) : ?>
-            <p class="thank-you">Tak for dit svar!</p>
+            <p class="thank-you"><?php pll_e("Tak for dit svar!"); ?></p>
         <?php endif; ?>
 
         <form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="POST">
             <?php wp_nonce_field( 'review_form_action', 'review_form_nonce' ); ?>
             <input type="hidden" name="action" value="handle_review_submission">
 
-            <label for="review">Hvad synes du om Kanten?</label>
+            <label for="review"><?php pll_e("Hvad synes du om Kanten?"); ?></label>
             <textarea name="review" id="review" rows="4" maxlength="200" required></textarea>
 
             <input type="submit" value="Send">
@@ -222,8 +222,8 @@ endif;
     <?php else : ?>
 
         <p class="login-notice">
-            Du skal være logget ind for at skrive en anmeldelse.
-            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">Log ind her</a>.
+            <?php pll_e("Du skal være logget ind for at skrive en anmeldelse."); ?>
+            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>"><?php pll_e("Log ind her"); ?></a>.
         </p>
 
     <?php endif; ?>
