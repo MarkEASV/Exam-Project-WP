@@ -89,7 +89,9 @@
 </a>
         <?php endwhile; endif; wp_reset_postdata(); ?>
 
+        
             <!-- Form -->
+             <?php if ( is_user_logged_in() ) : ?>
           <h3 class="surveyHeading">Giv din stemme på næste begivenheds tema!</h3>
             
     <div class="survey-form">
@@ -113,6 +115,14 @@
 
         <input type="submit" value="Send">
     </form>
+        <?php else : ?>
+
+        <p class="login-notice">
+            Du skal være logget ind for at skrive en anmeldelse.
+            <a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>">Log ind her</a>.
+        </p>
+
+    <?php endif; ?>
 </div>
 
       </section>
