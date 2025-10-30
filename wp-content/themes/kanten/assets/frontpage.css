@@ -231,15 +231,24 @@
   margin-right: 15px;
 }
 
+.surveyHeading {
+  color: var(--secondary-color);
+  font-size: 40px;
+  grid-column: 1 / span 12;
+  text-align: center;
+  margin-top: 100px;
+}
+
 /* Form container */
 .survey-form {
   max-width: 500px;
-  margin: 150px auto;
+  margin: 50px auto 0 auto;
   padding: 20px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   font-family: Arial, sans-serif;
+  grid-column: 1 / span 12;
 }
 
 /* Labels */

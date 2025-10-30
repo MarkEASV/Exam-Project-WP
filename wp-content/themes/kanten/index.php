@@ -88,6 +88,32 @@
   </article>
 </a>
         <?php endwhile; endif; wp_reset_postdata(); ?>
+
+            <!-- Form -->
+          <h3 class="surveyHeading">Giv din stemme på næste begivenheds tema!</h3>
+            
+    <div class="survey-form">
+        <?php if (isset($_GET['submitted'])): ?>
+            <p class="thank-you">Thanks for your response!</p>
+        <?php endif; ?>
+
+        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
+            <input type="hidden" name="action" value="handle_form_submission">
+
+            <label>Hvad skal være temaet for vores næste event</label>
+            <div class="options">
+                <label><input type="radio" name="preferred_theme" value="Thursday"> Rasta</label>
+                <label><input type="radio" name="preferred_theme" value="Friday"> Punk</label>
+                <label><input type="radio" name="preferred_theme" value="Saturday"> Disco</label>
+            </div>
+
+            <label for="feedback">Forslag til andre temaer?</label>
+            <textarea name="feedback" id="feedback" rows="4"></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
       </section>
 
       <!-- Blog -->
@@ -130,29 +156,6 @@
         <?php endwhile; endif; wp_reset_postdata(); ?>
       </section>
 
-    </div>
-
-    <!-- Form -->
-    <div class="survey-form">
-        <?php if (isset($_GET['submitted'])): ?>
-            <p class="thank-you">Thanks for your response!</p>
-        <?php endif; ?>
-
-        <form action="<?php echo esc_url(admin_url('admin-post.php')); ?>" method="POST">
-            <input type="hidden" name="action" value="handle_form_submission">
-
-            <label>Hvad skal være temaet for vores næste event</label>
-            <div class="options">
-                <label><input type="radio" name="preferred_theme" value="Thursday"> Rasta</label>
-                <label><input type="radio" name="preferred_theme" value="Friday"> Punk</label>
-                <label><input type="radio" name="preferred_theme" value="Saturday"> Disco</label>
-            </div>
-
-            <label for="feedback">Forslag til andre temaer?</label>
-            <textarea name="feedback" id="feedback" rows="4"></textarea>
-
-            <input type="submit" value="Send">
-        </form>
     </div>
   <?php endwhile; ?>
 <?php endif; ?>

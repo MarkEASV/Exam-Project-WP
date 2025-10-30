@@ -244,4 +244,3 @@ function register_survey_response_cpt() {
     ]);
 }
 add_action('init', 'register_survey_response_cpt');
-
