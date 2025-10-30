@@ -340,8 +340,9 @@
   background-color: var(--secondary-color);
   border-radius: 20px;
   position: relative;
-  padding: 15px 15px 45px 15px;
-  font-size: 20px;
+  padding: 20px 15px 45px 15px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .review-author {
