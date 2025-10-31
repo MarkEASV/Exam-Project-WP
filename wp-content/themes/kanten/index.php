@@ -46,7 +46,7 @@
     
       <!-- Events -->
       <section class="eventFrontpageSection">
-        <h2 id="eventHeading"><?php pll_e("Kommende Events"); ?></h2>
+        <h2 tabindex="0" id="eventHeading"><?php pll_e("Kommende Events"); ?></h2>
         <?php
           $args = [
             'post_type' => 'event',
@@ -92,8 +92,7 @@
         
             <!-- Form -->
              <?php if ( is_user_logged_in() ) : ?>
-          <h3 class="surveyHeading"><?php pll_e("Giv din stemme på næste begivenheds tema!"); ?></h3>
-            
+          <h3 tabindex="0" id="surveyHeading" aria-labelledby="surveyHeading" class="surveyHeading"><?php pll_e("Giv din stemme på næste begivenheds tema!"); ?></h3>
     <div class="survey-form">
     <?php if (isset($_GET['submitted'])): ?>
         <p class="thank-you"><?php pll_e("Tak for dit svar!"); ?></p>
@@ -129,7 +128,7 @@
 
       <!-- Blog -->
       <section class="blogFrontpageSection">
-        <h2 id="blogHeading"><?php pll_e("Seneste blogindlæg"); ?></h2>
+        <h2 tabindex="0" id="blogHeading"><?php pll_e("Seneste blogindlæg"); ?></h2>
         <?php
           $args = [
             'post_type' => 'blog',
@@ -168,7 +167,7 @@
       </section>
 
       <section class="userTestimonySection">
-             <h2 id="userTestimonyHeading"><?php pll_e("Brugeranmeldelser"); ?></h2>
+             <h2 tabindex="0" aria-labelledby="userTestimonyHeading" id="userTestimonyHeading"><?php pll_e("Brugeranmeldelser"); ?></h2>
 
 <?php
 // Query: Approved reviews only
@@ -201,7 +200,7 @@ endif;
 ?>
 
 <?php if ( is_user_logged_in() ) : ?>
-<h3 class="surveyHeading"><?php pll_e("Læg en anmeldelse og efterlad dit præg på siden"); ?></h3>
+<h3 tabindex="0" id="surveyHeading" aria-labelledby="surveyHeading" class="surveyHeading"><?php pll_e("Læg en anmeldelse og efterlad dit præg på siden"); ?></h3>
 
 <div class="survey-form">
 

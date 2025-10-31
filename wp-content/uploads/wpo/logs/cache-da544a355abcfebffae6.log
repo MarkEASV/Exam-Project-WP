@@ -168,3 +168,15 @@
 [2025-10-30 23:38:40 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "Blogsview &#8211; English" have been purged 
 [2025-10-30 23:38:40 : INFO] - Cache for URL: http://examprojekt3rd.local/en/blogsview-english/ has been purged, triggered by action: save_post 
 [2025-10-30 23:38:40 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "Blogsview &#8211; English" has been purged, triggered by action: save_post 
+[2025-10-30 23:50:34 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-31 00:00:03 : INFO] - Cache for multiple term taxonomy have been purged due to post terms update, triggered by action: set_object_terms 
+[2025-10-31 00:00:45 : INFO] - Cache for associated Polylang translation posts for Title: "shop english" have been purged 
+[2025-10-31 00:00:45 : INFO] - Cache for URL: http://examprojekt3rd.local/en/shop-english/ has been purged, triggered by action: save_post 
+[2025-10-31 00:00:45 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "shop english" has been purged, triggered by action: save_post 
+[2025-10-31 00:01:03 : INFO] - Cache for associated Polylang translation posts for Title: "shop english" have been purged 
+[2025-10-31 00:01:03 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "shop english" have been purged 
+[2025-10-31 00:01:03 : INFO] - Cache for URL: http://examprojekt3rd.local/en/shop-english/ has been purged, triggered by action: save_post 
+[2025-10-31 00:01:03 : INFO] - Cache for author page URL: http://examprojekt3rd.local/author/pp/ associated with post_type: page and Title: "shop english" has been purged, triggered by action: save_post 
+[2025-10-31 00:06:49 : INFO] - Cache for associated Polylang translation posts for Title: "shop english" have been purged 
+[2025-10-31 00:06:49 : INFO] - Cache for associated Polylang translation posts' feeds for Title: "shop english" have been purged 
+[2025-10-31 00:06:49 : INFO] - Cache for URL: http://examprojekt3rd.local/en/shop-english/ has been purged, triggered by action: wp_trash_post 
